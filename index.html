@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Leaders Fellowship</title>
+    <meta name="description" content="A nine-month fellowship for founder CEOs who have outgrown standard advice. Leadership that begins with presence.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav"></div>
+    
+    <!-- Hero -->
+    <div id="hero"></div>
+    
+    <!-- Manifesto -->
+    <div id="manifesto"></div>
+    
+    <!-- Features -->
+    <div id="features"></div>
+    
+    <!-- Dark Statement -->
+    <div id="dark-statement"></div>
+    
+    <!-- Testimonial -->
+    <div id="testimonial"></div>
+    
+    <!-- CTA -->
+    <div id="cta"></div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Section Loader -->
+    <script>
+        const sections = [
+            { id: 'nav', file: 'sections/nav.html' },
+            { id: 'hero', file: 'sections/hero.html' },
+            { id: 'manifesto', file: 'sections/manifesto.html' },
+            { id: 'features', file: 'sections/features.html' },
+            { id: 'dark-statement', file: 'sections/dark-statement.html' },
+            { id: 'testimonial', file: 'sections/testimonial.html' },
+            { id: 'cta', file: 'sections/cta.html' },
+            { id: 'footer', file: 'sections/footer.html' }
+        ];
+
+        sections.forEach(section => {
+            fetch(section.file)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(section.id).innerHTML = html;
+                })
+                .catch(err => console.log('Error loading section:', section.file));
+        });
+    </script>
+</body>
+</html>
