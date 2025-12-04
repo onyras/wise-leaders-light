@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLF - Logo Cloud Section</title>
+    <style>
+        /* Fonts */
+        @font-face {
+            font-family: 'Crimson Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/crimsonpro/v28/q5uDsoa5M_tv7IihmnkabARboYF6CsKj.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+        }
+
+        :root {
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+            --color-blue: #7FABC8;
+            --color-green: #A6BEA4;
+            --color-orange: #E08F6A;
+            --color-off-white: #F7F3ED;
+            --color-card: #EFEBE5;
+            --font-serif: 'Crimson Pro', Georgia, serif;
+            --font-sans: 'DM Sans', system-ui, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            background: var(--color-off-white);
+        }
+
+        /* Logo Cloud */
+        .logos {
+            background: var(--color-off-white);
+            padding: 80px 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .logos__container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logos__headline {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: #999;
+            text-align: center;
+            margin-bottom: 48px;
+            letter-spacing: 0.02em;
+        }
+
+        .logos__grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 48px 56px;
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.4;
+            transition: opacity 0.3s ease;
+            grayscale: 100%;
+        }
+
+        .logo-item:hover {
+            opacity: 0.7;
+        }
+
+        .logo-item span {
+            font-family: var(--font-sans);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-black);
+            letter-spacing: 0.02em;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .logos { padding: 60px 24px; }
+            .logos__grid { gap: 32px 40px; }
+            .logo-item span { font-size: 16px; }
+        }
+
+        @media (max-width: 600px) {
+            .logos { padding: 50px 20px; }
+            .logos__headline { margin-bottom: 36px; }
+            .logos__grid { 
+                gap: 24px 32px;
+            }
+            .logo-item span { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="logos">
+        <div class="logos__container">
+            <p class="logos__headline">Trusted by leaders building what matters</p>
+            <div class="logos__grid">
+                <div class="logo-item"><span>Mojo</span></div>
+                <div class="logo-item"><span>SirPlus</span></div>
+                <div class="logo-item"><span>Amorelie</span></div>
+                <div class="logo-item"><span>LiveEO</span></div>
+                <div class="logo-item"><span>Yuri</span></div>
+                <div class="logo-item"><span>Beat81</span></div>
+                <div class="logo-item"><span>Klang Games</span></div>
+                <div class="logo-item"><span>PSL</span></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

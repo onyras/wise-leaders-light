@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLF Hero - Radar Chart</title>
+    <style>
+        /* Fonts */
+        @font-face {
+            font-family: 'Crimson Pro';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/crimsonpro/v28/q5uBsoa5M_tv7IihmnkabARekYNwDeChrlU.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Crimson Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/crimsonpro/v28/q5uDsoa5M_tv7IihmnkabARboYF6CsKj.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+        }
+
+        :root {
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+            --color-blue: #7FABC8;
+            --color-green: #A6BEA4;
+            --color-orange: #E08F6A;
+            --font-serif: 'Crimson Pro', Georgia, serif;
+            --font-sans: 'DM Sans', system-ui, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px 12px 24px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 50px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            max-width: 680px;
+            width: calc(100% - 48px);
+        }
+
+        .nav__logo {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--color-black);
+            text-decoration: none;
+        }
+
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav__link {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav__cta {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            background-color: var(--color-blue);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            background-color: #F7F3ED;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero__content {
+            padding: 160px 60px 160px 80px;
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero__label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .hero__label-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--color-green);
+        }
+
+        .hero__label-text {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #999;
+        }
+
+        .hero__headline {
+            font-family: var(--font-serif);
+            font-size: 68px;
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: -0.025em;
+            color: var(--color-black);
+            margin-bottom: 36px;
+        }
+
+        .hero__headline em {
+            font-style: italic;
+            color: var(--color-blue);
+        }
+
+        .hero__body {
+            font-family: var(--font-sans);
+            font-size: 18px;
+            line-height: 1.75;
+            color: #666;
+            margin-bottom: 48px;
+            max-width: 540px;
+        }
+
+        .hero__body strong {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .hero__ctas {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hero__cta {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-sans);
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-white);
+            background-color: var(--color-blue);
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero__cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(127, 171, 200, 0.35);
+        }
+
+        .hero__cta--secondary {
+            background-color: transparent;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .hero__cta--secondary:hover {
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        /* Visual Container - BIGGER */
+        .hero__visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            height: 100vh;
+        }
+
+        .radar-container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        /* Ambient glow */
+        .radar-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(127, 171, 200, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: glow-breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes glow-breathe {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+        }
+
+        /* Radar SVG */
+        .radar-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Grid circles */
+        .radar-grid {
+            fill: none;
+            stroke: rgba(0, 0, 0, 0.05);
+            stroke-width: 1;
+        }
+
+        /* Axis lines */
+        .radar-axis {
+            stroke: rgba(0, 0, 0, 0.06);
+            stroke-width: 1;
+        }
+
+        /* Data area - before state (orange fill) */
+        .radar-area-before {
+            fill: rgba(224, 143, 106, 0.12);
+            stroke: var(--color-orange);
+            stroke-width: 1.5;
+            opacity: 0;
+            animation: area-in 0.8s ease forwards 0.3s;
+        }
+
+        /* Data area - after state (blue stroke only, no fill) */
+        .radar-area-after {
+            fill: none;
+            stroke: var(--color-blue);
+            stroke-width: 2.5;
+            filter: drop-shadow(0 0 8px rgba(127, 171, 200, 0.4));
+            opacity: 0;
+            animation: area-in 0.8s ease forwards 0.6s;
+        }
+
+        @keyframes area-in {
+            to { opacity: 1; }
+        }
+
+        /* Data points */
+        .radar-point {
+            fill: var(--color-blue);
+            filter: drop-shadow(0 0 6px rgba(127, 171, 200, 0.6));
+            opacity: 0;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+
+        /* Point animations with stagger */
+        .radar-point:nth-child(1) { animation: point-pop 0.4s ease forwards 0.7s; }
+        .radar-point:nth-child(2) { animation: point-pop 0.4s ease forwards 0.75s; }
+        .radar-point:nth-child(3) { animation: point-pop 0.4s ease forwards 0.8s; }
+        .radar-point:nth-child(4) { animation: point-pop 0.4s ease forwards 0.85s; }
+        .radar-point:nth-child(5) { animation: point-pop 0.4s ease forwards 0.9s; }
+        .radar-point:nth-child(6) { animation: point-pop 0.4s ease forwards 0.95s; }
+        .radar-point:nth-child(7) { animation: point-pop 0.4s ease forwards 1.0s; }
+        .radar-point:nth-child(8) { animation: point-pop 0.4s ease forwards 1.05s; }
+        .radar-point:nth-child(9) { animation: point-pop 0.4s ease forwards 1.1s; }
+        .radar-point:nth-child(10) { animation: point-pop 0.4s ease forwards 1.15s; }
+
+        @keyframes point-pop {
+            0% { opacity: 0; transform: scale(0); }
+            70% { transform: scale(1.4); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Pulsing points after initial animation */
+        .radar-point.pulse {
+            animation: point-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes point-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* Labels */
+        .radar-label {
+            font-family: var(--font-sans);
+            font-size: 11px;
+            font-weight: 500;
+            fill: #888;
+            text-anchor: middle;
+            opacity: 0;
+            animation: label-in 0.5s ease forwards;
+        }
+
+        .radar-label:nth-of-type(1) { animation-delay: 0.3s; }
+        .radar-label:nth-of-type(2) { animation-delay: 0.35s; }
+        .radar-label:nth-of-type(3) { animation-delay: 0.4s; }
+        .radar-label:nth-of-type(4) { animation-delay: 0.45s; }
+        .radar-label:nth-of-type(5) { animation-delay: 0.5s; }
+        .radar-label:nth-of-type(6) { animation-delay: 0.55s; }
+        .radar-label:nth-of-type(7) { animation-delay: 0.6s; }
+        .radar-label:nth-of-type(8) { animation-delay: 0.65s; }
+        .radar-label:nth-of-type(9) { animation-delay: 0.7s; }
+        .radar-label:nth-of-type(10) { animation-delay: 0.75s; }
+
+        @keyframes label-in {
+            to { opacity: 1; }
+        }
+
+        /* Center score */
+        .radar-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+            animation: center-in 0.6s ease forwards 1.2s;
+        }
+
+        @keyframes center-in {
+            to { opacity: 1; }
+        }
+
+        .radar-score {
+            font-family: var(--font-serif);
+            font-size: 56px;
+            font-weight: 400;
+            color: var(--color-black);
+            line-height: 1;
+        }
+
+        .radar-score-label {
+            font-family: var(--font-sans);
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        /* ==========================================
+           RESPONSIVE
+           ========================================== */
+        @media (max-width: 1200px) {
+            .hero__headline { font-size: 56px; }
+            .radar-container { width: 520px; height: 520px; }
+        }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero__content { 
+                padding: 140px 60px 40px; 
+                max-width: 100%;
+                text-align: center;
+            }
+            .hero__headline { font-size: 48px; }
+            .hero__body { margin: 0 auto 40px; }
+            .hero__ctas { justify-content: center; }
+            .hero__visual { height: auto; padding: 20px 40px 80px; }
+            .radar-container { width: 440px; height: 440px; }
+            .radar-score { font-size: 48px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav__links { display: none; }
+            .hero__content { padding: 120px 24px 30px; }
+            .hero__headline { font-size: 38px; margin-bottom: 28px; }
+            .hero__body { font-size: 17px; margin-bottom: 36px; }
+            .hero__ctas { flex-direction: column; align-items: stretch; gap: 12px; }
+            .hero__cta { justify-content: center; }
+            .radar-container { width: 340px; height: 340px; }
+            .radar-score { font-size: 40px; }
+            .radar-label { font-size: 9px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav__logo">WL</a>
+        <div class="nav__links">
+            <a href="#" class="nav__link">Fellowship</a>
+            <a href="#" class="nav__link">Approach</a>
+            <a href="#" class="nav__link">About</a>
+        </div>
+        <a href="#" class="nav__cta">Apply Now</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__label">
+                <span class="hero__label-dot"></span>
+                <span class="hero__label-text">For founder CEOs who have outgrown standard advice</span>
+            </div>
+            <h1 class="hero__headline">
+                Clarity you can <em>measure</em>. Growth you can <em>feel</em>. Peers who tell you the <em>truth</em>.
+            </h1>
+            <p class="hero__body">
+                A <strong>community</strong> of vetted CEOs doing the inner and outer work together: <strong>silent retreat, biometric deep-dives, performance optimization</strong>. Nine months of real measurement, real honesty, and real change.
+            </p>
+            <div class="hero__ctas">
+                <a href="#" class="hero__cta">Apply to Join</a>
+                <a href="#" class="hero__cta hero__cta--secondary">Refer a CEO</a>
+            </div>
+        </div>
+        
+        <div class="hero__visual">
+            <div class="radar-container">
+                <div class="radar-glow"></div>
+                
+                <svg class="radar-svg" viewBox="0 0 600 600" id="radarSvg">
+                    <!-- Grid circles -->
+                    <circle class="radar-grid" cx="300" cy="300" r="70"/>
+                    <circle class="radar-grid" cx="300" cy="300" r="140"/>
+                    <circle class="radar-grid" cx="300" cy="300" r="210"/>
+                    
+                    <!-- Axes will be generated -->
+                    <g id="axes"></g>
+                    
+                    <!-- Data areas will be generated -->
+                    <g id="areas"></g>
+                    
+                    <!-- Data points will be generated -->
+                    <g id="points"></g>
+                    
+                    <!-- Labels will be generated -->
+                    <g id="labels"></g>
+                </svg>
+                
+                <div class="radar-center">
+                    <div class="radar-score" id="radarScore">0</div>
+                    <div class="radar-score-label">Body Reserve</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cx = 300, cy = 300;
+        const maxRadius = 210;
+        
+        // 10 dimensions for more markers
+        const dimensions = [
+            { label: 'Clarity', before: 0.4, after: 0.88 },
+            { label: 'Resilience', before: 0.35, after: 0.82 },
+            { label: 'Presence', before: 0.45, after: 0.9 },
+            { label: 'Recovery', before: 0.3, after: 0.78 },
+            { label: 'Focus', before: 0.5, after: 0.85 },
+            { label: 'Connection', before: 0.38, after: 0.84 },
+            { label: 'Energy', before: 0.42, after: 0.86 },
+            { label: 'Balance', before: 0.33, after: 0.8 },
+            { label: 'Purpose', before: 0.48, after: 0.92 },
+            { label: 'Growth', before: 0.36, after: 0.87 }
+        ];
+        
+        const n = dimensions.length;
+        
+        // Calculate point position
+        function getPoint(index, value) {
+            const angle = (index / n) * Math.PI * 2 - Math.PI / 2;
+            const r = value * maxRadius;
+            return {
+                x: cx + Math.cos(angle) * r,
+                y: cy + Math.sin(angle) * r
+            };
+        }
+        
+        // Generate path for data area
+        function generatePath(values) {
+            const points = values.map((v, i) => getPoint(i, v));
+            return points.map((p, i) => (i === 0 ? 'M' : 'L') + p.x + ',' + p.y).join(' ') + ' Z';
+        }
+        
+        // Initialize
+        function init() {
+            const axesGroup = document.getElementById('axes');
+            const areasGroup = document.getElementById('areas');
+            const pointsGroup = document.getElementById('points');
+            const labelsGroup = document.getElementById('labels');
+            
+            // Generate axes
+            for (let i = 0; i < n; i++) {
+                const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+                const x2 = cx + Math.cos(angle) * maxRadius;
+                const y2 = cy + Math.sin(angle) * maxRadius;
+                
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', cx);
+                line.setAttribute('y1', cy);
+                line.setAttribute('x2', x2);
+                line.setAttribute('y2', y2);
+                line.setAttribute('class', 'radar-axis');
+                axesGroup.appendChild(line);
+            }
+            
+            // Generate labels
+            for (let i = 0; i < n; i++) {
+                const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+                const labelRadius = maxRadius + 28;
+                const x = cx + Math.cos(angle) * labelRadius;
+                const y = cy + Math.sin(angle) * labelRadius;
+                
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', x);
+                text.setAttribute('y', y + 4);
+                text.setAttribute('class', 'radar-label');
+                text.textContent = dimensions[i].label;
+                labelsGroup.appendChild(text);
+            }
+            
+            // Generate before area (orange, smaller, with fill)
+            const beforePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            beforePath.setAttribute('d', generatePath(dimensions.map(d => d.before)));
+            beforePath.setAttribute('class', 'radar-area-before');
+            areasGroup.appendChild(beforePath);
+            
+            // Generate after area (blue, larger, stroke only)
+            const afterPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            afterPath.setAttribute('d', generatePath(dimensions.map(d => d.after)));
+            afterPath.setAttribute('class', 'radar-area-after');
+            areasGroup.appendChild(afterPath);
+            
+            // Generate points (after values only, on top)
+            dimensions.forEach((dim, i) => {
+                const p = getPoint(i, dim.after);
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', p.x);
+                circle.setAttribute('cy', p.y);
+                circle.setAttribute('r', 6);
+                circle.setAttribute('class', 'radar-point');
+                pointsGroup.appendChild(circle);
+            });
+            
+            // Animate score
+            animateScore();
+            
+            // Add pulsing after initial animation
+            setTimeout(() => {
+                document.querySelectorAll('.radar-point').forEach((point, i) => {
+                    point.style.animation = `point-pulse 3s ease-in-out infinite ${i * 0.1}s`;
+                });
+            }, 1800);
+        }
+        
+        // Animate center score
+        function animateScore() {
+            const scoreEl = document.getElementById('radarScore');
+            const target = 54;
+            let current = 0;
+            
+            setTimeout(() => {
+                const interval = setInterval(() => {
+                    current += 2;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(interval);
+                    }
+                    scoreEl.textContent = current;
+                }, 25);
+            }, 1200);
+        }
+        
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>
