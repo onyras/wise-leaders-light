@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLF - Fellowship Overview Section</title>
+    <style>
+        /* Fonts */
+        @font-face {
+            font-family: 'Crimson Pro';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/crimsonpro/v28/q5uBsoa5M_tv7IihmnkabARekYNwDeChrlU.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Crimson Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/crimsonpro/v28/q5uDsoa5M_tv7IihmnkabARboYF6CsKj.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+        }
+
+        :root {
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+            --color-blue: #7FABC8;
+            --color-green: #A6BEA4;
+            --color-orange: #E08F6A;
+            --color-off-white: #F7F3ED;
+            --font-serif: 'Crimson Pro', Georgia, serif;
+            --font-sans: 'DM Sans', system-ui, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            background: var(--color-off-white);
+        }
+
+        /* Overview Section */
+        .overview {
+            background: var(--color-off-white);
+            padding: 120px 40px 140px;
+        }
+
+        .overview__container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .overview__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .overview__tagline {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #999;
+            margin-bottom: 24px;
+        }
+
+        .overview__headline {
+            font-family: var(--font-serif);
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 1.12;
+            letter-spacing: -0.02em;
+            color: var(--color-black);
+            margin-bottom: 28px;
+        }
+
+        .overview__subheadline {
+            font-family: var(--font-sans);
+            font-size: 18px;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        /* Phase Cards - Bento Layout */
+        .overview__phases {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-rows: repeat(2, 300px);
+            gap: 24px;
+        }
+
+        .phase-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* Large card spans 2 rows */
+        .phase-card--1 {
+            grid-row: span 2;
+        }
+
+        /* Background images with overlay */
+        .phase-card__bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .phase-card:hover .phase-card__bg {
+            transform: scale(1.08);
+        }
+
+        /* Placeholder backgrounds - forest, workshop, science */
+        .phase-card--1 .phase-card__bg {
+            background: linear-gradient(145deg, #2a3d4d 0%, #1a2530 100%);
+            background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1000&q=80');
+        }
+
+        .phase-card--2 .phase-card__bg {
+            background: linear-gradient(145deg, #3d4a3d 0%, #252d25 100%);
+            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80');
+        }
+
+        .phase-card--3 .phase-card__bg {
+            background: linear-gradient(145deg, #4d3d3a 0%, #2d2320 100%);
+            background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80');
+        }
+
+        /* Gradient overlay */
+        .phase-card__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+            transition: background 0.4s ease;
+        }
+
+        .phase-card:hover .phase-card__overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+        }
+
+        /* Content */
+        .phase-card__content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .phase__badge {
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-family: var(--font-sans);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .phase-card--1 .phase__badge { 
+            background: var(--color-blue); 
+            color: white;
+        }
+        .phase-card--2 .phase__badge { 
+            background: var(--color-green); 
+            color: white;
+        }
+        .phase-card--3 .phase__badge { 
+            background: var(--color-orange); 
+            color: white;
+        }
+
+        .phase__title {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            font-weight: 400;
+            color: var(--color-white);
+            margin-bottom: 12px;
+            line-height: 1.15;
+        }
+
+        .phase-card--1 .phase__title {
+            font-size: 48px;
+        }
+
+        .phase__description {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 420px;
+            margin-bottom: 20px;
+        }
+
+        .phase__meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phase__date {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .phase__date svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .phase__duration {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .phase__duration svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Arrow indicator */
+        .phase__arrow {
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateX(-10px) rotate(-45deg);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .phase-card:hover .phase__arrow {
+            opacity: 1;
+            transform: translateX(0) rotate(-45deg);
+        }
+
+        .phase__arrow svg {
+            width: 20px;
+            height: 20px;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .overview__phases {
+                grid-template-columns: 1fr;
+                grid-template-rows: 420px 320px 320px;
+            }
+            .phase-card--1 {
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .overview { padding: 80px 20px 100px; }
+            .overview__header { margin-bottom: 48px; }
+            .overview__headline { font-size: 42px; }
+            .overview__subheadline { font-size: 16px; }
+            .overview__phases {
+                grid-template-rows: 380px 300px 300px;
+                gap: 16px;
+            }
+            .phase-card__content { padding: 28px; }
+            .phase__badge { top: 24px; left: 24px; }
+            .phase__arrow { top: 24px; right: 24px; }
+            .phase__title { font-size: 30px; }
+            .phase-card--1 .phase__title { font-size: 36px; }
+            .phase__description { font-size: 15px; }
+        }
+
+        @media (max-width: 500px) {
+            .overview__headline { font-size: 34px; }
+            .overview__phases {
+                grid-template-rows: 340px 280px 280px;
+            }
+            .phase__title { font-size: 26px; }
+            .phase-card--1 .phase__title { font-size: 30px; }
+            .phase__meta { flex-direction: column; align-items: flex-start; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="overview">
+        <div class="overview__container">
+            <div class="overview__header">
+                <p class="overview__tagline">The Fellowship at a Glance</p>
+                <h2 class="overview__headline">Nine months. Three phases.<br>One transformation.</h2>
+                <p class="overview__subheadline">A private, vetted community for founder CEOs who have outgrown tactical advice and surface-level peer groups.</p>
+            </div>
+
+            <div class="overview__phases">
+                <!-- Phase 1: Large card -->
+                <div class="phase-card phase-card--1">
+                    <div class="phase-card__bg"></div>
+                    <div class="phase-card__overlay"></div>
+                    <div class="phase-card__content">
+                        <span class="phase__badge">Phase I</span>
+                        <h3 class="phase__title">5-Day Nature Retreat</h3>
+                        <p class="phase__description">Extended silence in nature. Daily leadership labs. Deep peer connection. This is where the real work begins.</p>
+                        <div class="phase__meta">
+                            <p class="phase__duration">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                5 days
+                            </p>
+                            <p class="phase__date">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                August 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="phase__arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7v14" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="phase-card phase-card--2">
+                    <div class="phase-card__bg"></div>
+                    <div class="phase-card__overlay"></div>
+                    <div class="phase-card__content">
+                        <span class="phase__badge">Phase II</span>
+                        <h3 class="phase__title">Monthly Expert Labs</h3>
+                        <p class="phase__description">Seven sessions with world-class faculty: Zen monks, performance coaches, therapists.</p>
+                        <div class="phase__meta">
+                            <p class="phase__duration">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                7 months
+                            </p>
+                            <p class="phase__date">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                Sep '25 – Mar '26
+                            </p>
+                        </div>
+                    </div>
+                    <div class="phase__arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7v14" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="phase-card phase-card--3">
+                    <div class="phase-card__bg"></div>
+                    <div class="phase-card__overlay"></div>
+                    <div class="phase-card__content">
+                        <span class="phase__badge">Phase III</span>
+                        <h3 class="phase__title">Biofeedback Retreat</h3>
+                        <p class="phase__description">2 days with performance scientists. Body data translated into personalized protocols.</p>
+                        <div class="phase__meta">
+                            <p class="phase__duration">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                2 days
+                            </p>
+                            <p class="phase__date">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                April 2026
+                            </p>
+                        </div>
+                    </div>
+                    <div class="phase__arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7v14" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
