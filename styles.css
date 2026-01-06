@@ -1619,180 +1619,163 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.structure__grid {
+/* Timeline Layout */
+.structure__timeline {
+    position: relative;
+    padding: 60px 0 40px;
+}
+
+.structure__wave {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.structure__wave svg {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+}
+
+/* Wave line animation - draw effect */
+.wave-line {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: wave-draw 2s ease-out forwards, wave-breathe 6s ease-in-out infinite 2s;
+}
+
+@keyframes wave-draw {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes wave-breathe {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Wave dots animation */
+.wave-dot {
+    opacity: 0;
+    animation: dot-appear 0.4s ease-out forwards;
+}
+
+.wave-dot--1 { animation-delay: 0.3s; }
+.wave-dot--2 { animation-delay: 0.8s; }
+.wave-dot--3 { animation-delay: 1.3s; }
+.wave-dot--4 { animation-delay: 1.8s; }
+
+@keyframes dot-appear {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Add pulse to dots after appearing */
+.wave-dot {
+    transform-origin: center;
+}
+
+.wave-dot--1 { animation: dot-appear 0.4s ease-out forwards 0.3s, dot-glow 4s ease-in-out infinite 2.5s; }
+.wave-dot--2 { animation: dot-appear 0.4s ease-out forwards 0.8s, dot-glow 4s ease-in-out infinite 2.8s; }
+.wave-dot--3 { animation: dot-appear 0.4s ease-out forwards 1.3s, dot-glow 4s ease-in-out infinite 3.1s; }
+.wave-dot--4 { animation: dot-appear 0.4s ease-out forwards 1.8s, dot-glow 4s ease-in-out infinite 3.4s; }
+
+@keyframes dot-glow {
+    0%, 100% { filter: drop-shadow(0 0 0 transparent); }
+    50% { filter: drop-shadow(0 0 8px currentColor); }
+}
+
+/* Timeline items grid */
+.structure__items {
     display: grid;
-    grid-template-columns: 1fr 1.3fr 1fr;
-    gap: 48px;
-    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.structure__features {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+.structure__item {
+    text-align: center;
+    padding: 24px 16px;
 }
 
-.feature { text-align: center; }
-
-.feature__icon {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.structure__item-marker {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
 }
 
-.feature__icon svg {
-    width: 32px;
-    height: 32px;
+.structure__item-marker--green { background: var(--color-green); }
+.structure__item-marker--blue { background: var(--color-blue); }
+.structure__item-marker--orange { background: var(--color-orange); }
+
+.structure__item-month {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
     color: rgba(255, 255, 255, 0.4);
-    stroke-width: 1.5;
+    margin-bottom: 8px;
 }
 
-.feature__title {
+.structure__item-title {
     font-family: var(--font-serif);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     color: var(--color-white);
     margin-bottom: 12px;
 }
 
-.feature__description {
+.structure__item-desc {
     font-family: var(--font-sans);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.5);
-    max-width: 280px;
+    max-width: 240px;
     margin: 0 auto;
 }
 
-/* Growth Rings Illustration */
-.structure__visual {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.rings-svg {
-    width: 100%;
-    height: 100%;
-    max-width: 380px;
-}
-
-.ring {
-    fill: none;
-    stroke-linecap: round;
-}
-
-.ring--foundation {
-    stroke: var(--color-green);
-    stroke-width: 1;
-    opacity: 0.7;
-}
-
-.ring--foundation-fill {
-    fill: var(--color-green);
-    opacity: 0.15;
-}
-
-.ring--labs {
-    stroke: var(--color-blue);
-    stroke-width: 0.75;
-    opacity: 0.5;
-}
-
-.ring--bio {
-    stroke: var(--color-orange);
-    stroke-width: 0.75;
-    opacity: 0.4;
-}
-
-.coaching-dot {
-    fill: var(--color-white);
-    opacity: 0.6;
-}
-
-.radial-line {
-    stroke: rgba(255, 255, 255, 0.06);
-    stroke-width: 0.5;
-}
-
-.ring--foundation {
-    animation: ring-pulse 8s ease-in-out infinite;
-    transform-origin: center;
-}
-
-.ring--labs:nth-of-type(1) { animation: ring-pulse 8s ease-in-out infinite 0.5s; transform-origin: center; }
-.ring--labs:nth-of-type(2) { animation: ring-pulse 8s ease-in-out infinite 1s; transform-origin: center; }
-.ring--labs:nth-of-type(3) { animation: ring-pulse 8s ease-in-out infinite 1.5s; transform-origin: center; }
-
-.ring--bio:nth-of-type(1) { animation: ring-pulse 8s ease-in-out infinite 2s; transform-origin: center; }
-.ring--bio:nth-of-type(2) { animation: ring-pulse 8s ease-in-out infinite 2.5s; transform-origin: center; }
-.ring--bio:nth-of-type(3) { animation: ring-pulse 8s ease-in-out infinite 3s; transform-origin: center; }
-
-@keyframes ring-pulse {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.015); }
-}
-
-.coaching-dot {
-    animation: dot-pulse 6s ease-in-out infinite;
-}
-
-.coaching-dot:nth-child(1) { animation-delay: 0s; }
-.coaching-dot:nth-child(2) { animation-delay: 0.5s; }
-.coaching-dot:nth-child(3) { animation-delay: 1s; }
-.coaching-dot:nth-child(4) { animation-delay: 1.5s; }
-.coaching-dot:nth-child(5) { animation-delay: 2s; }
-.coaching-dot:nth-child(6) { animation-delay: 2.5s; }
-.coaching-dot:nth-child(7) { animation-delay: 3s; }
-.coaching-dot:nth-child(8) { animation-delay: 3.5s; }
-
-@keyframes dot-pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.9; }
-}
-
-.ring-label {
-    font-family: var(--font-sans);
-    font-size: 9px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.ring-label--green { fill: var(--color-green); opacity: 0.8; }
-.ring-label--blue { fill: var(--color-blue); opacity: 0.7; }
-.ring-label--orange { fill: var(--color-orange); opacity: 0.7; }
-.ring-label--white { fill: rgba(255, 255, 255, 0.5); }
-
 /* Structure Responsive */
 @media (max-width: 1000px) {
-    .structure__grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
+    .structure__items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
-    .structure__visual {
-        max-width: 320px;
-        margin: 0 auto;
-    }
-    .structure__features {
-        flex-direction: row;
-        justify-content: center;
-        gap: 48px;
+    .structure__wave svg {
+        max-height: 120px;
     }
 }
 
 @media (max-width: 700px) {
     .structure { padding: 100px 24px; }
     .structure__headline { font-size: 40px; }
-    .structure__features {
-        flex-direction: column;
-        gap: 48px;
+    .structure__items {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .structure__wave {
+        display: none;
+    }
+    .structure__item {
+        text-align: left;
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        gap: 0 16px;
+    }
+    .structure__item-marker {
+        grid-row: span 2;
+        margin: 4px 0 0;
+    }
+    .structure__item-month {
+        margin-bottom: 4px;
+    }
+    .structure__item-title {
+        margin-bottom: 8px;
+    }
+    .structure__item-desc {
+        grid-column: 2;
+        max-width: none;
     }
 }
 
