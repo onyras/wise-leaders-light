@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Leaders Fellowship</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav class="nav">
+        <a href="/" class="nav__logo">WL</a>
+        <div class="nav__links">
+            <a href="#overview" class="nav__link">Fellowship</a>
+            <a href="#pillars" class="nav__link">Approach</a>
+            <a href="#" class="nav__link">About</a>
+        </div>
+        <a href="#" class="nav__cta">Apply Now</a>
+    </nav>
+
+    <!-- ==========================================
+         SECTION 1: HERO
+         ========================================== -->
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__label">
+                <span class="hero__label-dot"></span>
+                <span class="hero__label-text">For founder CEOs who have outgrown standard advice</span>
+            </div>
+            <h1 class="hero__headline">
+                A community that actually changes how you <em>lead</em>.
+            </h1>
+            <p class="hero__body">
+                Retreats in silence. Stress measured to the biomarker. Coaching that goes deep. Peers who tell you the truth.
+            </p>
+            <div class="hero__ctas">
+                <a href="#" class="hero__cta">Apply to Join</a>
+                <div class="refer-wrapper">
+                    <a href="#" class="hero__cta hero__cta--secondary" id="referBtn">Refer a CEO</a>
+                    <div class="refer-popup" id="referPopup">
+                        <button class="refer-popup__close" id="referClose">&times;</button>
+                        <form class="refer-popup__form" id="referForm">
+                            <div class="refer-popup__field">
+                                <label for="referProfile">Social Media Profile</label>
+                                <input type="text" id="referProfile" placeholder="LinkedIn, Twitter, etc.">
+                            </div>
+                            <div class="refer-popup__field">
+                                <label for="referWhy">Why would they benefit?</label>
+                                <textarea id="referWhy" rows="3" placeholder="What makes them a good fit..."></textarea>
+                            </div>
+                            <div class="refer-popup__field">
+                                <label for="referName">Your Name</label>
+                                <input type="text" id="referName" placeholder="Your full name">
+                            </div>
+                            <button type="submit" class="refer-popup__submit">Submit Referral</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero__visual">
+            <div class="radar-container">
+                <div class="radar-glow"></div>
+                <svg class="radar-svg" viewBox="0 0 600 600" id="radarSvg">
+                    <circle class="radar-grid" cx="300" cy="300" r="70"/>
+                    <circle class="radar-grid" cx="300" cy="300" r="140"/>
+                    <circle class="radar-grid" cx="300" cy="300" r="210"/>
+                    <g id="axes"></g>
+                    <g id="areas"></g>
+                    <g id="points"></g>
+                    <g id="labels"></g>
+                </svg>
+                <div class="radar-center">
+                    <div class="radar-score" id="radarScore">0</div>
+                    <div class="radar-score-label">Body Reserve</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: STATS BENTO
+         ========================================== -->
+    <section class="stats">
+        <div class="stats__container">
+            <div class="stat-card">
+                <div class="stat__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <div class="stat__content">
+                    <div class="stat__number">350<span>+</span></div>
+                    <div class="stat__label">Health markers measured</div>
+                    <div class="stat__sublabel">via Be-Sapiens diagnostics</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                    </svg>
+                </div>
+                <div class="stat__content">
+                    <div class="stat__number">30<span>%</span></div>
+                    <div class="stat__label">Less negative self-talk</div>
+                    <div class="stat__sublabel">reported by alumni</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="stat__content">
+                    <div class="stat__number">40<span>%</span></div>
+                    <div class="stat__label">Perceived as better leaders</div>
+                    <div class="stat__sublabel">by their teams</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: LOGO CLOUD
+         ========================================== -->
+    <section class="logos">
+        <div class="logos__container">
+            <p class="logos__headline">Trusted by leaders building what matters</p>
+            <div class="logos__grid">
+                <div class="logo-item"><span>Mojo</span></div>
+                <div class="logo-item"><span>SirPlus</span></div>
+                <div class="logo-item"><span>Amorelie</span></div>
+                <div class="logo-item"><span>LiveEO</span></div>
+                <div class="logo-item"><span>Yuri</span></div>
+                <div class="logo-item"><span>Beat81</span></div>
+                <div class="logo-item"><span>Klang Games</span></div>
+                <div class="logo-item"><span>PSL</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: FELLOWSHIP JOURNEY (Animated Pathway)
+         ========================================== -->
+    <section class="journey" id="journey">
+        <div class="journey__header">
+            <p class="journey__tagline">Your Year at a Glance</p>
+            <h2 class="journey__headline">One year. Ongoing <em>growth</em>.</h2>
+            <p class="journey__subheadline">A rhythm of retreats, coaching, and community that compounds year after year.</p>
+        </div>
+
+        <div class="pathways" id="pathways">
+            
+            <!-- Phase Labels Above -->
+            <div class="phase-labels">
+                <div class="phase-label phase-label--green">
+                    <span class="phase-label__badge">January</span>
+                    <h3 class="phase-label__title">Silent Retreat</h3>
+                    <p class="phase-label__meta">5 days · Schloss Elmau</p>
+                </div>
+                <div class="phase-label phase-label--blue">
+                    <span class="phase-label__badge">Year-round</span>
+                    <h3 class="phase-label__title">Peer Pods + Expert Labs</h3>
+                    <p class="phase-label__meta">Monthly coaching · Bi-monthly sessions</p>
+                </div>
+                <div class="phase-label phase-label--orange">
+                    <span class="phase-label__badge">September</span>
+                    <h3 class="phase-label__title">Performance Retreat</h3>
+                    <p class="phase-label__meta">3 days · All members</p>
+                </div>
+            </div>
+
+            <!-- SVG Timeline -->
+            <div class="pathways__svg-container">
+                <svg class="pathways__svg" viewBox="0 0 1400 300" preserveAspectRatio="xMidYMid meet">
+                    
+                    <!-- Background path (full line, subtle) -->
+                    <path class="pathway pathway--bg" 
+                          d="M 60,150 
+                             C 100,150 120,80 180,80
+                             S 280,150 340,150
+                             S 420,220 500,180
+                             S 580,100 660,120
+                             S 740,180 820,160
+                             S 900,100 980,120
+                             S 1060,180 1140,150
+                             S 1220,80 1280,100
+                             S 1340,150 1380,150"/>
+
+                    <!-- Phase I: Green segment -->
+                    <path class="pathway pathway--green pathway--animated" 
+                          d="M 60,150 
+                             C 100,150 120,80 180,80
+                             S 280,150 340,150"/>
+
+                    <!-- Phase II: Blue segment -->
+                    <path class="pathway pathway--blue pathway--animated" 
+                          d="M 340,150
+                             S 420,220 500,180
+                             S 580,100 660,120
+                             S 740,180 820,160
+                             S 900,100 980,120
+                             S 1060,180 1140,150"/>
+
+                    <!-- Phase III: Orange segment -->
+                    <path class="pathway pathway--orange pathway--animated" 
+                          d="M 1140,150
+                             S 1220,80 1280,100
+                             S 1340,150 1380,150"/>
+
+                    <!-- ==========================================
+                         NODES
+                         ========================================== -->
+                    
+                    <!-- Start Node -->
+                    <circle class="node node--filled node--green" cx="60" cy="150" r="10" data-delay="1"/>
+                    <circle class="node-pulse node-pulse--green" cx="60" cy="150" r="12" data-delay="1"/>
+
+                    <!-- Phase I nodes -->
+                    <circle class="node node--green" cx="180" cy="80" r="7" data-delay="2"/>
+                    <text class="activity-label" x="180" y="55" text-anchor="middle" data-delay="2">Silence</text>
+                    
+                    <circle class="node node--green" cx="280" cy="115" r="6" data-delay="3"/>
+                    <text class="activity-label" x="280" y="95" text-anchor="middle" data-delay="3">Labs</text>
+
+                    <!-- Transition node -->
+                    <circle class="node node--green" cx="340" cy="150" r="8" data-delay="3"/>
+
+                    <!-- Phase II nodes (monthly) -->
+                    <circle class="node node--blue" cx="500" cy="180" r="6" data-delay="4"/>
+                    <text class="activity-label" x="500" y="210" text-anchor="middle" data-delay="4">Zen</text>
+
+                    <circle class="node node--blue" cx="660" cy="120" r="6" data-delay="5"/>
+                    <text class="activity-label" x="660" y="100" text-anchor="middle" data-delay="5">Conversations</text>
+
+                    <circle class="node node--blue" cx="820" cy="160" r="6" data-delay="6"/>
+                    <text class="activity-label" x="820" y="190" text-anchor="middle" data-delay="6">Relationships</text>
+
+                    <circle class="node node--blue" cx="980" cy="120" r="6" data-delay="7"/>
+                    <text class="activity-label" x="980" y="100" text-anchor="middle" data-delay="7">Resilience</text>
+
+                    <!-- Transition node -->
+                    <circle class="node node--blue" cx="1140" cy="150" r="8" data-delay="8"/>
+
+                    <!-- Phase III nodes -->
+                    <circle class="node node--orange" cx="1280" cy="100" r="7" data-delay="10"/>
+                    <text class="activity-label" x="1280" y="80" text-anchor="middle" data-delay="10">Diagnostics</text>
+
+                    <!-- End Node -->
+                    <circle class="node node--filled node--orange" cx="1380" cy="150" r="10" data-delay="11"/>
+                    <circle class="node-pulse node-pulse--orange" cx="1380" cy="150" r="12" data-delay="11"/>
+
+                </svg>
+            </div>
+
+            <!-- Month Labels Below -->
+            <div class="month-labels">
+                <div class="month-label">AUG<span>Retreat</span></div>
+                <div class="month-label">SEP<span>Lab 1</span></div>
+                <div class="month-label">OCT<span>Lab 2</span></div>
+                <div class="month-label">NOV<span>Lab 3</span></div>
+                <div class="month-label">DEC<span>Lab 4</span></div>
+                <div class="month-label">JAN<span>Lab 5</span></div>
+                <div class="month-label">FEB<span>Lab 6</span></div>
+                <div class="month-label">MAR<span>Lab 7</span></div>
+                <div class="month-label">APR<span>Retreat</span></div>
+            </div>
+
+        </div>
+
+        <!-- Summary stats -->
+        <div class="journey__summary">
+            <div class="summary-item">
+                <div class="summary-item__number">9</div>
+                <div class="summary-item__label">Months</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-item__number">3</div>
+                <div class="summary-item__label">Phases</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-item__number">7</div>
+                <div class="summary-item__label">Days In-Person</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-item__number">350+</div>
+                <div class="summary-item__label">Biomarkers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: MANIFESTO (LIGHT)
+         ========================================== -->
+    <section class="manifesto" id="manifesto">
+        <div class="manifesto__container">
+            <p class="manifesto__text">
+                <span class="manifesto__line">You don't need <span class="rotating-word" id="rotatingWord"><span class="rotating-word__placeholder">more advice</span><span class="rotating-word__item active" data-index="0">more advice</span><span class="rotating-word__item" data-index="1">more hustle</span><span class="rotating-word__item" data-index="2">more input</span></span></span>
+                <span class="manifesto__line manifesto__answer">You need <em>space to think</em></span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: VIDEO (LIGHT)
+         ========================================== -->
+    <section class="video-section">
+        <div class="video-section__container">
+            <div class="video-section__content">
+                <div class="video-section__label">
+                    <span class="video-section__label-dot"></span>
+                    <span class="video-section__label-text">The Foundation Retreat</span>
+                </div>
+                <h2 class="video-section__headline">What participants say about the <em>retreat</em></h2>
+                <p class="video-section__body">No phones. No agenda. Just silence, nature, and the space to finally hear yourself think. Participants call it the most transformative week of their leadership journey.</p>
+                <blockquote class="video-section__quote">
+                    "I came expecting a leadership workshop. I left understanding myself."
+                    <span class="video-section__quote-author">— 2024 Retreat Participant</span>
+                </blockquote>
+            </div>
+            <div class="video-section__visual">
+                <div class="video-section__player" id="videoPlayer">
+                    <img class="video-section__thumbnail" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80" alt="Nature retreat">
+                    <div class="video-section__play">
+                        <div class="video-section__play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: TESTIMONIALS (LIGHT)
+         ========================================== -->
+    <section class="testimonials">
+        <div class="testimonials__container">
+            <div class="testimonials__header">
+                <h2 class="testimonials__headline">What <em>alumni</em> say</h2>
+                <p class="testimonials__subheadline">Real words from CEOs who've been through the fellowship</p>
+            </div>
+
+            <div class="testimonials__grid">
+                <div class="testimonials__column">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">The fellowship is the most transformative experience in leadership development I've ever had.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Francescu Santoni</span>
+                                <span class="testimonial-card__role">CEO Mojo, YC W19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">This program has changed my mind. It will change yours.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Raffael Fellmer</span>
+                                <span class="testimonial-card__role">CEO SirPlus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">I never knew I have so much kindness in me.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Claire Midwood</span>
+                                <span class="testimonial-card__role">former CEO Amorelie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__column">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">Nikolas teaches the science of meditation in a way that immediately is applicable to help me be a better leader.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Franziska Schmitt</span>
+                                <span class="testimonial-card__role">CEO Humanize</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">An amazing program to reflect how I am showing up as a leader.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Oddur Magnusson</span>
+                                <span class="testimonial-card__role">Founder Klang Games</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: PILLARS (LIGHT)
+         ========================================== -->
+    <section class="pillars" id="pillars">
+        <div class="pillars__container">
+            <div class="pillars__label">
+                <span class="pillars__label-dot"></span>
+                <span class="pillars__label-text">Our Approach</span>
+            </div>
+            <h2 class="pillars__headline">We create reflection spaces for people in responsibility.</h2>
+
+            <div class="pillars__grid">
+                <div class="pillar-card">
+                    <div class="pillar-card__illustration">
+                        <svg viewBox="0 0 200 150" fill="none">
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-center" cx="100" cy="75" r="6"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-card__content">
+                        <h3 class="pillar-card__title">Stillness</h3>
+                        <p class="pillar-card__description">Space to step back from the noise.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-card__illustration">
+                        <svg viewBox="0 0 200 150" fill="none">
+                            <rect class="bar-base" x="35" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="55" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="75" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="95" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="115" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="135" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="155" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-fill bar-fill-1" x="35" y="95" width="12" height="25" rx="3"/>
+                            <rect class="bar-fill bar-fill-2" x="55" y="80" width="12" height="40" rx="3"/>
+                            <rect class="bar-fill bar-fill-3" x="75" y="90" width="12" height="30" rx="3"/>
+                            <rect class="bar-fill bar-fill-4" x="95" y="70" width="12" height="50" rx="3"/>
+                            <rect class="bar-fill bar-fill-5" x="115" y="85" width="12" height="35" rx="3"/>
+                            <rect class="bar-fill bar-fill-6" x="135" y="75" width="12" height="45" rx="3"/>
+                            <rect class="bar-fill bar-fill-7" x="155" y="100" width="12" height="20" rx="3"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-card__content">
+                        <h3 class="pillar-card__title">Science</h3>
+                        <p class="pillar-card__description">Diagnostics that make the invisible visible.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-card__illustration">
+                        <svg viewBox="0 0 200 150" fill="none">
+                            <line class="ally-connection" x1="70" y1="65" x2="130" y2="65"/>
+                            <line class="ally-connection" x1="70" y1="65" x2="100" y2="110"/>
+                            <line class="ally-connection" x1="130" y1="65" x2="100" y2="110"/>
+                            <circle class="ally-circle ally-circle-1" cx="70" cy="65" r="35" style="transform-origin: 70px 65px;"/>
+                            <circle class="ally-circle ally-circle-2" cx="130" cy="65" r="35" style="transform-origin: 130px 65px;"/>
+                            <circle class="ally-circle ally-circle-3" cx="100" cy="110" r="35" style="transform-origin: 100px 110px;"/>
+                            <circle class="ally-dot ally-dot-1" cx="70" cy="65" r="6"/>
+                            <circle class="ally-dot ally-dot-2" cx="130" cy="65" r="6"/>
+                            <circle class="ally-dot ally-dot-3" cx="100" cy="110" r="6"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-card__content">
+                        <h3 class="pillar-card__title">Allies</h3>
+                        <p class="pillar-card__description">Peers who understand what you carry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: STRUCTURE (DARK)
+         ========================================== -->
+    <section class="structure">
+        <div class="structure__container">
+            <div class="structure__header">
+                <div class="structure__label">
+                    <span class="structure__label-dot"></span>
+                    <span class="structure__label-text">Structure</span>
+                </div>
+                <h2 class="structure__headline">How <em>your year</em> unfolds</h2>
+                <p class="structure__subheadline">The fellowship moves through a rhythm of retreats, coaching, and learning. Momentum that compounds year after year.</p>
+            </div>
+
+            <div class="structure__grid">
+                <div class="structure__features">
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Silent Retreat</h3>
+                        <p class="feature__description">Five days in January at Schloss Elmau. A silent retreat where new and returning members find clarity together.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Expert Sessions</h3>
+                        <p class="feature__description">Six bi-monthly virtual sessions with world-class experts on strategy, culture, resilience, and leadership presence.</p>
+                    </div>
+                </div>
+
+                <div class="structure__visual">
+                    <svg class="rings-svg" viewBox="0 0 300 300" fill="none">
+                        <!-- Subtle radial lines -->
+                        <line class="radial-line" x1="150" y1="150" x2="150" y2="20"/>
+                        <line class="radial-line" x1="150" y1="150" x2="150" y2="280"/>
+                        <line class="radial-line" x1="150" y1="150" x2="20" y2="150"/>
+                        <line class="radial-line" x1="150" y1="150" x2="280" y2="150"/>
+                        <line class="radial-line" x1="150" y1="150" x2="58" y2="58"/>
+                        <line class="radial-line" x1="150" y1="150" x2="242" y2="242"/>
+                        <line class="radial-line" x1="150" y1="150" x2="242" y2="58"/>
+                        <line class="radial-line" x1="150" y1="150" x2="58" y2="242"/>
+                        
+                        <!-- Outer rings - Biofeedback (Orange) -->
+                        <circle class="ring ring--bio" cx="150" cy="150" r="130" style="transform-origin: 150px 150px;"/>
+                        <circle class="ring ring--bio" cx="150" cy="150" r="118" style="transform-origin: 150px 150px;"/>
+                        <circle class="ring ring--bio" cx="150" cy="150" r="106" style="transform-origin: 150px 150px;"/>
+                        
+                        <!-- Middle rings - Labs (Blue) -->
+                        <circle class="ring ring--labs" cx="150" cy="150" r="88" style="transform-origin: 150px 150px;"/>
+                        <circle class="ring ring--labs" cx="150" cy="150" r="76" style="transform-origin: 150px 150px;"/>
+                        <circle class="ring ring--labs" cx="150" cy="150" r="64" style="transform-origin: 150px 150px;"/>
+                        
+                        <!-- Inner rings - Foundation (Green) -->
+                        <circle class="ring--foundation-fill" cx="150" cy="150" r="46"/>
+                        <circle class="ring ring--foundation" cx="150" cy="150" r="46" style="transform-origin: 150px 150px;"/>
+                        <circle class="ring ring--foundation" cx="150" cy="150" r="34" style="transform-origin: 150px 150px;"/>
+                        <circle class="ring ring--foundation" cx="150" cy="150" r="22" style="transform-origin: 150px 150px;"/>
+                        
+                        <!-- Center dot -->
+                        <circle fill="var(--color-green)" cx="150" cy="150" r="6" opacity="0.8"/>
+                        
+                        <!-- Coaching dots - scattered across rings -->
+                        <circle class="coaching-dot" cx="150" cy="98" r="2.5"/>
+                        <circle class="coaching-dot" cx="186" cy="114" r="2.5"/>
+                        <circle class="coaching-dot" cx="202" cy="150" r="2.5"/>
+                        <circle class="coaching-dot" cx="186" cy="186" r="2.5"/>
+                        <circle class="coaching-dot" cx="150" cy="202" r="2.5"/>
+                        <circle class="coaching-dot" cx="114" cy="186" r="2.5"/>
+                        <circle class="coaching-dot" cx="98" cy="150" r="2.5"/>
+                        <circle class="coaching-dot" cx="114" cy="114" r="2.5"/>
+                        
+                        <!-- Labels -->
+                        <text class="ring-label ring-label--green" x="150" y="155" text-anchor="middle">Foundation</text>
+                        <text class="ring-label ring-label--blue" x="150" y="56" text-anchor="middle">Labs</text>
+                        <text class="ring-label ring-label--orange" x="150" y="28" text-anchor="middle">Biofeedback</text>
+                        <text class="ring-label ring-label--white" x="220" y="155" text-anchor="start">Coaching</text>
+                    </svg>
+                </div>
+
+                <div class="structure__features">
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">One-on-one Coaching</h3>
+                        <p class="feature__description">Monthly sessions with an executive coach who knows your story and your struggles.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Biofeedback Seminar</h3>
+                        <p class="feature__description">A final gathering in form of a two day biofeedback & performance retreat in spring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 10: PHASE I - FOUNDATION RETREAT
+         ========================================== -->
+    <section class="phase-hero phase-hero--1" id="phase-1">
+        <div class="phase-hero__bg">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80" alt="Forest retreat">
+        </div>
+
+        <div class="phase-hero__arc">
+            <div class="arc">
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Arrive</h4>
+                        <p class="arc__desc">Release the role. Land in the body.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Map</h4>
+                        <p class="arc__desc">See your patterns with ruthless clarity.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Silence</h4>
+                        <p class="arc__desc">Strip away the noise. Meet yourself.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Train</h4>
+                        <p class="arc__desc">Build a mind that works for you, not against you.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Return</h4>
+                        <p class="arc__desc">Leave with practices, commitments, and a Wisdom Council for life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phase-hero__container">
+            <div class="phase-hero__content">
+                <div class="phase-hero__label">
+                    <span class="phase-hero__label-dot"></span>
+                    <span class="phase-hero__label-text">Phase I</span>
+                </div>
+
+                <p class="phase-hero__date">August 5–10, 2026</p>
+
+                <h2 class="phase-hero__headline">Foundation <em>Retreat</em></h2>
+
+                <p class="phase-hero__description">Five days of extended silence, daily leadership labs, and deep peer connection. This is where the real work begins.</p>
+
+                <div class="phase-hero__features">
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Deep Stillness</span>
+                            <span class="phase-hero__feature-desc">No words, devices, or distraction</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Leadership Labs</span>
+                            <span class="phase-hero__feature-desc">Purpose, patterns, and presence</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Peer Connection</span>
+                            <span class="phase-hero__feature-desc">Your Wisdom Council forms here</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Lasting Practices</span>
+                            <span class="phase-hero__feature-desc">Skills you keep for life</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="phase-hero__cta">
+                    Apply now
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 11: PHASE II - EXPERT LABS
+         ========================================== -->
+    <section class="phase-hero phase-hero--2" id="phase-2">
+        <div class="phase-hero__bg">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=80" alt="Modern workspace">
+        </div>
+
+        <div class="phase-hero__arc">
+            <div class="arc">
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Strategy</h4>
+                        <p class="arc__desc">Rethink how you allocate time and energy.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Culture</h4>
+                        <p class="arc__desc">Build systems that scale your values.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Relationships</h4>
+                        <p class="arc__desc">Navigate the dynamics that matter most.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Resilience</h4>
+                        <p class="arc__desc">Develop capacity for sustained excellence.</p>
+                    </div>
+                </div>
+                <div class="arc__line"></div>
+                <div class="arc__item">
+                    <div class="arc__marker"></div>
+                    <div class="arc__content">
+                        <h4 class="arc__title">Presence</h4>
+                        <p class="arc__desc">Lead from clarity, not reactivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phase-hero__container">
+            <div class="phase-hero__content">
+                <div class="phase-hero__label">
+                    <span class="phase-hero__label-dot"></span>
+                    <span class="phase-hero__label-text">Phase II</span>
+                </div>
+
+                <p class="phase-hero__date">September 2026 – March 2027</p>
+
+                <h2 class="phase-hero__headline">Expert <em>Labs</em></h2>
+
+                <p class="phase-hero__description">Seven months of monthly deep-dives with world-class faculty. Strategy, culture, relationships, and the inner game of leadership.</p>
+
+                <div class="phase-hero__features">
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">7 Monthly Sessions</span>
+                            <span class="phase-hero__feature-desc">Virtual, 3 hours each</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">World-Class Faculty</span>
+                            <span class="phase-hero__feature-desc">Experts in their domain</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Peer Integration</span>
+                            <span class="phase-hero__feature-desc">Apply learnings with your council</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Practical Frameworks</span>
+                            <span class="phase-hero__feature-desc">Tools you use immediately</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="phase-hero__cta">
+                    Apply now
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 12: FACULTY V5
+         ========================================== -->
+    <section class="faculty-v5" id="faculty">
+        <div class="faculty-v5__container">
+            <div class="faculty-v5__header">
+                <div class="faculty-v5__label">
+                    <span class="faculty-v5__label-dot"></span>
+                    <span class="faculty-v5__label-text">New Faculty Every Year</span>
+                </div>
+                <h2 class="faculty-v5__headline">Different experts.<br><em>Every single year.</em></h2>
+                <p class="faculty-v5__subheadline">We curate a fresh lineup of world-class minds for each fellowship. No repeats. Always relevant.</p>
+            </div>
+
+            <div class="faculty-v5__grid">
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Shoukei Matsumoto">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Shoukei Matsumoto</h3>
+                        <p class="expert-card__topic">Zen & the Art of Long-Term Thinking.</p>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Joe Hudson">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Joe Hudson</h3>
+                        <p class="expert-card__topic">Transformational Conversations for High-Trust Cultures.</p>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1559418162-0d309d8d10cc?w=600&q=80" alt="Dr. Michael Korpiun">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Dr. Michael Korpiun</h3>
+                        <p class="expert-card__topic">The 6 Dimensions of Relationships Mastery.</p>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="Hugo Suidman">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Hugo Suidman</h3>
+                        <p class="expert-card__topic">Navigating the Growing Pains of Organisational Growth.</p>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Bernd Kessel">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Bernd Kessel</h3>
+                        <p class="expert-card__topic">Principles for High Performance.</p>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Jana Schmitz">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Jana Schmitz</h3>
+                        <p class="expert-card__topic">Emotional Intelligence for Leadership.</p>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-card__visual">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80" alt="Vanessa Faloye">
+                    </div>
+                    <div class="expert-card__content">
+                        <h3 class="expert-card__name">Vanessa Faloye</h3>
+                        <p class="expert-card__topic">Navigating Difference & Complexity for Leadership.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 13: PHASE III - BIOFEEDBACK RETREAT
+         ========================================== -->
+    <section class="phase-hero phase-hero--3" id="phase-3">
+        <div class="phase-hero__bg">
+            <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1800&q=80" alt="Meditation retreat">
+        </div>
+
+        <div class="phase-hero__container">
+            <div class="phase-hero__content">
+                <div class="phase-hero__label">
+                    <span class="phase-hero__label-dot"></span>
+                    <span class="phase-hero__label-text">Phase III</span>
+                    <span class="phase-hero__date" style="margin-left: 20px; margin-bottom: 0;">April 11-12, 2026</span>
+                </div>
+
+                <h2 class="phase-hero__headline">Biofeedback <em>Retreat</em></h2>
+
+                <p class="phase-hero__description">Work with your individual stress and recovery data, learn practical breath protocols, and build a personal routine that fits your real life as a CEO.</p>
+
+                <div class="phase-hero__features">
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Stress Diagnostics</span>
+                            <span class="phase-hero__feature-desc">250+ biomarkers analyzed</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Breathwork Training</span>
+                            <span class="phase-hero__feature-desc">Rapid state-shift protocols</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Immersive Retreat</span>
+                            <span class="phase-hero__feature-desc">Two days of integration</span>
+                        </div>
+                    </div>
+                    <div class="phase-hero__feature">
+                        <div class="phase-hero__feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                            </svg>
+                        </div>
+                        <div class="phase-hero__feature-text">
+                            <span class="phase-hero__feature-title">Personal Playbook</span>
+                            <span class="phase-hero__feature-desc">Routines for your biology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="phase-hero__cta">
+                    Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="phase-hero__details">
+                <div class="details__section">
+                    <p class="details__label">Dates</p>
+                    <p class="details__value">Saturday 11 to Sunday 12 April 2026</p>
+                </div>
+                <div class="details__section">
+                    <p class="details__label">Coaches</p>
+                    <div class="details__coaches">
+                        <div class="coach">
+                            <div class="coach__avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Jan Philipp Martini">
+                            </div>
+                            <div class="coach__info">
+                                <p class="coach__name">Jan Philipp Martini</p>
+                                <p class="coach__role">Human Performance Scientist</p>
+                            </div>
+                        </div>
+                        <div class="coach">
+                            <div class="coach__avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Peter van Woerkum">
+                            </div>
+                            <div class="coach__info">
+                                <p class="coach__name">Peter van Woerkum</p>
+                                <p class="coach__role">Breathwork & Self-Regulation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 14: DIAGNOSTICS
+         ========================================== -->
+    <section class="diagnostics" id="diagnostics">
+        <div class="diagnostics__bg"></div>
+        <div class="diagnostics__orb diagnostics__orb--1"></div>
+        <div class="diagnostics__orb diagnostics__orb--2"></div>
+        <div class="diagnostics__orb diagnostics__orb--3"></div>
+
+        <div class="diagnostics__container">
+            <div class="diagnostics__header">
+                <div class="diagnostics__label">
+                    <span class="diagnostics__label-dot"></span>
+                    <span class="diagnostics__label-text">For founder CEOs who have outgrown standard advice</span>
+                </div>
+                <h2 class="diagnostics__headline">Stress-proof your leadership with <em>body data.</em></h2>
+                <p class="diagnostics__description">In partnership with Be-Sapiens, every Fellow receives comprehensive stress diagnostics and a personalized resilience plan. This isn't generic wellness advice. It's a scientific assessment of how your body handles the demands of leadership.</p>
+            </div>
+
+            <div class="diagnostics__grid">
+                <div class="diag-card">
+                    <div class="diag-card__visual">
+                        <span class="diag-card__badge">Retreat</span>
+                        <div class="diag-card__illustration">
+                            <div class="illustration-biomarker">
+                                <div class="biomarker-ring biomarker-ring--1"></div>
+                                <div class="biomarker-ring biomarker-ring--2"></div>
+                                <div class="biomarker-ring biomarker-ring--3"></div>
+                                <div class="biomarker-dot biomarker-dot--1"></div>
+                                <div class="biomarker-dot biomarker-dot--2"></div>
+                                <div class="biomarker-dot biomarker-dot--3"></div>
+                                <div class="biomarker-dot biomarker-dot--4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diag-card__content">
+                        <div class="diag-card__meta">
+                            <span class="diag-card__meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                                Jan 2026
+                            </span>
+                        </div>
+                        <h3 class="diag-card__title">Diagnostics</h3>
+                        <ul class="diag-card__list">
+                            <li>Hair Stress Hormone Profile (Cortisol, Cortisone, DHEA + 7 biomarkers)</li>
+                            <li>Saliva Cortisol Profile (morning ramp-up, evening wind-down)</li>
+                            <li>Recovery Analytics with ECG Monitor (one workweek)</li>
+                            <li>Scientifically Validated Self-Assessment</li>
+                        </ul>
+                        <a href="#" class="diag-card__link">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="diag-card">
+                    <div class="diag-card__visual">
+                        <span class="diag-card__badge">Labs</span>
+                        <div class="diag-card__illustration">
+                            <div class="illustration-report">
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diag-card__content">
+                        <div class="diag-card__meta">
+                            <span class="diag-card__meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                                Year-round, 2026
+                            </span>
+                        </div>
+                        <h3 class="diag-card__title">Your Report</h3>
+                        <ul class="diag-card__list">
+                            <li>Body Reserve Index (your score out of 100)</li>
+                            <li>Stress Age vs. Actual Age</li>
+                            <li>System-by-system breakdown (Hormonal, Nervous, Immune, GI)</li>
+                            <li>Protective Factors and Stress Drivers</li>
+                            <li>Thought Patterns analysis</li>
+                        </ul>
+                        <a href="#" class="diag-card__link">
+                            Explore topics
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="diag-card">
+                    <div class="diag-card__visual">
+                        <span class="diag-card__badge">Retreat</span>
+                        <div class="diag-card__illustration">
+                            <div class="illustration-action">
+                                <div class="action-lines">
+                                    <div class="action-line"></div>
+                                    <div class="action-line"></div>
+                                    <div class="action-line"></div>
+                                    <div class="action-line"></div>
+                                </div>
+                                <div class="action-circle">
+                                    <svg class="action-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diag-card__content">
+                        <div class="diag-card__meta">
+                            <span class="diag-card__meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                                Apr 11-12, 2026
+                            </span>
+                        </div>
+                        <h3 class="diag-card__title">Your Action Plan</h3>
+                        <ul class="diag-card__list">
+                            <li>Personalized focus areas</li>
+                            <li>Specific daily protocols</li>
+                            <li>Nutrition recommendations</li>
+                            <li>Movement prescriptions</li>
+                            <li>Recovery routines</li>
+                            <li>Expert debrief session</li>
+                        </ul>
+                        <a href="#" class="diag-card__link">
+                            See details
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 15: COMPARISON
+         ========================================== -->
+    <section class="comparison" id="comparison">
+        <div class="comparison__container">
+            <div class="comparison__header">
+                <div class="comparison__label">
+                    <span class="comparison__label-dot"></span>
+                    <span class="comparison__label-text">The New Way vs. The Old Way</span>
+                </div>
+                <h2 class="comparison__headline">There's a better way to <em>develop as a leader.</em></h2>
+                <p class="comparison__subheadline">The old way stops working. Here's what actually changes you.</p>
+            </div>
+
+            <div class="comparison__table">
+                <div class="comparison__table-header">
+                    <div class="comparison__table-header-spacer"></div>
+                    <div class="comparison__column-header comparison__column-header--wlf">
+                        <svg class="comparison__column-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.038 4.36 9.75 5.25 9.75h.904" />
+                        </svg>
+                        <h3 class="comparison__column-title">Wise Leaders Fellowship</h3>
+                        <p class="comparison__column-subtitle">Here's what actually changes you</p>
+                    </div>
+                    <div class="comparison__column-header comparison__column-header--other">
+                        <svg class="comparison__column-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                        </svg>
+                        <h3 class="comparison__column-title">CEO Peer Groups</h3>
+                        <p class="comparison__column-subtitle">The old way stops working</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Investment">
+                    <div class="comparison__row-label">Investment</div>
+                    <div class="comparison__cell comparison__cell--wlf">
+                        <p class="comparison__cell-title">€15,000/year.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other">
+                        <p class="comparison__cell-title">€15,000–€30,000/year.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Time-to-clarity">
+                    <div class="comparison__row-label">Time-to-clarity</div>
+                    <div class="comparison__cell comparison__cell--wlf">
+                        <p class="comparison__cell-title">Immediate</p>
+                        <p class="comparison__cell-text">A 5-day silent retreat cuts through years of noise in three days.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other">
+                        <p class="comparison__cell-title">Months, maybe never</p>
+                        <p class="comparison__cell-text">Surface-level sharing. The same stories on repeat.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Focus">
+                    <div class="comparison__row-label">Focus</div>
+                    <div class="comparison__cell comparison__cell--wlf">
+                        <p class="comparison__cell-title">Inner development</p>
+                        <p class="comparison__cell-text">Your stress patterns, your blind spots, how you show up under pressure.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other">
+                        <p class="comparison__cell-title">Tactical problems</p>
+                        <p class="comparison__cell-text">Useful, but doesn't address why the same problems keep showing up.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Transformation">
+                    <div class="comparison__row-label">Transformation</div>
+                    <div class="comparison__cell comparison__cell--wlf">
+                        <p class="comparison__cell-title">Measured</p>
+                        <p class="comparison__cell-text">Diagnostics before and after. Contemplative practices. New operating patterns you can see.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other">
+                        <p class="comparison__cell-title">Rare</p>
+                        <p class="comparison__cell-text">No inner work. No diagnostics. Same ceiling year after year.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Community">
+                    <div class="comparison__row-label">Community</div>
+                    <div class="comparison__cell comparison__cell--wlf">
+                        <p class="comparison__cell-title">Hand-matched</p>
+                        <p class="comparison__cell-text">Curated by experience, industry, personality. Professionally facilitated. Built to last.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other">
+                        <p class="comparison__cell-title">Random matching</p>
+                        <p class="comparison__cell-text">Grouped by geography. Peer-only discussions stay shallow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 16: INVESTMENT
+         ========================================== -->
+    <section class="investment" id="investment">
+        <div class="investment__container">
+            <div class="investment__content">
+                <div class="investment__label">
+                    <span class="investment__label-dot"></span>
+                    <span class="investment__label-text">Investment</span>
+                </div>
+                <h2 class="investment__headline">Investment and <em>practical details</em></h2>
+                <p class="investment__subline">One price. Everything included.</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-card__header">
+                    <div class="pricing-card__header-top">
+                        <h3 class="pricing-card__title">Annual membership</h3>
+                        <div class="pricing-card__price">€15,000</div>
+                    </div>
+                    <p class="pricing-card__subtitle">One year of growth</p>
+                </div>
+
+                <div class="pricing-card__body">
+                    <p class="pricing-card__includes-label">Includes</p>
+                    
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Five-day in-person silent retreat</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Access to biofeedback tools</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Year-round peer community</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Ongoing measurement support</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Six expert sessions</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Monthly executive coaching</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Be-Sapiens stress diagnostics</span>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="pricing-card__feature-text">Three-day performance retreat</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card__divider"></div>
+
+                    <a href="#" class="pricing-card__cta">Apply now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 17: FIT
+         ========================================== -->
+    <section class="fit" id="fit">
+        <div class="fit__container">
+            <div class="fit__header">
+                <p class="fit__label">Fit</p>
+                <h2 class="fit__headline">Is this community right for you?</h2>
+                <p class="fit__subheadline">Be honest about what you need</p>
+            </div>
+
+            <div class="fit__grid">
+                <div class="fit-card">
+                    <svg class="fit-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                    </svg>
+                    <h3 class="fit-card__title">You are a fit if</h3>
+                    <p class="fit-card__subtitle">You lead a real company</p>
+
+                    <ul class="fit-card__criteria">
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">Your company scaled past twenty people and you feel the leadership game changed faster than you did</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--yes">Yes</span>
+                        </li>
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">You are raising a new round, preparing for exit, or navigating a major transition and realize you need to evolve alongside it</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--yes">Yes</span>
+                        </li>
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">Your executive team is not executing at the level you need, or you sense your own leadership might be the constraint</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--yes">Yes</span>
+                        </li>
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">You have tried other approaches (coaching, courses, books, peer groups) but want something more rigorous, connected to real peers, and grounded in evidence</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--yes">Yes</span>
+                        </li>
+                    </ul>
+
+                    <ul class="fit-card__checklist">
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="fit-card__check-text">You can commit to one full year</span>
+                        </li>
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="fit-card__check-text">You're ready to do the hard work</span>
+                        </li>
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            <span class="fit-card__check-text">You're open to honest feedback</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fit-card">
+                    <svg class="fit-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                    </svg>
+                    <h3 class="fit-card__title">You are not a fit if</h3>
+                    <p class="fit-card__subtitle">You're looking for answers</p>
+
+                    <ul class="fit-card__criteria">
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">You want a quick inspirational seminar instead of ongoing practice</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--no">No</span>
+                        </li>
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">You prefer to outsource leadership issues to HR or consultants</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--no">No</span>
+                        </li>
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">You are not willing to bring real situations into the room and be challenged by peers</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--no">No</span>
+                        </li>
+                        <li class="fit-card__criterion">
+                            <span class="fit-card__criterion-text">You are skeptical of measuring your own development or uncomfortable with data about your stress, recovery, and behavioral patterns</span>
+                            <span class="fit-card__criterion-badge fit-card__criterion-badge--no">No</span>
+                        </li>
+                    </ul>
+
+                    <ul class="fit-card__checklist">
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <span class="fit-card__check-text">You can't show up fully</span>
+                        </li>
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <span class="fit-card__check-text">You want to avoid hard work</span>
+                        </li>
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <span class="fit-card__check-text">You're not ready to listen</span>
+                        </li>
+                        <li class="fit-card__check-item">
+                            <svg class="fit-card__check-icon fit-card__check-icon--x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <span class="fit-card__check-text">You're seeking quick fixes</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 18: SELECTION
+         ========================================== -->
+    <section class="selection" id="selection">
+        <div class="selection__container">
+            <div class="selection__content">
+                <div class="selection__label">
+                    <span class="selection__label-dot"></span>
+                    <span class="selection__label-text">Selection</span>
+                </div>
+                <h2 class="selection__headline">Applications for 2026 are <em>open.</em></h2>
+                <div class="selection__ctas">
+                    <a href="#" class="selection__cta">Apply</a>
+                    <div class="refer-wrapper refer-wrapper--dark">
+                        <a href="#" class="selection__cta selection__cta--secondary refer-btn">Refer a CEO</a>
+                        <div class="refer-popup refer-popup--dark">
+                            <button class="refer-popup__close">&times;</button>
+                            <form class="refer-popup__form refer-form">
+                                <div class="refer-popup__field">
+                                    <label for="referProfile2">Social Media Profile</label>
+                                    <input type="text" id="referProfile2" placeholder="LinkedIn, Twitter, etc.">
+                                </div>
+                                <div class="refer-popup__field">
+                                    <label for="referWhy2">Why would they benefit?</label>
+                                    <textarea id="referWhy2" rows="3" placeholder="What makes them a good fit..."></textarea>
+                                </div>
+                                <div class="refer-popup__field">
+                                    <label for="referName2">Your Name</label>
+                                    <input type="text" id="referName2" placeholder="Your full name">
+                                </div>
+                                <button type="submit" class="refer-popup__submit">Submit Referral</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selection__criteria-wrapper">
+                <h3 class="selection__criteria-title">How we choose you</h3>
+                
+                <div class="selection__criteria">
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Leadership impact</h4>
+                            <p class="criterion__text">Evidence you've built something real.</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Clarity of vision</h4>
+                            <p class="criterion__text">You know what you're wrestling with.</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Experience with inner work</h4>
+                            <p class="criterion__text">Meditation, coaching, or self-inquiry.</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Contribution to the circle</h4>
+                            <p class="criterion__text">Show up honestly, hold space for others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RADAR CHART JAVASCRIPT
+         ========================================== -->
+    <script src="scripts.js"></script>
+</body>
+</html>
