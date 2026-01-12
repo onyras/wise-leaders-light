@@ -133,33 +133,100 @@ if (pathways) {
     pathwayObserver.observe(pathways);
 }
 
-// Manifesto rotating words
-const rotatingWord = document.getElementById('rotatingWord');
-if (rotatingWord) {
-    const items = rotatingWord.querySelectorAll('.rotating-word__item');
-    let currentIndex = 0;
-    const totalItems = items.length;
+// Manifesto typing words
+const typingWord = document.getElementById('typingWord');
+if (typingWord) {
+    const words = ['more advice', 'more hustle', 'more input'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
 
-    function rotateWord() {
-        const currentItem = items[currentIndex];
-        const nextIndex = (currentIndex + 1) % totalItems;
-        const nextItem = items[nextIndex];
+    function typeWord() {
+        const currentWord = words[wordIndex];
 
-        currentItem.classList.add('exiting');
-        currentItem.classList.remove('active');
-        nextItem.classList.add('entering');
+        if (isPaused) return;
+
+        if (!isDeleting) {
+            // Typing
+            typingWord.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === currentWord.length) {
+                // Finished typing, pause then delete
+                isPaused = true;
+                setTimeout(() => {
+                    isPaused = false;
+                    isDeleting = true;
+                    typeWord();
+                }, 1500);
+                return;
+            }
+            setTimeout(typeWord, 80 + Math.random() * 40);
+        } else {
+            // Deleting
+            typingWord.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                // Finished deleting, move to next word
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(typeWord, 300);
+                return;
+            }
+            setTimeout(typeWord, 40);
+        }
+    }
+
+    // Start typing when section is in view
+    const manifestoSection = document.getElementById('manifesto');
+    if (manifestoSection) {
+        const manifestoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(typeWord, 500);
+                    manifestoObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        manifestoObserver.observe(manifestoSection);
+    }
+}
+
+// Pillars Option D: Rotating word animation
+const pillarsRotating = document.getElementById('pillarsRotating');
+if (pillarsRotating) {
+    const pillarWords = [
+        { text: 'Stillness', class: 'pillars__rotating--stillness' },
+        { text: 'Science', class: 'pillars__rotating--science' },
+        { text: 'Allies', class: 'pillars__rotating--allies' }
+    ];
+    let pillarIndex = 0;
+
+    function rotatePillarWord() {
+        pillarsRotating.style.opacity = '0';
 
         setTimeout(() => {
-            currentItem.classList.remove('exiting');
-            nextItem.classList.remove('entering');
-            nextItem.classList.add('active');
-            currentIndex = nextIndex;
+            // Remove all color classes
+            pillarWords.forEach(w => pillarsRotating.classList.remove(w.class));
+
+            // Move to next word
+            pillarIndex = (pillarIndex + 1) % pillarWords.length;
+            const current = pillarWords[pillarIndex];
+
+            // Update text and add color class
+            pillarsRotating.textContent = current.text;
+            pillarsRotating.classList.add(current.class);
+            pillarsRotating.style.opacity = '1';
         }, 400);
     }
 
-    setTimeout(() => {
-        setInterval(rotateWord, 2500);
-    }, 2000);
+    // Set initial color
+    pillarsRotating.classList.add('pillars__rotating--stillness');
+
+    // Start rotating
+    setInterval(rotatePillarWord, 2500);
 }
 
 // Refer a CEO popups (supports multiple instances)
@@ -276,4 +343,262 @@ if (statCounts.length > 0) {
     }, { threshold: 0.5 });
 
     statCounts.forEach(stat => statsObserver.observe(stat));
+}
+
+// Fit Quiz
+const fitQuiz = document.querySelector('.fit-quiz');
+if (fitQuiz) {
+    const introScreen = fitQuiz.querySelector('.fit-quiz__intro');
+    const startBtn = document.getElementById('quizStartBtn');
+    const questions = fitQuiz.querySelectorAll('.fit-quiz__question');
+    const progressBar = fitQuiz.querySelector('.fit-quiz__progress-bar');
+    const progressContainer = fitQuiz.querySelector('.fit-quiz__progress');
+    const currentDisplay = fitQuiz.querySelector('.fit-quiz__current');
+    const progressText = fitQuiz.querySelector('.fit-quiz__progress-text');
+    const questionsContainer = fitQuiz.querySelector('.fit-quiz__questions');
+    const resultFit = fitQuiz.querySelector('.fit-quiz__result--fit');
+    const resultMaybe = fitQuiz.querySelector('.fit-quiz__result--maybe');
+    const resultNot = fitQuiz.querySelector('.fit-quiz__result--not');
+    const restartBtns = fitQuiz.querySelectorAll('.fit-quiz__restart');
+
+    let currentQuestion = 0;
+    let answers = [];
+    let scaleData = { employees: 0, revenue: 0 };
+    const totalQuestions = questions.length;
+
+    // Handle start button click
+    if (startBtn) {
+        startBtn.addEventListener('click', () => {
+            introScreen.classList.remove('fit-quiz__intro--active');
+            progressContainer.style.display = 'block';
+            progressText.style.display = 'block';
+            questions[0].classList.add('fit-quiz__question--active');
+        });
+    }
+
+    // Handle option clicks
+    fitQuiz.querySelectorAll('.fit-quiz__option').forEach(option => {
+        option.addEventListener('click', () => {
+            const value = option.dataset.value;
+            answers[currentQuestion] = value;
+
+            // Visual feedback
+            const parent = option.closest('.fit-quiz__options');
+            parent.querySelectorAll('.fit-quiz__option').forEach(opt => {
+                opt.classList.remove('fit-quiz__option--selected');
+            });
+            option.classList.add('fit-quiz__option--selected');
+
+            // Move to next question after brief delay
+            setTimeout(() => {
+                if (currentQuestion < totalQuestions - 1) {
+                    currentQuestion++;
+                    showQuestion(currentQuestion);
+                } else {
+                    showResult();
+                }
+            }, 300);
+        });
+    });
+
+    // Handle question 2 (scale inputs) continue button
+    const scaleNextBtn = document.getElementById('quizScaleNext');
+    if (scaleNextBtn) {
+        scaleNextBtn.addEventListener('click', () => {
+            const employeesInput = document.getElementById('quizEmployees');
+            const revenueInput = document.getElementById('quizRevenue');
+
+            const employees = parseInt(employeesInput.value) || 0;
+            const revenue = parseInt(revenueInput.value) || 0;
+
+            // Store the data
+            scaleData.employees = employees;
+            scaleData.revenue = revenue;
+
+            // Determine if they meet the threshold (20+ employees AND €2M+ revenue)
+            const meetsThreshold = employees >= 20 && revenue >= 2000000;
+            answers[currentQuestion] = meetsThreshold ? 'yes' : 'no';
+
+            // Move to next question
+            if (currentQuestion < totalQuestions - 1) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                showResult();
+            }
+        });
+    }
+
+    function showQuestion(index) {
+        questions.forEach((q, i) => {
+            q.classList.remove('fit-quiz__question--active');
+            if (i === index) {
+                q.classList.add('fit-quiz__question--active');
+            }
+        });
+
+        // Update progress
+        const progress = ((index) / totalQuestions) * 100;
+        progressBar.style.width = progress + '%';
+        currentDisplay.textContent = index + 1;
+    }
+
+    function showResult() {
+        // Hide questions and progress
+        questionsContainer.style.display = 'none';
+        progressBar.parentElement.style.display = 'none';
+        progressText.style.display = 'none';
+
+        // Count "good fit" answers based on each question's data-good-answer attribute
+        let fitScore = 0;
+        questions.forEach((q, i) => {
+            const goodAnswer = q.dataset.goodAnswer;
+            // For input questions, we already stored 'yes' or 'no' based on threshold
+            if (goodAnswer === 'input') {
+                // Check if they meet threshold (stored as 'yes' or 'no')
+                if (answers[i] === 'yes') fitScore++;
+            } else if (answers[i] === goodAnswer) {
+                fitScore++;
+            }
+        });
+
+        // Show appropriate result (out of 6 questions)
+        if (fitScore >= 5) {
+            resultFit.style.display = 'block';
+        } else if (fitScore >= 3) {
+            resultMaybe.style.display = 'block';
+        } else {
+            resultNot.style.display = 'block';
+        }
+    }
+
+    // Restart quiz
+    restartBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Reset state
+            currentQuestion = 0;
+            answers = [];
+            scaleData = { employees: 0, revenue: 0 };
+
+            // Hide results
+            resultFit.style.display = 'none';
+            resultMaybe.style.display = 'none';
+            resultNot.style.display = 'none';
+
+            // Hide progress and questions, show intro
+            questionsContainer.style.display = 'block';
+            progressContainer.style.display = 'none';
+            progressText.style.display = 'none';
+            introScreen.classList.add('fit-quiz__intro--active');
+
+            // Reset progress
+            progressBar.style.width = '0%';
+            currentDisplay.textContent = '1';
+
+            // Clear selections
+            fitQuiz.querySelectorAll('.fit-quiz__option').forEach(opt => {
+                opt.classList.remove('fit-quiz__option--selected');
+            });
+
+            // Clear input fields
+            const employeesInput = document.getElementById('quizEmployees');
+            const revenueInput = document.getElementById('quizRevenue');
+            if (employeesInput) employeesInput.value = '';
+            if (revenueInput) revenueInput.value = '';
+
+            // Hide all questions
+            questions.forEach(q => q.classList.remove('fit-quiz__question--active'));
+        });
+    });
+}
+
+// ==========================================
+// OPTION C: Typewriter Effect
+// ==========================================
+const typewriterEl = document.getElementById('typewriter');
+if (typewriterEl) {
+    const textEl = typewriterEl.querySelector('.typewriter__text');
+    const sequences = [
+        { text: 'You need more advice', pause: 1500, deleteCount: 11 },
+        { text: 'more hustle', pause: 1200, deleteCount: 11 },
+        { text: 'more input', pause: 1200, deleteCount: 10 },
+        { text: '', pause: 500, deleteCount: 9 }, // delete "You need "
+        { text: 'You need ', pause: 0, deleteCount: 0 },
+        { text: '<em>space to think</em>', pause: 0, deleteCount: 0, final: true }
+    ];
+
+    let seqIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let currentText = '';
+
+    function typewriterStep() {
+        const seq = sequences[seqIndex];
+
+        if (seq.final) {
+            textEl.innerHTML = currentText + seq.text;
+            return;
+        }
+
+        if (!isDeleting) {
+            // Typing
+            currentText += seq.text[charIndex];
+            textEl.innerHTML = currentText;
+            charIndex++;
+
+            if (charIndex >= seq.text.length) {
+                // Done typing this sequence
+                setTimeout(() => {
+                    isDeleting = true;
+                    typewriterStep();
+                }, seq.pause);
+                return;
+            }
+            setTimeout(typewriterStep, 50 + Math.random() * 50);
+        } else {
+            // Deleting
+            if (seq.deleteCount > 0) {
+                currentText = currentText.slice(0, -1);
+                textEl.innerHTML = currentText;
+                seq.deleteCount--;
+                setTimeout(typewriterStep, 30);
+            } else {
+                // Move to next sequence
+                isDeleting = false;
+                charIndex = 0;
+                seqIndex++;
+                if (seqIndex < sequences.length) {
+                    setTimeout(typewriterStep, 200);
+                }
+            }
+        }
+    }
+
+    // Start when in view
+    const typewriterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(typewriterStep, 500);
+                typewriterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    typewriterObserver.observe(typewriterEl);
+}
+
+// ==========================================
+// OPTION D & G: Scroll-triggered animations
+// ==========================================
+const manifestoSections = document.querySelectorAll('.manifesto--noise, .manifesto--fog');
+if (manifestoSections.length > 0) {
+    const manifestoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                manifestoObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    manifestoSections.forEach(section => manifestoObserver.observe(section));
 }

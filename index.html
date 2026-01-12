@@ -24,6 +24,7 @@
          SECTION 1: HERO
          ========================================== -->
     <section class="hero">
+        <div class="hero__inner">
         <div class="hero__content">
             <div class="hero__label">
                 <span class="hero__label-dot"></span>
@@ -79,6 +80,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- ==========================================
@@ -130,6 +132,63 @@
     </section>
 
     <!-- ==========================================
+         SECTION 2B: STATS WITH IMAGES
+         ========================================== -->
+    <section class="stats stats--images">
+        <div class="stats__container">
+            <div class="stat-card stat-card--image">
+                <div class="stat-card__bg">
+                    <img src="images/image.png" alt="">
+                </div>
+                <div class="stat__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <div class="stat__content">
+                    <div class="stat__number"><span class="stat__count" data-target="350">0</span><span>+</span></div>
+                    <div class="stat__label">Health markers measured</div>
+                    <div class="stat__sublabel">via Be-Sapiens diagnostics</div>
+                </div>
+            </div>
+            <div class="stat-card stat-card--image">
+                <div class="stat-card__bg">
+                    <img src="images/image copy.png" alt="">
+                </div>
+                <div class="stat__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                    </svg>
+                </div>
+                <div class="stat__content">
+                    <div class="stat__number"><span class="stat__count" data-target="30">0</span><span>%</span></div>
+                    <div class="stat__label">Less negative self-talk</div>
+                    <div class="stat__sublabel">reported by alumni</div>
+                </div>
+            </div>
+            <div class="stat-card stat-card--image">
+                <div class="stat-card__bg">
+                    <img src="images/image copy 2.png" alt="">
+                </div>
+                <div class="stat__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="stat__content">
+                    <div class="stat__number"><span class="stat__count" data-target="40">0</span><span>%</span></div>
+                    <div class="stat__label">Perceived as better leaders</div>
+                    <div class="stat__sublabel">by their teams</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
          SECTION 3: LOGO CLOUD
          ========================================== -->
     <section class="logos">
@@ -153,9 +212,13 @@
          ========================================== -->
     <section class="journey" id="journey">
         <div class="journey__header">
-            <p class="journey__tagline">Your Year at a Glance</p>
+            <div class="journey__label">
+                <span class="journey__label-dot"></span>
+                <span class="journey__label-text">Your Year at a Glance</span>
+            </div>
             <h2 class="journey__headline">One year. Ongoing <em>growth</em>.</h2>
             <p class="journey__subheadline">A rhythm of retreats, coaching, and community that compounds year after year.</p>
+
         </div>
 
         <div class="pathways" id="pathways">
@@ -163,138 +226,89 @@
             <!-- Phase Labels Above -->
             <div class="phase-labels">
                 <div class="phase-label phase-label--green">
-                    <span class="phase-label__badge">January</span>
+                    <span class="phase-label__badge">August</span>
                     <h3 class="phase-label__title">Silent Retreat</h3>
-                    <p class="phase-label__meta">5 days · Schloss Elmau</p>
+                    <p class="phase-label__meta">5 days</p>
                 </div>
                 <div class="phase-label phase-label--blue">
-                    <span class="phase-label__badge">Year-round</span>
-                    <h3 class="phase-label__title">Peer Pods + Expert Labs</h3>
-                    <p class="phase-label__meta">Monthly coaching · Bi-monthly sessions</p>
+                    <span class="phase-label__badge">Every 2 months</span>
+                    <h3 class="phase-label__title">Expert Sessions</h3>
+                    <p class="phase-label__meta">90-min virtual deep dives</p>
+                </div>
+                <div class="phase-label phase-label--blue">
+                    <span class="phase-label__badge">Monthly</span>
+                    <h3 class="phase-label__title">Peer Pods</h3>
+                    <p class="phase-label__meta">2-hour sessions with 4-5 CEOs</p>
                 </div>
                 <div class="phase-label phase-label--orange">
-                    <span class="phase-label__badge">September</span>
+                    <span class="phase-label__badge">April</span>
                     <h3 class="phase-label__title">Performance Retreat</h3>
-                    <p class="phase-label__meta">3 days · All members</p>
+                    <p class="phase-label__meta">3 days</p>
                 </div>
             </div>
 
-            <!-- SVG Timeline -->
-            <div class="pathways__svg-container">
-                <svg class="pathways__svg" viewBox="0 0 1400 300" preserveAspectRatio="xMidYMid meet">
-                    
-                    <!-- Background path (full line, subtle) -->
-                    <path class="pathway pathway--bg" 
-                          d="M 60,150 
-                             C 100,150 120,80 180,80
-                             S 280,150 340,150
-                             S 420,220 500,180
-                             S 580,100 660,120
-                             S 740,180 820,160
-                             S 900,100 980,120
-                             S 1060,180 1140,150
-                             S 1220,80 1280,100
-                             S 1340,150 1380,150"/>
+            <!-- CSS-based Geometric Timeline (same flex layout as labels) -->
+            <div class="timeline-cubes">
+                <!-- Cube 1: Silent Retreat (GREEN) - Dense -->
+                <div class="cube-container cube-container--green">
+                    <div class="cube cube--dense">
+                        <div class="cube__layer cube__layer--1"></div>
+                        <div class="cube__layer cube__layer--2"></div>
+                        <div class="cube__layer cube__layer--3"></div>
+                        <div class="cube__layer cube__layer--4"></div>
+                        <div class="cube__layer cube__layer--5"></div>
+                        <div class="cube__layer cube__layer--front"></div>
+                    </div>
+                    <div class="cube__bar"></div>
+                </div>
 
-                    <!-- Phase I: Green segment -->
-                    <path class="pathway pathway--green pathway--animated" 
-                          d="M 60,150 
-                             C 100,150 120,80 180,80
-                             S 280,150 340,150"/>
+                <!-- Cube 2: Expert Sessions (BLUE) - Medium -->
+                <div class="cube-container cube-container--blue">
+                    <div class="cube cube--medium">
+                        <div class="cube__layer cube__layer--1"></div>
+                        <div class="cube__layer cube__layer--2"></div>
+                        <div class="cube__layer cube__layer--3"></div>
+                        <div class="cube__layer cube__layer--front"></div>
+                    </div>
+                    <div class="cube__bar"></div>
+                </div>
 
-                    <!-- Phase II: Blue segment -->
-                    <path class="pathway pathway--blue pathway--animated" 
-                          d="M 340,150
-                             S 420,220 500,180
-                             S 580,100 660,120
-                             S 740,180 820,160
-                             S 900,100 980,120
-                             S 1060,180 1140,150"/>
+                <!-- Cube 3: Peer Pods (BLUE) - Light -->
+                <div class="cube-container cube-container--blue-light">
+                    <div class="cube cube--light">
+                        <div class="cube__layer cube__layer--1"></div>
+                        <div class="cube__layer cube__layer--2"></div>
+                        <div class="cube__layer cube__layer--front"></div>
+                    </div>
+                    <div class="cube__bar"></div>
+                </div>
 
-                    <!-- Phase III: Orange segment -->
-                    <path class="pathway pathway--orange pathway--animated" 
-                          d="M 1140,150
-                             S 1220,80 1280,100
-                             S 1340,150 1380,150"/>
-
-                    <!-- ==========================================
-                         NODES
-                         ========================================== -->
-                    
-                    <!-- Start Node -->
-                    <circle class="node node--filled node--green" cx="60" cy="150" r="10" data-delay="1"/>
-                    <circle class="node-pulse node-pulse--green" cx="60" cy="150" r="12" data-delay="1"/>
-
-                    <!-- Phase I nodes -->
-                    <circle class="node node--green" cx="180" cy="80" r="7" data-delay="2"/>
-                    <text class="activity-label" x="180" y="55" text-anchor="middle" data-delay="2">Silence</text>
-                    
-                    <circle class="node node--green" cx="280" cy="115" r="6" data-delay="3"/>
-                    <text class="activity-label" x="280" y="95" text-anchor="middle" data-delay="3">Labs</text>
-
-                    <!-- Transition node -->
-                    <circle class="node node--green" cx="340" cy="150" r="8" data-delay="3"/>
-
-                    <!-- Phase II nodes (monthly) -->
-                    <circle class="node node--blue" cx="500" cy="180" r="6" data-delay="4"/>
-                    <text class="activity-label" x="500" y="210" text-anchor="middle" data-delay="4">Zen</text>
-
-                    <circle class="node node--blue" cx="660" cy="120" r="6" data-delay="5"/>
-                    <text class="activity-label" x="660" y="100" text-anchor="middle" data-delay="5">Conversations</text>
-
-                    <circle class="node node--blue" cx="820" cy="160" r="6" data-delay="6"/>
-                    <text class="activity-label" x="820" y="190" text-anchor="middle" data-delay="6">Relationships</text>
-
-                    <circle class="node node--blue" cx="980" cy="120" r="6" data-delay="7"/>
-                    <text class="activity-label" x="980" y="100" text-anchor="middle" data-delay="7">Resilience</text>
-
-                    <!-- Transition node -->
-                    <circle class="node node--blue" cx="1140" cy="150" r="8" data-delay="8"/>
-
-                    <!-- Phase III nodes -->
-                    <circle class="node node--orange" cx="1280" cy="100" r="7" data-delay="10"/>
-                    <text class="activity-label" x="1280" y="80" text-anchor="middle" data-delay="10">Diagnostics</text>
-
-                    <!-- End Node -->
-                    <circle class="node node--filled node--orange" cx="1380" cy="150" r="10" data-delay="11"/>
-                    <circle class="node-pulse node-pulse--orange" cx="1380" cy="150" r="12" data-delay="11"/>
-
-                </svg>
+                <!-- Cube 4: Performance Retreat (ORANGE) - Open -->
+                <div class="cube-container cube-container--orange">
+                    <div class="cube cube--open">
+                        <div class="cube__layer cube__layer--1"></div>
+                        <div class="cube__layer cube__layer--front"></div>
+                    </div>
+                    <div class="cube__bar"></div>
+                </div>
             </div>
 
-            <!-- Month Labels Below -->
-            <div class="month-labels">
-                <div class="month-label">AUG<span>Retreat</span></div>
-                <div class="month-label">SEP<span>Lab 1</span></div>
-                <div class="month-label">OCT<span>Lab 2</span></div>
-                <div class="month-label">NOV<span>Lab 3</span></div>
-                <div class="month-label">DEC<span>Lab 4</span></div>
-                <div class="month-label">JAN<span>Lab 5</span></div>
-                <div class="month-label">FEB<span>Lab 6</span></div>
-                <div class="month-label">MAR<span>Lab 7</span></div>
-                <div class="month-label">APR<span>Retreat</span></div>
+            <!-- Summary stats -->
+            <div class="journey__summary">
+                <div class="summary-item">
+                    <div class="summary-item__number">2</div>
+                    <div class="summary-item__label">Retreats</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item__number">350+</div>
+                    <div class="summary-item__label">Biomarkers</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item__number">8-12</div>
+                    <div class="summary-item__label">CEOs per Cohort</div>
+                </div>
             </div>
 
-        </div>
-
-        <!-- Summary stats -->
-        <div class="journey__summary">
-            <div class="summary-item">
-                <div class="summary-item__number">9</div>
-                <div class="summary-item__label">Months</div>
-            </div>
-            <div class="summary-item">
-                <div class="summary-item__number">3</div>
-                <div class="summary-item__label">Phases</div>
-            </div>
-            <div class="summary-item">
-                <div class="summary-item__number">7</div>
-                <div class="summary-item__label">Days In-Person</div>
-            </div>
-            <div class="summary-item">
-                <div class="summary-item__number">350+</div>
-                <div class="summary-item__label">Biomarkers</div>
-            </div>
         </div>
     </section>
 
@@ -304,7 +318,7 @@
     <section class="manifesto" id="manifesto">
         <div class="manifesto__container">
             <p class="manifesto__text">
-                <span class="manifesto__line">You don't need <span class="rotating-word" id="rotatingWord"><span class="rotating-word__placeholder">more advice</span><span class="rotating-word__item active" data-index="0">more advice</span><span class="rotating-word__item" data-index="1">more hustle</span><span class="rotating-word__item" data-index="2">more input</span></span></span>
+                <span class="manifesto__line">You don't need <span class="typing-word" id="typingWord"></span><span class="typing-cursor">|</span></span>
                 <span class="manifesto__line manifesto__answer">You need <em>space to think</em></span>
             </p>
         </div>
@@ -348,6 +362,10 @@
     <section class="testimonials">
         <div class="testimonials__container">
             <div class="testimonials__header">
+                <div class="testimonials__label">
+                    <span class="testimonials__label-dot"></span>
+                    <span class="testimonials__label-text">Testimonials</span>
+                </div>
                 <h2 class="testimonials__headline">What <em>alumni</em> say</h2>
                 <p class="testimonials__subheadline">Real words from CEOs who've been through the fellowship</p>
             </div>
@@ -534,6 +552,67 @@
     </section>
 
     <!-- ==========================================
+         PILLARS V4 OPTION J: LARGE GRAPHIC FOCUS
+         Giant graphic area, small text below
+         ========================================== -->
+    <section class="pillars pillars--v4-j" id="pillars-v4-j">
+        <div class="pillars__container">
+            <div class="pillars__label">
+                <span class="pillars__label-dot"></span>
+                <span class="pillars__label-text">Option J: Large Graphic Focus</span>
+            </div>
+            <h2 class="pillars__headline">We create reflection spaces for people in responsibility.</h2>
+
+            <div class="pillars__cards-v4">
+                <div class="pillar-large">
+                    <div class="pillar-large__graphic pillar-large__graphic--green">
+                        <svg viewBox="0 0 200 200" fill="none">
+                            <circle class="ripple-circle" cx="100" cy="100" r="15" stroke="#A6BEA4" stroke-width="2" fill="none" opacity="0"/>
+                            <circle class="ripple-circle" cx="100" cy="100" r="15" stroke="#A6BEA4" stroke-width="2" fill="none" opacity="0" style="animation-delay: 0.6s"/>
+                            <circle class="ripple-circle" cx="100" cy="100" r="15" stroke="#A6BEA4" stroke-width="2" fill="none" opacity="0" style="animation-delay: 1.2s"/>
+                            <circle class="ripple-circle" cx="100" cy="100" r="15" stroke="#A6BEA4" stroke-width="2" fill="none" opacity="0" style="animation-delay: 1.8s"/>
+                            <circle class="ripple-center" cx="100" cy="100" r="12" fill="#A6BEA4"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-large__text">
+                        <h3 class="pillar-large__title pillar-large__title--green">Stillness</h3>
+                        <p class="pillar-large__desc">Space to step back from the noise.</p>
+                    </div>
+                </div>
+                <div class="pillar-large">
+                    <div class="pillar-large__graphic pillar-large__graphic--blue">
+                        <svg viewBox="0 0 200 200" fill="none">
+                            <rect class="bar-animate" x="40" y="120" width="24" height="50" rx="4" fill="#7FABC8"/>
+                            <rect class="bar-animate" x="88" y="80" width="24" height="90" rx="4" fill="#7FABC8" style="animation-delay: 0.15s"/>
+                            <rect class="bar-animate" x="136" y="40" width="24" height="130" rx="4" fill="#7FABC8" style="animation-delay: 0.3s"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-large__text">
+                        <h3 class="pillar-large__title pillar-large__title--blue">Science</h3>
+                        <p class="pillar-large__desc">Diagnostics that make the invisible visible.</p>
+                    </div>
+                </div>
+                <div class="pillar-large">
+                    <div class="pillar-large__graphic pillar-large__graphic--orange">
+                        <svg viewBox="0 0 200 200" fill="none">
+                            <line class="connect-line" x1="55" y1="70" x2="100" y2="140" stroke="#E08F6A" stroke-width="2.5"/>
+                            <line class="connect-line" x1="100" y1="140" x2="145" y2="70" stroke="#E08F6A" stroke-width="2.5" style="animation-delay: 0.2s"/>
+                            <line class="connect-line" x1="55" y1="70" x2="145" y2="70" stroke="#E08F6A" stroke-width="2.5" style="animation-delay: 0.4s"/>
+                            <circle class="node-dot" cx="55" cy="70" r="14" fill="#E08F6A"/>
+                            <circle class="node-dot" cx="145" cy="70" r="14" fill="#E08F6A" style="animation-delay: 0.15s"/>
+                            <circle class="node-dot" cx="100" cy="140" r="14" fill="#E08F6A" style="animation-delay: 0.3s"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-large__text">
+                        <h3 class="pillar-large__title pillar-large__title--orange">Allies</h3>
+                        <p class="pillar-large__desc">Peers who understand what you carry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
          SECTION 9: STRUCTURE (DARK)
          ========================================== -->
     <section class="structure">
@@ -571,27 +650,27 @@
                 <div class="structure__items">
                     <div class="structure__item">
                         <div class="structure__item-marker structure__item-marker--green"></div>
-                        <span class="structure__item-month">January</span>
+                        <span class="structure__item-month">August</span>
                         <h3 class="structure__item-title">Silent Retreat</h3>
-                        <p class="structure__item-desc">Five days at Schloss Elmau. A silent retreat where new and returning members find clarity together.</p>
+                        <p class="structure__item-desc">Five days of silence. No phones, no agendas, no small talk. This is where you reconnect with yourself and begin from stillness.</p>
                     </div>
                     <div class="structure__item">
                         <div class="structure__item-marker structure__item-marker--blue"></div>
-                        <span class="structure__item-month">Ongoing</span>
+                        <span class="structure__item-month">Every 2 Months</span>
                         <h3 class="structure__item-title">Expert Sessions</h3>
-                        <p class="structure__item-desc">Six bi-monthly virtual sessions with world-class experts on strategy, culture, and leadership.</p>
+                        <p class="structure__item-desc">90-minute virtual deep dives with leading thinkers on decision-making, difficult conversations, and the neuroscience of leadership.</p>
                     </div>
                     <div class="structure__item">
                         <div class="structure__item-marker structure__item-marker--blue"></div>
                         <span class="structure__item-month">Monthly</span>
-                        <h3 class="structure__item-title">1:1 Coaching</h3>
-                        <p class="structure__item-desc">Monthly sessions with an executive coach who knows your story and your struggles.</p>
+                        <h3 class="structure__item-title">Peer Pods</h3>
+                        <p class="structure__item-desc">Two-hour sessions with 4-5 CEOs, facilitated by a seasoned coach. Same group all year. Real relationships. Real accountability.</p>
                     </div>
                     <div class="structure__item">
                         <div class="structure__item-marker structure__item-marker--orange"></div>
-                        <span class="structure__item-month">September</span>
-                        <h3 class="structure__item-title">Biofeedback Retreat</h3>
-                        <p class="structure__item-desc">A two-day biofeedback and performance retreat to close the year.</p>
+                        <span class="structure__item-month">April</span>
+                        <h3 class="structure__item-title">Performance Retreat</h3>
+                        <p class="structure__item-desc">Three days focused on your body: stress patterns, energy optimization, and sustainable habits. Includes full biomarker diagnostics.</p>
                     </div>
                 </div>
             </div>
@@ -657,7 +736,7 @@
                     <span class="phase-hero__label-text">Phase I</span>
                 </div>
 
-                <p class="phase-hero__date">August 5–10, 2026</p>
+                <p class="phase-hero__date">August 2026</p>
 
                 <h2 class="phase-hero__headline">Foundation <em>Retreat</em></h2>
 
@@ -779,7 +858,7 @@
                     <span class="phase-hero__label-text">Phase II</span>
                 </div>
 
-                <p class="phase-hero__date">September 2026 – March 2027</p>
+                <p class="phase-hero__date">Year-round</p>
 
                 <h2 class="phase-hero__headline">Expert <em>Labs</em></h2>
 
@@ -937,10 +1016,10 @@
                 <div class="phase-hero__label">
                     <span class="phase-hero__label-dot"></span>
                     <span class="phase-hero__label-text">Phase III</span>
-                    <span class="phase-hero__date" style="margin-left: 20px; margin-bottom: 0;">April 11-12, 2026</span>
+                    <span class="phase-hero__date" style="margin-left: 20px; margin-bottom: 0;">April 2027</span>
                 </div>
 
-                <h2 class="phase-hero__headline">Biofeedback <em>Retreat</em></h2>
+                <h2 class="phase-hero__headline">Performance <em>Retreat</em></h2>
 
                 <p class="phase-hero__description">Work with your individual stress and recovery data, learn practical breath protocols, and build a personal routine that fits your real life as a CEO.</p>
 
@@ -1002,7 +1081,7 @@
             <div class="phase-hero__details">
                 <div class="details__section">
                     <p class="details__label">Dates</p>
-                    <p class="details__value">Saturday 11 to Sunday 12 April 2026</p>
+                    <p class="details__value">April 2027</p>
                 </div>
                 <div class="details__section">
                     <p class="details__label">Coaches</p>
@@ -1072,7 +1151,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                                 </svg>
-                                Jan 2026
+                                Pre-retreat
                             </span>
                         </div>
                         <h3 class="diag-card__title">Diagnostics</h3>
@@ -1111,7 +1190,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                                 </svg>
-                                Year-round, 2026
+                                Year-round
                             </span>
                         </div>
                         <h3 class="diag-card__title">Your Report</h3>
@@ -1156,7 +1235,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                                 </svg>
-                                Apr 11-12, 2026
+                                April
                             </span>
                         </div>
                         <h3 class="diag-card__title">Your Action Plan</h3>
@@ -1227,7 +1306,7 @@
                     <div class="comparison__row-label">Time-to-clarity</div>
                     <div class="comparison__cell comparison__cell--wlf">
                         <p class="comparison__cell-title">Immediate</p>
-                        <p class="comparison__cell-text">A 5-day silent retreat cuts through years of noise in three days.</p>
+                        <p class="comparison__cell-text">A 5-day silent retreat cuts through years of noise.</p>
                     </div>
                     <div class="comparison__cell comparison__cell--other">
                         <p class="comparison__cell-title">Months, maybe never</p>
@@ -1335,7 +1414,7 @@
                             <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
-                            <span class="pricing-card__feature-text">Monthly executive coaching</span>
+                            <span class="pricing-card__feature-text">Monthly Peer Pod sessions</span>
                         </div>
                         <div class="pricing-card__feature">
                             <svg class="pricing-card__feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -1365,7 +1444,10 @@
     <section class="fit" id="fit">
         <div class="fit__container">
             <div class="fit__header">
-                <p class="fit__label">Fit</p>
+                <div class="fit__label">
+                    <span class="fit__label-dot"></span>
+                    <span class="fit__label-text">Fit</span>
+                </div>
                 <h2 class="fit__headline">Is this community right for you?</h2>
                 <p class="fit__subheadline">Be honest about what you need</p>
             </div>
@@ -1477,6 +1559,168 @@
     </section>
 
     <!-- ==========================================
+         SECTION 17B: FIT QUIZ (Alternative Version)
+         ========================================== -->
+    <section class="fit-quiz" id="fit-quiz">
+        <div class="fit-quiz__container">
+            <div class="fit-quiz__header">
+                <div class="fit-quiz__label">
+                    <span class="fit-quiz__label-dot"></span>
+                    <span class="fit-quiz__label-text">Quick Check</span>
+                </div>
+                <h2 class="fit-quiz__headline">Is this right for you?</h2>
+                <p class="fit-quiz__subheadline">6 questions to find out</p>
+            </div>
+
+            <div class="fit-quiz__card">
+                <!-- Intro screen -->
+                <div class="fit-quiz__intro fit-quiz__intro--active">
+                    <div class="fit-quiz__intro-graphic">
+                        <svg viewBox="0 0 120 120" fill="none">
+                            <!-- Two overlapping circles representing mutual fit -->
+                            <circle cx="45" cy="60" r="35" stroke="var(--color-blue)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                            <circle cx="75" cy="60" r="35" stroke="var(--color-green)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                            <!-- Intersection highlight -->
+                            <path d="M60 32.5 A35 35 0 0 1 60 87.5 A35 35 0 0 1 60 32.5" fill="var(--color-blue)" opacity="0.15"/>
+                            <!-- Center dot -->
+                            <circle cx="60" cy="60" r="4" fill="var(--color-blue)"/>
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__intro-headline">Let's see if we're right for each other</h3>
+                    <button class="fit-quiz__start-btn" id="quizStartBtn">Begin</button>
+                </div>
+
+                <!-- Progress bar (hidden initially) -->
+                <div class="fit-quiz__progress" style="display: none;">
+                    <div class="fit-quiz__progress-bar" style="width: 0%"></div>
+                </div>
+                <div class="fit-quiz__progress-text" style="display: none;">Question <span class="fit-quiz__current">1</span> of 6</div>
+
+                <!-- Questions -->
+                <!-- data-good-answer indicates which answer means "good fit" for scoring -->
+                <div class="fit-quiz__questions">
+                    <!-- Question 1: YES = good fit - Qualifying: Are they a real CEO? -->
+                    <div class="fit-quiz__question" data-question="1" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Do you carry ultimate responsibility for the direction of your company?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, the buck stops with me</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, I report to others</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2: Input - Scale: employees and revenue -->
+                    <div class="fit-quiz__question" data-question="2" data-good-answer="input">
+                        <h3 class="fit-quiz__question-text">Tell us about your company</h3>
+                        <div class="fit-quiz__inputs">
+                            <div class="fit-quiz__input-group">
+                                <label class="fit-quiz__input-label">Number of employees</label>
+                                <input type="number" class="fit-quiz__input" id="quizEmployees" placeholder="e.g. 50" min="1">
+                            </div>
+                            <div class="fit-quiz__input-group">
+                                <label class="fit-quiz__input-label">Annual revenue (€)</label>
+                                <input type="number" class="fit-quiz__input" id="quizRevenue" placeholder="e.g. 5000000" min="0">
+                            </div>
+                            <button class="fit-quiz__next-btn" id="quizScaleNext">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 3: YES = good fit - Isolation: Do they feel alone at the top? -->
+                    <div class="fit-quiz__question" data-question="3" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Do you often feel alone with decisions that you can't fully discuss with your team or board?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, more than I'd like to admit</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, I have people I can talk to</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 4: YES = good fit - Transition: Are they at a pivotal moment? -->
+                    <div class="fit-quiz__question" data-question="4" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Are you navigating a significant transition—scaling, fundraising, preparing for exit, or feeling stuck?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, I'm at a pivotal point</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, things are stable</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 5: NO = good fit - Outgrown: Have they tried other things? -->
+                    <div class="fit-quiz__question" data-question="5" data-good-answer="no">
+                        <h3 class="fit-quiz__question-text">Do peer groups like YPO or EO still give you what you need?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, they work well for me</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, I need something deeper</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 6: YES = good fit - Commitment: Can they commit fully? -->
+                    <div class="fit-quiz__question" data-question="6" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Can you commit to a full year of hard work, honest feedback, and real change?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, I'm ready for that</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, not right now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="fit-quiz__result fit-quiz__result--fit" style="display: none;">
+                    <div class="fit-quiz__result-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__result-title">You might be a great fit.</h3>
+                    <p class="fit-quiz__result-text">Based on your answers, the Wise Leaders Fellowship could be exactly what you need at this stage of your leadership journey.</p>
+                    <a href="#" class="fit-quiz__result-cta">Apply Now</a>
+                    <button class="fit-quiz__restart">Take the quiz again</button>
+                </div>
+
+                <div class="fit-quiz__result fit-quiz__result--maybe" style="display: none;">
+                    <div class="fit-quiz__result-icon fit-quiz__result-icon--maybe">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__result-title">Let's explore further.</h3>
+                    <p class="fit-quiz__result-text">You have some of the qualities we look for. The best way to know if this is right for you is a conversation.</p>
+                    <a href="#" class="fit-quiz__result-cta fit-quiz__result-cta--secondary">Book a Call</a>
+                    <button class="fit-quiz__restart">Take the quiz again</button>
+                </div>
+
+                <div class="fit-quiz__result fit-quiz__result--not" style="display: none;">
+                    <div class="fit-quiz__result-icon fit-quiz__result-icon--not">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__result-title">This might not be the right time.</h3>
+                    <p class="fit-quiz__result-text">Based on your answers, the Fellowship may not be the best fit right now. That's okay—the right moment will come.</p>
+                    <button class="fit-quiz__restart">Take the quiz again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
          SECTION 18: SELECTION
          ========================================== -->
     <section class="selection" id="selection">
@@ -1486,7 +1730,7 @@
                     <span class="selection__label-dot"></span>
                     <span class="selection__label-text">Selection</span>
                 </div>
-                <h2 class="selection__headline">Applications for 2026 are <em>open.</em></h2>
+                <h2 class="selection__headline">Applications for 2027 are <em>open.</em></h2>
                 <div class="selection__ctas">
                     <a href="#" class="selection__cta">Apply</a>
                     <div class="refer-wrapper refer-wrapper--dark">
