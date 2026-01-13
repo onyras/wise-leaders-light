@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLF - Unused Sections</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Unused sections page styles */
+        .unused-header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .unused-header h1 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .unused-header p {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        .unused-divider {
+            background: linear-gradient(90deg, var(--color-green), var(--color-blue), var(--color-orange));
+            padding: 20px 40px;
+            margin: 0;
+        }
+        .unused-divider h2 {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin: 0;
+        }
+        .unused-divider p {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+            margin: 4px 0 0 0;
+        }
+
+        /* ========================================
+           TESTIMONIALS ALT 6: Hero with Large Photo
+           ======================================== */
+        .testimonials-alt6 {
+            background: var(--color-dark);
+            padding: 0;
+            min-height: 80vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .testimonials-alt6__photo {
+            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials-alt6__photo-placeholder {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px dashed rgba(255,255,255,0.2);
+        }
+        .testimonials-alt6__photo-placeholder span {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .testimonials-alt6__content {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .testimonials-alt6__quote {
+            font-family: var(--font-serif);
+            font-size: 48px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.25;
+            margin-bottom: 40px;
+        }
+        .testimonials-alt6__quote em {
+            color: var(--color-green);
+            font-style: italic;
+        }
+        .testimonials-alt6__author {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .testimonials-alt6__name {
+            font-family: var(--font-sans);
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .testimonials-alt6__role {
+            font-family: var(--font-sans);
+            font-size: 15px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ========================================
+           TESTIMONIALS ALT 7: Cards with Photos
+           ======================================== */
+        .testimonials-alt7 {
+            background: var(--color-off-white);
+            padding: 100px 40px;
+        }
+        .testimonials-alt7__container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonials-alt7__headline {
+            font-family: var(--font-serif);
+            font-size: 56px;
+            color: var(--color-dark);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .testimonials-alt7__headline em {
+            font-style: italic;
+            color: var(--color-blue);
+        }
+        .testimonials-alt7__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .testimonials-alt7__card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+        }
+        .testimonials-alt7__card-photo {
+            height: 200px;
+            background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonials-alt7__card-photo-placeholder {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(0,0,0,0.15);
+        }
+        .testimonials-alt7__card-photo-placeholder span {
+            font-family: var(--font-sans);
+            font-size: 10px;
+            color: rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+        .testimonials-alt7__card-content {
+            padding: 32px;
+        }
+        .testimonials-alt7__card-quote {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            line-height: 1.4;
+            color: var(--color-dark);
+            margin-bottom: 24px;
+        }
+        .testimonials-alt7__card-author {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+        .testimonials-alt7__card-role {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            color: rgba(0,0,0,0.5);
+            margin-top: 2px;
+        }
+
+        /* ========================================
+           TESTIMONIALS ALT 8: Big Text Focus
+           ======================================== */
+        .testimonials-alt8 {
+            background: #fff;
+            padding: 120px 40px;
+        }
+        .testimonials-alt8__container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .testimonials-alt8__item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 40px;
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            align-items: start;
+        }
+        .testimonials-alt8__item:last-child {
+            border-bottom: none;
+        }
+        .testimonials-alt8__photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e8e4de 0%, #d0ccc6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(0,0,0,0.1);
+        }
+        .testimonials-alt8__photo span {
+            font-family: var(--font-sans);
+            font-size: 10px;
+            color: rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+        .testimonials-alt8__content {}
+        .testimonials-alt8__quote {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            line-height: 1.35;
+            color: var(--color-dark);
+            margin-bottom: 20px;
+        }
+        .testimonials-alt8__author {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--color-dark);
+        }
+        .testimonials-alt8__author strong {
+            font-weight: 600;
+        }
+        .testimonials-alt8__author span {
+            color: rgba(0,0,0,0.5);
+            margin-left: 8px;
+        }
+
+        /* ========================================
+           TESTIMONIALS ALT 9: Statement Style
+           ======================================== */
+        .testimonials-alt9 {
+            background: var(--color-dark);
+            padding: 140px 40px;
+        }
+        .testimonials-alt9__container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .testimonials-alt9__faces {
+            display: flex;
+            justify-content: center;
+            gap: -20px;
+            margin-bottom: 60px;
+        }
+        .testimonials-alt9__face {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+            border: 3px solid var(--color-dark);
+            margin-left: -20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonials-alt9__face:first-child {
+            margin-left: 0;
+        }
+        .testimonials-alt9__face span {
+            font-family: var(--font-sans);
+            font-size: 8px;
+            color: rgba(255,255,255,0.3);
+            text-transform: uppercase;
+        }
+        .testimonials-alt9__statement {
+            font-family: var(--font-serif);
+            font-size: 64px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 40px;
+        }
+        .testimonials-alt9__statement em {
+            color: var(--color-orange);
+            font-style: italic;
+        }
+        .testimonials-alt9__count {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* ========================================
+           TESTIMONIALS ALT 10: Side-by-Side
+           ======================================== */
+        .testimonials-alt10 {
+            background: linear-gradient(135deg, var(--color-off-white) 0%, #e8e4de 100%);
+            padding: 100px 40px;
+        }
+        .testimonials-alt10__container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .testimonials-alt10__headline {
+            font-family: var(--font-serif);
+            font-size: 48px;
+            color: var(--color-dark);
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .testimonials-alt10__headline em {
+            font-style: italic;
+            color: var(--color-green);
+        }
+        .testimonials-alt10__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        .testimonials-alt10__item {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+        .testimonials-alt10__photo {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d0ccc6 0%, #c0bbb4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(0,0,0,0.1);
+        }
+        .testimonials-alt10__photo span {
+            font-family: var(--font-sans);
+            font-size: 8px;
+            color: rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+        .testimonials-alt10__content {}
+        .testimonials-alt10__quote {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            line-height: 1.4;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+        }
+        .testimonials-alt10__author {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+        .testimonials-alt10__role {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            color: rgba(0,0,0,0.5);
+        }
+
+        /* ========================================
+           TESTIMONIALS ALT 11: Featured + List
+           ======================================== */
+        .testimonials-alt11 {
+            background: var(--color-off-white);
+            padding: 120px 40px;
+        }
+        .testimonials-alt11__container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .testimonials-alt11__featured {
+            text-align: center;
+            padding-bottom: 80px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        .testimonials-alt11__featured-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d0ccc6 0%, #c0bbb4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(0,0,0,0.1);
+            margin: 0 auto 40px;
+        }
+        .testimonials-alt11__featured-photo span {
+            font-family: var(--font-sans);
+            font-size: 10px;
+            color: rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+        .testimonials-alt11__featured-quote {
+            font-family: var(--font-serif);
+            font-size: 52px;
+            line-height: 1.2;
+            color: var(--color-dark);
+            margin-bottom: 32px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .testimonials-alt11__featured-quote em {
+            font-style: italic;
+            color: var(--color-blue);
+        }
+        .testimonials-alt11__featured-author {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--color-dark);
+        }
+        .testimonials-alt11__featured-author strong {
+            font-weight: 600;
+        }
+        .testimonials-alt11__featured-author span {
+            color: rgba(0,0,0,0.5);
+            margin-left: 8px;
+        }
+        .testimonials-alt11__list {}
+        .testimonials-alt11__item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 40px;
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            align-items: start;
+        }
+        .testimonials-alt11__item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .testimonials-alt11__photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e8e4de 0%, #d0ccc6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(0,0,0,0.1);
+        }
+        .testimonials-alt11__photo span {
+            font-family: var(--font-sans);
+            font-size: 10px;
+            color: rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+        .testimonials-alt11__content {}
+        .testimonials-alt11__quote {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            line-height: 1.35;
+            color: var(--color-dark);
+            margin-bottom: 20px;
+        }
+        .testimonials-alt11__author {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--color-dark);
+        }
+        .testimonials-alt11__author strong {
+            font-weight: 600;
+        }
+        .testimonials-alt11__author span {
+            color: rgba(0,0,0,0.5);
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header class="unused-header">
+        <h1>Unused Sections</h1>
+        <p>Sections removed from index.html. Preview them here and copy back when ready.</p>
+    </header>
+
+    <!-- ==========================================
+         SECTION: VIDEO - RETREAT TESTIMONIAL
+         Was: Section 6 in index.html
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Video - What Participants Say About the Retreat</h2>
+        <p>Was: Section 6 in index.html</p>
+    </div>
+
+    <section class="video-section">
+        <div class="video-section__container">
+            <div class="video-section__content">
+                <div class="video-section__label">
+                    <span class="video-section__label-dot"></span>
+                    <span class="video-section__label-text">The Foundation Retreat</span>
+                </div>
+                <h2 class="video-section__headline">What participants say about the <em>retreat</em></h2>
+                <p class="video-section__body">No phones. No agenda. Just silence, nature, and the space to finally hear yourself think. Participants call it the most transformative week of their leadership journey.</p>
+                <blockquote class="video-section__quote">
+                    "I came expecting a leadership workshop. I left understanding myself."
+                    <span class="video-section__quote-author">— 2024 Retreat Participant</span>
+                </blockquote>
+            </div>
+            <div class="video-section__visual">
+                <div class="video-section__player" id="videoPlayer">
+                    <img class="video-section__thumbnail" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80" alt="Nature retreat">
+                    <div class="video-section__play">
+                        <div class="video-section__play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS ALT 6: Hero with Large Photo
+         Split screen - big photo left, big quote right
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Alt 6: Hero with Large Photo</h2>
+        <p>Split screen - big photo left, big quote right</p>
+    </div>
+
+    <section class="testimonials-alt6">
+        <div class="testimonials-alt6__photo">
+            <div class="testimonials-alt6__photo-placeholder">
+                <span>Photo</span>
+            </div>
+        </div>
+        <div class="testimonials-alt6__content">
+            <p class="testimonials-alt6__quote">"The fellowship is the most <em>transformative</em> experience in leadership development I've ever had."</p>
+            <div class="testimonials-alt6__author">
+                <span class="testimonials-alt6__name">Francescu Santoni</span>
+                <span class="testimonials-alt6__role">CEO Mojo, YC W19</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS ALT 7: Cards with Photos
+         3-column grid with photo headers
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Alt 7: Cards with Photos</h2>
+        <p>3-column grid with photo headers on each card</p>
+    </div>
+
+    <section class="testimonials-alt7">
+        <div class="testimonials-alt7__container">
+            <h2 class="testimonials-alt7__headline">What <em>alumni</em> say</h2>
+            <div class="testimonials-alt7__grid">
+                <div class="testimonials-alt7__card">
+                    <div class="testimonials-alt7__card-photo">
+                        <div class="testimonials-alt7__card-photo-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="testimonials-alt7__card-content">
+                        <p class="testimonials-alt7__card-quote">"The fellowship is the most transformative experience in leadership development I've ever had."</p>
+                        <p class="testimonials-alt7__card-author">Francescu Santoni</p>
+                        <p class="testimonials-alt7__card-role">CEO Mojo, YC W19</p>
+                    </div>
+                </div>
+                <div class="testimonials-alt7__card">
+                    <div class="testimonials-alt7__card-photo">
+                        <div class="testimonials-alt7__card-photo-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="testimonials-alt7__card-content">
+                        <p class="testimonials-alt7__card-quote">"This program has changed my mind. It will change yours."</p>
+                        <p class="testimonials-alt7__card-author">Raffael Fellmer</p>
+                        <p class="testimonials-alt7__card-role">CEO SirPlus</p>
+                    </div>
+                </div>
+                <div class="testimonials-alt7__card">
+                    <div class="testimonials-alt7__card-photo">
+                        <div class="testimonials-alt7__card-photo-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="testimonials-alt7__card-content">
+                        <p class="testimonials-alt7__card-quote">"I never knew I have so much kindness in me."</p>
+                        <p class="testimonials-alt7__card-author">Claire Midwood</p>
+                        <p class="testimonials-alt7__card-role">former CEO Amorelie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS ALT 8: Big Text Focus
+         Large quotes with small circular photos
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Alt 8: Big Text Focus</h2>
+        <p>Large quotes with small circular photos - text dominates</p>
+    </div>
+
+    <section class="testimonials-alt8">
+        <div class="testimonials-alt8__container">
+            <div class="testimonials-alt8__item">
+                <div class="testimonials-alt8__photo"><span>Photo</span></div>
+                <div class="testimonials-alt8__content">
+                    <p class="testimonials-alt8__quote">"The fellowship is the most transformative experience in leadership development I've ever had."</p>
+                    <p class="testimonials-alt8__author"><strong>Francescu Santoni</strong> <span>CEO Mojo, YC W19</span></p>
+                </div>
+            </div>
+            <div class="testimonials-alt8__item">
+                <div class="testimonials-alt8__photo"><span>Photo</span></div>
+                <div class="testimonials-alt8__content">
+                    <p class="testimonials-alt8__quote">"This program has changed my mind. It will change yours."</p>
+                    <p class="testimonials-alt8__author"><strong>Raffael Fellmer</strong> <span>CEO SirPlus</span></p>
+                </div>
+            </div>
+            <div class="testimonials-alt8__item">
+                <div class="testimonials-alt8__photo"><span>Photo</span></div>
+                <div class="testimonials-alt8__content">
+                    <p class="testimonials-alt8__quote">"I never knew I have so much kindness in me."</p>
+                    <p class="testimonials-alt8__author"><strong>Claire Midwood</strong> <span>former CEO Amorelie</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS ALT 9: Statement Style
+         One bold statement with row of faces
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Alt 9: Statement Style</h2>
+        <p>One bold statement with overlapping faces above</p>
+    </div>
+
+    <section class="testimonials-alt9">
+        <div class="testimonials-alt9__container">
+            <div class="testimonials-alt9__faces">
+                <div class="testimonials-alt9__face"><span>Photo</span></div>
+                <div class="testimonials-alt9__face"><span>Photo</span></div>
+                <div class="testimonials-alt9__face"><span>Photo</span></div>
+                <div class="testimonials-alt9__face"><span>Photo</span></div>
+                <div class="testimonials-alt9__face"><span>Photo</span></div>
+            </div>
+            <p class="testimonials-alt9__statement">"The most <em>transformative</em> experience in leadership development."</p>
+            <p class="testimonials-alt9__count">50+ CEOs transformed</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS ALT 10: Side-by-Side Grid
+         2-column with photos beside quotes
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Alt 10: Side-by-Side Grid</h2>
+        <p>2-column layout with circular photos beside each quote</p>
+    </div>
+
+    <section class="testimonials-alt10">
+        <div class="testimonials-alt10__container">
+            <h2 class="testimonials-alt10__headline">Words from <em>fellows</em></h2>
+            <div class="testimonials-alt10__grid">
+                <div class="testimonials-alt10__item">
+                    <div class="testimonials-alt10__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt10__content">
+                        <p class="testimonials-alt10__quote">"The fellowship is the most transformative experience in leadership development I've ever had."</p>
+                        <p class="testimonials-alt10__author">Francescu Santoni</p>
+                        <p class="testimonials-alt10__role">CEO Mojo, YC W19</p>
+                    </div>
+                </div>
+                <div class="testimonials-alt10__item">
+                    <div class="testimonials-alt10__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt10__content">
+                        <p class="testimonials-alt10__quote">"This program has changed my mind. It will change yours."</p>
+                        <p class="testimonials-alt10__author">Raffael Fellmer</p>
+                        <p class="testimonials-alt10__role">CEO SirPlus</p>
+                    </div>
+                </div>
+                <div class="testimonials-alt10__item">
+                    <div class="testimonials-alt10__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt10__content">
+                        <p class="testimonials-alt10__quote">"I never knew I have so much kindness in me."</p>
+                        <p class="testimonials-alt10__author">Claire Midwood</p>
+                        <p class="testimonials-alt10__role">former CEO Amorelie</p>
+                    </div>
+                </div>
+                <div class="testimonials-alt10__item">
+                    <div class="testimonials-alt10__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt10__content">
+                        <p class="testimonials-alt10__quote">"Nikolas teaches the science of meditation in a way that immediately is applicable."</p>
+                        <p class="testimonials-alt10__author">Franziska Schmitt</p>
+                        <p class="testimonials-alt10__role">CEO Humanize</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS ALT 11: Featured + List
+         Large featured quote + smaller list below
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Alt 11: Featured + List</h2>
+        <p>One large featured quote at top, smaller quotes below</p>
+    </div>
+
+    <section class="testimonials-alt11">
+        <div class="testimonials-alt11__container">
+            <!-- Featured large quote -->
+            <div class="testimonials-alt11__featured">
+                <div class="testimonials-alt11__featured-photo"><span>Photo</span></div>
+                <p class="testimonials-alt11__featured-quote">"The most <em>transformative</em> experience in leadership development."</p>
+                <p class="testimonials-alt11__featured-author"><strong>Francescu Santoni</strong> <span>CEO Mojo, YC W19</span></p>
+            </div>
+
+            <!-- Smaller quotes list -->
+            <div class="testimonials-alt11__list">
+                <div class="testimonials-alt11__item">
+                    <div class="testimonials-alt11__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"This program has changed my mind. It will change yours."</p>
+                        <p class="testimonials-alt11__author"><strong>Raffael Fellmer</strong> <span>CEO SirPlus</span></p>
+                    </div>
+                </div>
+                <div class="testimonials-alt11__item">
+                    <div class="testimonials-alt11__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"I never knew I have so much kindness in me."</p>
+                        <p class="testimonials-alt11__author"><strong>Claire Midwood</strong> <span>former CEO Amorelie</span></p>
+                    </div>
+                </div>
+                <div class="testimonials-alt11__item">
+                    <div class="testimonials-alt11__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"Nikolas teaches the science of meditation in a way that immediately is applicable to help me be a better leader."</p>
+                        <p class="testimonials-alt11__author"><strong>Franziska Schmitt</strong> <span>CEO Humanize</span></p>
+                    </div>
+                </div>
+                <div class="testimonials-alt11__item">
+                    <div class="testimonials-alt11__photo"><span>Photo</span></div>
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"An amazing program to reflect how I am showing up as a leader."</p>
+                        <p class="testimonials-alt11__author"><strong>Oddur Magnusson</strong> <span>Founder Klang Games</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED TESTIMONIAL OPTIONS
+         5 ways to separate header from featured quote
+         ========================================== -->
+
+    <!-- OPTION 1: White Card Background -->
+    <div class="unused-divider">
+        <h2>Option 1: White Card Background</h2>
+        <p>Featured quote in white card like the list items</p>
+    </div>
+    <section style="background: var(--color-off-white); padding: 120px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;">Testimonials</span>
+                </div>
+                <h2 style="font-family: var(--font-serif); font-size: 56px; font-weight: 400; color: var(--color-dark);">What <em style="font-style: italic; color: var(--color-blue);">alumni</em> say</h2>
+            </div>
+            <div style="background: #fff; border-radius: 24px; padding: 60px; text-align: center; margin-bottom: 60px;">
+                <img src="images/testimonials/Francescu Santoni.jpg" alt="Francescu Santoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 40px;">
+                <p style="font-family: var(--font-serif); font-size: 52px; line-height: 1.2; color: var(--color-dark); margin-bottom: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">"The most <em style="font-style: italic; color: var(--color-blue);">transformative</em> experience in leadership development."</p>
+                <p style="font-family: var(--font-sans); font-size: 16px;"><strong>Francescu Santoni</strong> <span style="color: rgba(0,0,0,0.5); margin-left: 8px;">CEO Mojo, YC W19</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 2: Subtle Top Border -->
+    <div class="unused-divider">
+        <h2>Option 2: Subtle Top Border</h2>
+        <p>Thin line separates header from featured</p>
+    </div>
+    <section style="background: var(--color-off-white); padding: 120px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;">Testimonials</span>
+                </div>
+                <h2 style="font-family: var(--font-serif); font-size: 56px; font-weight: 400; color: var(--color-dark);">What <em style="font-style: italic; color: var(--color-blue);">alumni</em> say</h2>
+            </div>
+            <div style="text-align: center; padding-bottom: 80px; margin-bottom: 60px; border-bottom: 1px solid rgba(0,0,0,0.08);">
+                <img src="images/testimonials/Francescu Santoni.jpg" alt="Francescu Santoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 40px;">
+                <p style="font-family: var(--font-serif); font-size: 52px; line-height: 1.2; color: var(--color-dark); margin-bottom: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">"The most <em style="font-style: italic; color: var(--color-blue);">transformative</em> experience in leadership development."</p>
+                <p style="font-family: var(--font-sans); font-size: 16px;"><strong>Francescu Santoni</strong> <span style="color: rgba(0,0,0,0.5); margin-left: 8px;">CEO Mojo, YC W19</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 3: Increased Spacing -->
+    <div class="unused-divider">
+        <h2>Option 3: Increased Spacing</h2>
+        <p>Double the gap (120px) between header and featured</p>
+    </div>
+    <section style="background: var(--color-off-white); padding: 120px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 120px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;">Testimonials</span>
+                </div>
+                <h2 style="font-family: var(--font-serif); font-size: 56px; font-weight: 400; color: var(--color-dark);">What <em style="font-style: italic; color: var(--color-blue);">alumni</em> say</h2>
+            </div>
+            <div style="text-align: center; padding-bottom: 80px; margin-bottom: 60px; border-bottom: 1px solid rgba(0,0,0,0.08);">
+                <img src="images/testimonials/Francescu Santoni.jpg" alt="Francescu Santoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 40px;">
+                <p style="font-family: var(--font-serif); font-size: 52px; line-height: 1.2; color: var(--color-dark); margin-bottom: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">"The most <em style="font-style: italic; color: var(--color-blue);">transformative</em> experience in leadership development."</p>
+                <p style="font-family: var(--font-sans); font-size: 16px;"><strong>Francescu Santoni</strong> <span style="color: rgba(0,0,0,0.5); margin-left: 8px;">CEO Mojo, YC W19</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 4: Background Color Block -->
+    <div class="unused-divider">
+        <h2>Option 4: Background Color Block</h2>
+        <p>Light sage/cream background on featured section</p>
+    </div>
+    <section style="background: var(--color-off-white); padding: 120px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;">Testimonials</span>
+                </div>
+                <h2 style="font-family: var(--font-serif); font-size: 56px; font-weight: 400; color: var(--color-dark);">What <em style="font-style: italic; color: var(--color-blue);">alumni</em> say</h2>
+            </div>
+            <div style="background: rgba(166, 190, 164, 0.12); border-radius: 24px; padding: 80px 60px; text-align: center; margin-bottom: 60px;">
+                <img src="images/testimonials/Francescu Santoni.jpg" alt="Francescu Santoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 40px;">
+                <p style="font-family: var(--font-serif); font-size: 52px; line-height: 1.2; color: var(--color-dark); margin-bottom: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">"The most <em style="font-style: italic; color: var(--color-blue);">transformative</em> experience in leadership development."</p>
+                <p style="font-family: var(--font-sans); font-size: 16px;"><strong>Francescu Santoni</strong> <span style="color: rgba(0,0,0,0.5); margin-left: 8px;">CEO Mojo, YC W19</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 5: Quote Marks Decoration -->
+    <div class="unused-divider">
+        <h2>Option 5: Quote Marks Decoration</h2>
+        <p>Large decorative quotation marks above the quote</p>
+    </div>
+    <section style="background: var(--color-off-white); padding: 120px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;">Testimonials</span>
+                </div>
+                <h2 style="font-family: var(--font-serif); font-size: 56px; font-weight: 400; color: var(--color-dark);">What <em style="font-style: italic; color: var(--color-blue);">alumni</em> say</h2>
+            </div>
+            <div style="text-align: center; padding-bottom: 80px; margin-bottom: 60px; border-bottom: 1px solid rgba(0,0,0,0.08);">
+                <div style="font-family: var(--font-serif); font-size: 160px; line-height: 0.5; color: rgba(127, 171, 200, 0.3); margin-bottom: 40px;">"</div>
+                <img src="images/testimonials/Francescu Santoni.jpg" alt="Francescu Santoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 40px;">
+                <p style="font-family: var(--font-serif); font-size: 52px; line-height: 1.2; color: var(--color-dark); margin-bottom: 32px; max-width: 900px; margin-left: auto; margin-right: auto;">The most <em style="font-style: italic; color: var(--color-blue);">transformative</em> experience in leadership development.</p>
+                <p style="font-family: var(--font-sans); font-size: 16px;"><strong>Francescu Santoni</strong> <span style="color: rgba(0,0,0,0.5); margin-left: 8px;">CEO Mojo, YC W19</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ORIGINAL TESTIMONIALS - Cards with Stars
+         Was: Section 6 in index.html
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Original Testimonials - Cards with Stars</h2>
+        <p>Was: Section 6 in index.html (before Alt 11)</p>
+    </div>
+
+    <section class="testimonials">
+        <div class="testimonials__container">
+            <div class="testimonials__header">
+                <div class="testimonials__label">
+                    <span class="testimonials__label-dot"></span>
+                    <span class="testimonials__label-text">Testimonials</span>
+                </div>
+                <h2 class="testimonials__headline">What <em>alumni</em> say</h2>
+                <p class="testimonials__subheadline">Real words from CEOs who've been through the fellowship</p>
+            </div>
+
+            <div class="testimonials__grid">
+                <div class="testimonials__column">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">The fellowship is the most transformative experience in leadership development I've ever had.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Francescu Santoni</span>
+                                <span class="testimonial-card__role">CEO Mojo, YC W19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">This program has changed my mind. It will change yours.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Raffael Fellmer</span>
+                                <span class="testimonial-card__role">CEO SirPlus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">I never knew I have so much kindness in me.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Claire Midwood</span>
+                                <span class="testimonial-card__role">former CEO Amorelie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__column">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">Nikolas teaches the science of meditation in a way that immediately is applicable to help me be a better leader.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Franziska Schmitt</span>
+                                <span class="testimonial-card__role">CEO Humanize</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-card__quote">An amazing program to reflect how I am showing up as a leader.</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__image">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                            </div>
+                            <div class="testimonial-card__info">
+                                <span class="testimonial-card__name">Oddur Magnusson</span>
+                                <span class="testimonial-card__role">Founder Klang Games</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ADD MORE UNUSED SECTIONS BELOW
+         ========================================== -->
+
+    <!-- ==========================================
+         PILLARS - ORIGINAL SMALL CARDS VERSION
+         (Moved from main site - replaced by Option J)
+         ========================================== -->
+    <div class="unused-divider">
+        <h2>Pillars - Original Small Cards</h2>
+        <p>The original pillars section with small card illustrations</p>
+    </div>
+    <section class="pillars" id="pillars-original">
+        <div class="pillars__container">
+            <div class="pillars__label">
+                <span class="pillars__label-dot"></span>
+                <span class="pillars__label-text">Our Approach</span>
+            </div>
+            <h2 class="pillars__headline">We create reflection spaces for people in responsibility.</h2>
+
+            <div class="pillars__grid">
+                <div class="pillar-card">
+                    <div class="pillar-card__illustration">
+                        <svg viewBox="0 0 200 150" fill="none">
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-circle" cx="100" cy="75" r="8"/>
+                            <circle class="ripple-center" cx="100" cy="75" r="6"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-card__content">
+                        <h3 class="pillar-card__title">Stillness</h3>
+                        <p class="pillar-card__description">Space to step back from the noise.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-card__illustration">
+                        <svg viewBox="0 0 200 150" fill="none">
+                            <rect class="bar-base" x="35" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="55" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="75" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="95" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="115" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="135" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-base" x="155" y="30" width="12" height="90" rx="3"/>
+                            <rect class="bar-fill bar-fill-1" x="35" y="95" width="12" height="25" rx="3"/>
+                            <rect class="bar-fill bar-fill-2" x="55" y="80" width="12" height="40" rx="3"/>
+                            <rect class="bar-fill bar-fill-3" x="75" y="90" width="12" height="30" rx="3"/>
+                            <rect class="bar-fill bar-fill-4" x="95" y="70" width="12" height="50" rx="3"/>
+                            <rect class="bar-fill bar-fill-5" x="115" y="85" width="12" height="35" rx="3"/>
+                            <rect class="bar-fill bar-fill-6" x="135" y="75" width="12" height="45" rx="3"/>
+                            <rect class="bar-fill bar-fill-7" x="155" y="100" width="12" height="20" rx="3"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-card__content">
+                        <h3 class="pillar-card__title">Science</h3>
+                        <p class="pillar-card__description">Diagnostics that make the invisible visible.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-card__illustration">
+                        <svg viewBox="0 0 200 150" fill="none">
+                            <line class="ally-connection" x1="70" y1="65" x2="130" y2="65"/>
+                            <line class="ally-connection" x1="70" y1="65" x2="100" y2="110"/>
+                            <line class="ally-connection" x1="130" y1="65" x2="100" y2="110"/>
+                            <circle class="ally-circle ally-circle-1" cx="70" cy="65" r="35" style="transform-origin: 70px 65px;"/>
+                            <circle class="ally-circle ally-circle-2" cx="130" cy="65" r="35" style="transform-origin: 130px 65px;"/>
+                            <circle class="ally-circle ally-circle-3" cx="100" cy="110" r="35" style="transform-origin: 100px 110px;"/>
+                            <circle class="ally-dot ally-dot-1" cx="70" cy="65" r="6"/>
+                            <circle class="ally-dot ally-dot-2" cx="130" cy="65" r="6"/>
+                            <circle class="ally-dot ally-dot-3" cx="100" cy="110" r="6"/>
+                        </svg>
+                    </div>
+                    <div class="pillar-card__content">
+                        <h3 class="pillar-card__title">Allies</h3>
+                        <p class="pillar-card__description">Peers who understand what you carry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
