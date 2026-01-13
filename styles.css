@@ -3646,6 +3646,16 @@ body {
 .phase-hero--2 .phase-hero__cta { background: var(--color-blue); color: var(--color-white); }
 .phase-hero--2 .phase-hero__cta:hover { box-shadow: 0 16px 40px rgba(127, 171, 200, 0.4); }
 
+.phase-hero--pods .phase-hero__label-dot,
+.phase-hero--pods .arc__marker { background-color: var(--color-blue); }
+.phase-hero--pods .phase-hero__headline em { color: var(--color-blue); }
+.phase-hero--pods .phase-hero__date { color: var(--color-blue); }
+.phase-hero--pods .phase-hero__feature-icon { background: rgba(127, 171, 200, 0.15); }
+.phase-hero--pods .phase-hero__feature-icon svg { color: var(--color-blue); }
+.phase-hero--pods .arc__line { background: linear-gradient(to bottom, var(--color-blue), rgba(127, 171, 200, 0.2)); }
+.phase-hero--pods .phase-hero__cta { background: var(--color-blue); color: var(--color-white); }
+.phase-hero--pods .phase-hero__cta:hover { box-shadow: 0 16px 40px rgba(127, 171, 200, 0.4); }
+
 .phase-hero--3 .phase-hero__label-dot { background-color: var(--color-orange); }
 .phase-hero--3 .phase-hero__headline em { color: var(--color-orange); }
 .phase-hero--3 .phase-hero__date { color: var(--color-orange); }
@@ -3717,7 +3727,7 @@ body {
    SECTION 12: FACULTY V5
    ========================================== */
 .faculty-v5 {
-    background: var(--color-black);
+    background: #1a1a1a;
     padding: 120px 40px 140px;
 }
 .faculty-v5__container { max-width: var(--width-wide); margin: 0 auto; }
@@ -3804,7 +3814,7 @@ body {
    SECTION 14: DIAGNOSTICS
    ========================================== */
 .diagnostics {
-    background: var(--color-dark);
+    background: #1a1a1a;
     padding: 140px 40px 160px;
     position: relative;
     overflow: hidden;
@@ -3820,15 +3830,11 @@ body {
     -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
 }
 .diagnostics__orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: float 20s ease-in-out infinite;
+    display: none;
 }
-.diagnostics__orb--1 { width: 400px; height: 400px; background: var(--color-orange); top: -100px; right: 10%; }
-.diagnostics__orb--2 { width: 300px; height: 300px; background: var(--color-blue); bottom: -50px; left: 5%; animation-delay: -7s; }
-.diagnostics__orb--3 { width: 250px; height: 250px; background: var(--color-green); top: 40%; left: 50%; animation-delay: -14s; }
+.diagnostics__orb--1 { display: none; }
+.diagnostics__orb--2 { display: none; }
+.diagnostics__orb--3 { display: none; }
 @keyframes float {
     0%, 100% { transform: translate(0, 0) scale(1); }
     33% { transform: translate(30px, -30px) scale(1.05); }
@@ -4555,7 +4561,7 @@ body {
 /* ==========================================
    SECTION 18: SELECTION
    ========================================== */
-.selection { background: var(--color-dark); padding: 120px 40px 140px; }
+.selection { background: #1a1a1a; padding: 120px 40px 140px; }
 .selection__container {
     max-width: var(--width-wide);
     margin: 0 auto;
@@ -4899,4 +4905,128 @@ body {
     .testimonials-alt11__item { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
     .testimonials-alt11__photo { width: 64px; height: 64px; }
     .testimonials-alt11__quote { font-size: 22px; }
+}
+
+/* ==========================================
+   STRUCTURE INTRO - MASSIVE TYPE (Option 9)
+   ========================================== */
+.structure-intro {
+    background: #1a1a1a;
+    padding: 140px 40px;
+}
+.structure-intro__container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.structure-intro__header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.structure-intro__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.structure-intro__label-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-green);
+    border-radius: 50%;
+}
+.structure-intro__label-text {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.6);
+}
+.structure-intro__headline {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.1;
+}
+.structure-intro__headline em {
+    font-style: italic;
+}
+.structure-intro__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.structure-intro__item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 28px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+    margin: 0 -20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.structure-intro__item:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.03);
+}
+.structure-intro__item--last {
+    border-bottom: none;
+}
+.structure-intro__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.structure-intro__title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 400;
+    font-style: italic;
+    transition: color 0.2s ease;
+}
+.structure-intro__title--green {
+    color: var(--color-green);
+}
+.structure-intro__title--blue {
+    color: var(--color-blue);
+}
+.structure-intro__title--orange {
+    color: var(--color-orange);
+}
+.structure-intro__desc {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+}
+.structure-intro__timing {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: rgba(255,255,255,0.35);
+    flex-shrink: 0;
+}
+
+/* Structure Intro - Responsive */
+@media (max-width: 768px) {
+    .structure-intro { padding: 80px 24px; }
+    .structure-intro__header { margin-bottom: 60px; }
+    .structure-intro__headline { font-size: 40px; }
+    .structure-intro__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 24px 16px;
+        margin: 0 -16px;
+    }
+    .structure-intro__title { font-size: 36px; }
+    .structure-intro__timing { font-size: 13px; }
+    .structure-intro__desc { font-size: 13px; }
+}
+@media (max-width: 480px) {
+    .structure-intro { padding: 60px 20px; }
+    .structure-intro__headline { font-size: 32px; }
+    .structure-intro__title { font-size: 28px; }
 }
