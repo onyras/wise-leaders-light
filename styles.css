@@ -5665,7 +5665,7 @@ img {
     }
 }
 
-/* ISSUE 6: Comparison table - single column stacked layout */
+/* ISSUE 6: Comparison table - simplified mobile layout */
 @media (max-width: 768px) {
     .comparison {
         padding: 60px 20px 80px !important;
@@ -5675,70 +5675,46 @@ img {
         font-size: 28px !important;
     }
 
-    .comparison__table-header {
+    /* Hide the header row and "other" column - just show WLF approach */
+    .comparison__table-header,
+    .comparison__cell--other {
         display: none !important;
     }
 
     .comparison__row {
-        display: flex !important;
-        flex-direction: column !important;
-        margin-bottom: 32px !important;
-        background: var(--color-white) !important;
-        border-radius: 16px !important;
-        overflow: hidden !important;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
-    }
-
-    .comparison__row-label {
         display: block !important;
-        width: 100% !important;
-        padding: 16px 20px !important;
-        background: var(--color-cream) !important;
-        font-size: 14px !important;
-        font-weight: 600 !important;
-        text-align: center !important;
+        margin-bottom: 16px !important;
+        padding-bottom: 16px !important;
         border-bottom: 1px solid rgba(0,0,0,0.08) !important;
     }
 
-    .comparison__cell {
-        display: block !important;
-        width: 100% !important;
-        padding: 20px !important;
-        text-align: left !important;
-        border-bottom: 1px solid rgba(0,0,0,0.06) !important;
-    }
-
-    .comparison__cell:last-child {
+    .comparison__row:last-child {
         border-bottom: none !important;
     }
 
-    .comparison__cell--wlf {
-        background: var(--color-white) !important;
-        border-left: 4px solid var(--color-blue) !important;
+    .comparison__row-label {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: var(--color-blue) !important;
+        margin-bottom: 8px !important;
     }
 
-    .comparison__cell--other {
-        background: #f5f5f5 !important;
-        border-left: 4px solid #ccc !important;
+    .comparison__cell--wlf {
+        padding: 0 !important;
     }
 
     .comparison__cell::before {
-        content: attr(data-column) !important;
-        display: block !important;
-        font-size: 11px !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.1em !important;
-        color: #888 !important;
-        margin-bottom: 8px !important;
+        display: none !important;
     }
 
     .comparison__cell-title {
         font-size: 15px !important;
+        margin-bottom: 4px !important;
     }
 
     .comparison__cell-text {
         font-size: 14px !important;
+        color: #666 !important;
     }
 }
 
