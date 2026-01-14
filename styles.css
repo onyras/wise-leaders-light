@@ -5510,7 +5510,7 @@ img {
    MOBILE FIX ROUND 2 - Critical Issues
    ========================================== */
 
-/* ISSUE 1: Navigation - ensure it stays visible and compact */
+/* ISSUE 1: Navigation - mobile hamburger menu */
 @media (max-width: 768px) {
     .nav {
         position: fixed !important;
@@ -5522,6 +5522,9 @@ img {
         max-width: 400px !important;
         background: rgba(255, 255, 255, 0.95) !important;
         padding: 12px 16px 12px 20px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
     .nav__logo {
         color: var(--color-black) !important;
@@ -5530,11 +5533,121 @@ img {
     .nav__links {
         display: none !important;
     }
-    .nav__cta {
+    .nav__cta--desktop {
+        display: none !important;
+    }
+
+    /* Hamburger button */
+    .nav__hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 8px !important;
+        gap: 5px !important;
+    }
+
+    .nav__hamburger span {
+        display: block !important;
+        width: 22px !important;
+        height: 2px !important;
+        background: var(--color-black) !important;
+        border-radius: 2px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .nav__hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px) !important;
+    }
+
+    .nav__hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .nav__hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px) !important;
+    }
+
+    /* Mobile menu overlay */
+    .mobile-menu {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: var(--color-cream) !important;
+        z-index: 9998 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .mobile-menu.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .mobile-menu__content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px !important;
+    }
+
+    .mobile-menu__link {
+        font-family: var(--font-sans) !important;
+        font-size: 24px !important;
+        font-weight: 500 !important;
+        color: var(--color-black) !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease !important;
+    }
+
+    .mobile-menu__link:hover {
+        color: var(--color-blue) !important;
+    }
+
+    .mobile-menu__cta {
+        margin-top: 16px !important;
+        padding: 14px 32px !important;
+        background: var(--color-blue) !important;
         color: white !important;
-        background-color: var(--color-blue) !important;
-        padding: 10px 18px !important;
-        font-size: 13px !important;
+        font-family: var(--font-sans) !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        border-radius: 100px !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .mobile-menu__cta:hover {
+        background: #6a9ab8 !important;
+    }
+}
+
+/* Hide hamburger on desktop */
+.nav__hamburger {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .nav__hamburger {
+        display: none !important;
+    }
+    .mobile-menu {
+        display: none !important;
     }
 }
 

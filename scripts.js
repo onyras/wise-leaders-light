@@ -628,3 +628,25 @@ if (cookieConsent) {
         cookieConsent.classList.add('hidden');
     });
 }
+
+// Mobile Navigation Hamburger Menu
+const navHamburger = document.getElementById('navHamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (navHamburger && mobileMenu) {
+    navHamburger.addEventListener('click', () => {
+        navHamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('.mobile-menu__link, .mobile-menu__cta');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navHamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
