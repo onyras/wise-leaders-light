@@ -602,3 +602,29 @@ if (manifestoSections.length > 0) {
 
     manifestoSections.forEach(section => manifestoObserver.observe(section));
 }
+
+// ==========================================
+// COOKIE CONSENT
+// ==========================================
+const cookieConsent = document.getElementById('cookieConsent');
+const cookieAccept = document.getElementById('cookieAccept');
+const cookieDecline = document.getElementById('cookieDecline');
+
+if (cookieConsent) {
+    // Check if user has already made a choice
+    const cookieChoice = localStorage.getItem('cookieConsent');
+
+    if (cookieChoice) {
+        cookieConsent.classList.add('hidden');
+    }
+
+    cookieAccept.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieConsent.classList.add('hidden');
+    });
+
+    cookieDecline.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        cookieConsent.classList.add('hidden');
+    });
+}
