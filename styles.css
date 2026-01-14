@@ -5778,7 +5778,7 @@ img {
     }
 }
 
-/* ISSUE 6: Comparison table - simplified mobile layout */
+/* ISSUE 6: Comparison table - card-based mobile layout */
 @media (max-width: 768px) {
     .comparison {
         padding: 60px 20px 80px !important;
@@ -5788,28 +5788,43 @@ img {
         font-size: 28px !important;
     }
 
+    .comparison__subheadline {
+        font-size: 15px !important;
+        margin-bottom: 32px !important;
+    }
+
     /* Hide the header row and "other" column - just show WLF approach */
     .comparison__table-header,
     .comparison__cell--other {
         display: none !important;
     }
 
-    .comparison__row {
-        display: block !important;
-        margin-bottom: 16px !important;
-        padding-bottom: 16px !important;
-        border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+    .comparison__table {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
     }
 
-    .comparison__row:last-child {
+    .comparison__row {
+        display: block !important;
+        background: var(--color-card) !important;
+        border-radius: 16px !important;
+        padding: 20px !important;
+        margin-bottom: 0 !important;
         border-bottom: none !important;
     }
 
     .comparison__row-label {
-        font-size: 13px !important;
+        display: inline-block !important;
+        font-size: 11px !important;
         font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
         color: var(--color-blue) !important;
-        margin-bottom: 8px !important;
+        background: rgba(127, 171, 200, 0.15) !important;
+        padding: 6px 12px !important;
+        border-radius: 100px !important;
+        margin-bottom: 12px !important;
     }
 
     .comparison__cell--wlf {
@@ -5821,13 +5836,16 @@ img {
     }
 
     .comparison__cell-title {
-        font-size: 15px !important;
+        font-size: 17px !important;
+        font-weight: 600 !important;
+        color: var(--color-black) !important;
         margin-bottom: 4px !important;
     }
 
     .comparison__cell-text {
         font-size: 14px !important;
         color: #666 !important;
+        line-height: 1.5 !important;
     }
 }
 
