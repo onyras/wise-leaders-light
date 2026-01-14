@@ -5286,3 +5286,222 @@ body {
     .legal-page__content h2 { font-size: 20px; margin-top: 40px; }
     .legal-page__content h3 { font-size: 17px; }
 }
+
+/* ==========================================
+   MOBILE RESPONSIVE FIXES
+   ========================================== */
+
+/* Global image constraints */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation mobile */
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 12px 10px 16px;
+        width: calc(100% - 32px);
+    }
+    .nav__cta {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+
+/* Hero mobile - stack content and visual */
+@media (max-width: 900px) {
+    .hero__inner {
+        grid-template-columns: 1fr !important;
+        padding: 0 24px !important;
+    }
+    .hero__content {
+        padding: 140px 0 40px !important;
+        max-width: 100% !important;
+    }
+    .hero__visual {
+        padding: 20px 0 60px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero__headline {
+        font-size: 36px !important;
+    }
+    .hero__body {
+        font-size: 16px !important;
+    }
+    .radar-container {
+        width: 280px !important;
+        height: 280px !important;
+    }
+}
+
+/* Journey section mobile */
+@media (max-width: 900px) {
+    .journey {
+        padding: 80px 24px !important;
+    }
+    .journey__headline {
+        font-size: 40px !important;
+    }
+    .phase-labels {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    .timeline-cubes {
+        display: none !important;
+    }
+    .journey__summary {
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+}
+
+/* Manifesto mobile */
+@media (max-width: 600px) {
+    .manifesto__text {
+        font-size: 24px !important;
+    }
+}
+
+/* Testimonials mobile */
+@media (max-width: 900px) {
+    .testimonials-alt11 {
+        padding: 80px 24px !important;
+    }
+    .testimonials-alt11__headline {
+        font-size: 40px !important;
+    }
+    .testimonials-alt11__featured {
+        padding: 40px 24px !important;
+    }
+    .testimonials-alt11__featured-quote {
+        font-size: 28px !important;
+    }
+    .testimonials-alt11__list {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
+
+/* Pillars section mobile */
+@media (max-width: 800px) {
+    .pillars {
+        padding: 80px 24px !important;
+    }
+    .pillars__headline {
+        font-size: 36px !important;
+    }
+    .pillars__cards-v4 {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+}
+
+/* Structure intro mobile */
+@media (max-width: 800px) {
+    .structure-intro {
+        padding: 80px 24px !important;
+    }
+    .structure-intro__headline {
+        font-size: 40px !important;
+    }
+    .structure-intro__item {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    .structure-intro__timing {
+        align-self: flex-start !important;
+    }
+}
+
+/* Pillar dark sections - CRITICAL MOBILE FIX */
+/* These sections use inline styles, so !important is required */
+@media (max-width: 900px) {
+    .pillar-dark {
+        padding: 80px 24px !important;
+    }
+    .pillar-dark__grid {
+        grid-template-columns: 1fr !important;
+        gap: 48px !important;
+        max-width: 100% !important;
+    }
+    .pillar-dark h2 {
+        font-size: 48px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .pillar-dark {
+        padding: 60px 20px !important;
+    }
+    .pillar-dark h2 {
+        font-size: 36px !important;
+    }
+    .pillar-dark p {
+        font-size: 16px !important;
+    }
+    /* Fix 2x2 feature grids in pillar sections */
+    .pillar-dark__features {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Faculty section mobile */
+@media (max-width: 768px) {
+    .faculty-v5 {
+        padding: 60px 24px !important;
+    }
+    .faculty-v5__headline {
+        font-size: 32px !important;
+    }
+    .faculty-v5__grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+    .expert-card__visual img {
+        max-width: 200px !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+}
+
+/* Investment section mobile */
+@media (max-width: 768px) {
+    .investment {
+        padding: 80px 24px !important;
+    }
+    .investment__headline {
+        font-size: 32px !important;
+    }
+    .pricing-card__header-top {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+}
+
+/* Footer mobile */
+@media (max-width: 600px) {
+    .footer {
+        padding: 40px 24px !important;
+    }
+    .footer__links {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+}
+
+/* Cookie consent mobile */
+@media (max-width: 600px) {
+    .cookie-consent__content {
+        flex-direction: column !important;
+        gap: 16px !important;
+        text-align: center !important;
+    }
+    .cookie-consent__buttons {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
