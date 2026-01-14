@@ -5741,3 +5741,177 @@ img {
         word-wrap: break-word !important;
     }
 }
+
+/* ==========================================
+   MOBILE FIX ROUND 3 - Additional Issues
+   ========================================== */
+
+/* ISSUE: Hero "Apply to Join" button - make narrower to match secondary */
+@media (max-width: 768px) {
+    .hero__ctas {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .hero__cta {
+        width: auto !important;
+        min-width: 160px !important;
+        max-width: 200px !important;
+        padding: 14px 28px !important;
+        font-size: 14px !important;
+    }
+
+    .hero__cta--secondary {
+        padding: 12px 24px !important;
+    }
+
+    .refer-wrapper {
+        width: auto !important;
+    }
+}
+
+/* ISSUE: Bento boxes (stat cards) - make compact */
+@media (max-width: 768px) {
+    .stats {
+        padding: 40px 20px !important;
+    }
+
+    .stats__container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        max-width: 100% !important;
+    }
+
+    .stat-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        min-height: auto !important;
+        padding: 20px !important;
+        gap: 16px !important;
+    }
+
+    .stat__icon {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .stat__icon svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .stat__content {
+        text-align: left !important;
+    }
+
+    .stat__number {
+        font-size: 32px !important;
+        line-height: 1 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .stat__label {
+        font-size: 14px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .stat__sublabel {
+        font-size: 12px !important;
+    }
+}
+
+/* ISSUE: Feature titles (Stillness, etc) smaller than headlines */
+@media (max-width: 768px) {
+    .pillar-large__title {
+        font-size: 28px !important;
+    }
+
+    .pillar-large__desc {
+        font-size: 14px !important;
+    }
+
+    .pillar-large__graphic {
+        aspect-ratio: 1/1 !important;
+        max-height: 200px !important;
+    }
+}
+
+/* ISSUE: Journey summary stats - horizontal layout */
+@media (max-width: 768px) {
+    .journey__summary {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 24px !important;
+        flex-wrap: nowrap !important;
+        padding: 20px 0 !important;
+    }
+
+    .journey__summary .summary-item {
+        flex: 0 0 auto !important;
+        text-align: center !important;
+    }
+
+    .journey__summary .summary-item__number {
+        font-size: 28px !important;
+        line-height: 1.1 !important;
+    }
+
+    .journey__summary .summary-item__label {
+        font-size: 11px !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* ISSUE: Phase labels (timeline items) - 2x2 grid */
+@media (max-width: 768px) {
+    .phase-labels {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+        padding: 0 !important;
+    }
+
+    .phase-label {
+        flex: none !important;
+        text-align: center !important;
+        padding: 16px 12px !important;
+        background: var(--color-card) !important;
+        border-radius: 12px !important;
+    }
+
+    .phase-label__badge {
+        font-size: 10px !important;
+        padding: 4px 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .phase-label__title {
+        font-size: 16px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .phase-label__meta {
+        font-size: 12px !important;
+    }
+
+    /* Hide the timeline cubes on mobile */
+    .timeline-cubes {
+        display: none !important;
+    }
+}
+
+/* ISSUE: Pillar section dots - reduce size in inline styles override */
+@media (max-width: 768px) {
+    /* Override inline styles for journey dots in pillar sections */
+    .pillar-dark div[style*="width: 12px"][style*="height: 12px"] {
+        width: 8px !important;
+        height: 8px !important;
+        min-width: 8px !important;
+    }
+}
