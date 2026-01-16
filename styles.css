@@ -4706,30 +4706,102 @@ body {
     .selection__headline { font-size: 40px; }
 }
 @media (max-width: 700px) {
-    .comparison { padding: 100px 20px 120px; }
+    .comparison { padding: 80px 20px 100px; }
     .comparison__headline { font-size: 36px; }
-    .comparison__table-header, .comparison__row { grid-template-columns: 1fr 1fr; }
-    .comparison__table-header-spacer, .comparison__row-label { display: none; }
-    .comparison__row::before {
-        content: attr(data-label);
-        grid-column: 1 / -1;
-        padding: 20px 16px 8px;
-        font-family: var(--font-sans);
-        font-size: 13px;
-        font-weight: 600;
-        color: #666;
-        background: var(--color-cream);
+    .comparison__header { margin-bottom: 40px; }
+
+    /* Hide the complex table header */
+    .comparison__table-header { display: none; }
+
+    /* Stack rows vertically */
+    .comparison__table {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
-    .comparison__column-header { padding: 32px 20px; }
-    .comparison__cell { padding: 20px; }
+
+    .comparison__row {
+        display: flex;
+        flex-direction: column;
+        background: var(--color-card);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    /* Row label as header */
+    .comparison__row-label {
+        display: block;
+        padding: 16px 20px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-blue);
+        background: rgba(127, 171, 200, 0.1);
+        border-bottom: none;
+    }
+
+    /* Side by side cells */
+    .comparison__row-cells {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .comparison__cell {
+        padding: 16px 20px;
+        text-align: left;
+        border-bottom: none;
+    }
+
+    .comparison__cell--wlf {
+        background: #fff;
+        border-right: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .comparison__cell--other {
+        background: rgba(0,0,0,0.02);
+    }
+
+    .comparison__cell::before {
+        content: attr(data-column);
+        display: block;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #999;
+        margin-bottom: 8px;
+    }
+
+    .comparison__cell--wlf::before {
+        color: var(--color-blue);
+    }
+
+    .comparison__cell-title {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .comparison__cell-text {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .comparison__row:last-child .comparison__cell--wlf,
+    .comparison__row:last-child .comparison__cell--other {
+        border-radius: 0;
+    }
 }
 @media (max-width: 600px) {
     .faculty-v5 { padding: 60px 20px 80px; }
     .faculty-v5__headline { font-size: 36px; }
     .faculty-v5__subheadline { font-size: 16px; }
-    .faculty-v5__grid { grid-template-columns: 1fr; gap: 40px; }
-    .expert-card__content { flex-direction: column; gap: 8px; }
-    .expert-card__name { min-width: auto; }
+    .faculty-v5__grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .expert-card { gap: 12px; }
+    .expert-card__visual { aspect-ratio: 3 / 4; }
+    .expert-card__content { flex-direction: column; gap: 4px; }
+    .expert-card__name { min-width: auto; font-size: 14px; }
+    .expert-card__topic { font-size: 12px; }
     .diagnostics { padding: 100px 20px 120px; }
     .diagnostics__headline { font-size: 36px; }
     .diagnostics__description { font-size: 16px; }
@@ -4908,7 +4980,22 @@ body {
 @media (max-width: 480px) {
     .testimonials-alt11 { padding: 60px 20px; }
     .testimonials-alt11__headline { font-size: 36px; }
-    .testimonials-alt11__featured-quote { font-size: 28px; }
+
+    /* Make featured card match list items on mobile */
+    .testimonials-alt11__featured {
+        text-align: left;
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+    .testimonials-alt11__featured-photo {
+        width: 64px;
+        height: 64px;
+        margin: 0 0 20px 0;
+    }
+    .testimonials-alt11__featured-quote { font-size: 22px; margin-bottom: 16px; }
+    .testimonials-alt11__featured-author { font-size: 15px; }
+
+    /* List items */
     .testimonials-alt11__item { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
     .testimonials-alt11__photo { width: 64px; height: 64px; }
     .testimonials-alt11__quote { font-size: 22px; }
@@ -5311,6 +5398,9 @@ img {
 
 /* Hero mobile - stack content and visual */
 @media (max-width: 900px) {
+    .hero {
+        min-height: auto !important;
+    }
     .hero__inner {
         grid-template-columns: 1fr !important;
         padding: 0 24px !important;
@@ -5778,77 +5868,6 @@ img {
     }
 }
 
-/* ISSUE 6: Comparison table - card-based mobile layout */
-@media (max-width: 768px) {
-    .comparison {
-        padding: 60px 20px 80px !important;
-    }
-
-    .comparison__headline {
-        font-size: 28px !important;
-    }
-
-    .comparison__subheadline {
-        font-size: 15px !important;
-        margin-bottom: 32px !important;
-    }
-
-    /* Hide the header row and "other" column - just show WLF approach */
-    .comparison__table-header,
-    .comparison__cell--other {
-        display: none !important;
-    }
-
-    .comparison__table {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
-
-    .comparison__row {
-        display: block !important;
-        background: var(--color-card) !important;
-        border-radius: 16px !important;
-        padding: 20px !important;
-        margin-bottom: 0 !important;
-        border-bottom: none !important;
-    }
-
-    .comparison__row-label {
-        display: inline-block !important;
-        font-size: 11px !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.08em !important;
-        color: var(--color-blue) !important;
-        background: rgba(127, 171, 200, 0.15) !important;
-        padding: 6px 12px !important;
-        border-radius: 100px !important;
-        margin-bottom: 12px !important;
-    }
-
-    .comparison__cell--wlf {
-        padding: 0 !important;
-    }
-
-    .comparison__cell::before {
-        display: none !important;
-    }
-
-    .comparison__cell-title {
-        font-size: 17px !important;
-        font-weight: 600 !important;
-        color: var(--color-black) !important;
-        margin-bottom: 4px !important;
-    }
-
-    .comparison__cell-text {
-        font-size: 14px !important;
-        color: #666 !important;
-        line-height: 1.5 !important;
-    }
-}
-
 /* Additional overflow fixes for pillar sections */
 @media (max-width: 768px) {
     .pillar-dark,
@@ -6044,5 +6063,40 @@ img {
         width: 8px !important;
         height: 8px !important;
         min-width: 8px !important;
+    }
+}
+
+/* ===========================================
+   HIDE ELEMENTS ON MOBILE
+   =========================================== */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* ===========================================
+   MOBILE HEADLINE HIERARCHY FIX
+   Make section headlines bigger on mobile
+   =========================================== */
+@media (max-width: 600px) {
+    /* All section headlines - increase to 40px for clear hierarchy */
+    .structure-intro__headline,
+    .testimonials-alt11__headline,
+    .faculty-v5__headline,
+    .diagnostics__headline,
+    .investment__headline,
+    .fit__headline,
+    .fit-quiz__headline,
+    .selection__headline,
+    .comparison__headline,
+    .journey__headline,
+    .overview__headline,
+    .pillars__headline,
+    .video-section__headline,
+    .structure__headline,
+    .testimonials__headline {
+        font-size: 40px !important;
+        line-height: 1.15 !important;
     }
 }
