@@ -3850,7 +3850,7 @@ body {
 .diagnostics__container { max-width: var(--width-wide); margin: 0 auto; position: relative; z-index: 2; }
 .diagnostics__header { text-align: center; margin-bottom: 100px; }
 .diagnostics__label { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 40px; }
-.diagnostics__label-dot { width: 10px; height: 10px; background: var(--color-green); border-radius: 50%; }
+.diagnostics__label-dot { width: 10px; height: 10px; background: var(--color-orange); border-radius: 50%; }
 .diagnostics__label-text {
     font-family: var(--font-sans);
     font-size: 13px;
@@ -4706,102 +4706,110 @@ body {
     .selection__headline { font-size: 40px; }
 }
 @media (max-width: 700px) {
-    .comparison { padding: 80px 20px 100px; }
-    .comparison__headline { font-size: 36px; }
-    .comparison__header { margin-bottom: 40px; }
+    .comparison { padding: 60px 20px 80px; }
+    .comparison__headline { font-size: 32px; }
+    .comparison__header { margin-bottom: 32px; }
+    .comparison__subheadline { font-size: 15px; }
 
-    /* Hide the complex table header */
-    .comparison__table-header { display: none; }
-
-    /* Stack rows vertically */
+    /* Simple two-column layout */
     .comparison__table {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .comparison__row {
-        display: flex;
-        flex-direction: column;
-        background: var(--color-card);
-        border-radius: 16px;
-        overflow: hidden;
-    }
-
-    /* Row label as header */
-    .comparison__row-label {
-        display: block;
-        padding: 16px 20px;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--color-blue);
-        background: rgba(127, 171, 200, 0.1);
-        border-bottom: none;
-    }
-
-    /* Side by side cells */
-    .comparison__row-cells {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
 
+    /* Hide the original table header */
+    .comparison__table-header { display: none; }
+
+    /* Hide row labels - we'll use column headers instead */
+    .comparison__row-label { display: none; }
+
+    /* Each row becomes a full-width spanning element */
+    .comparison__row {
+        display: contents;
+    }
+
+    /* Cells as simple cards */
     .comparison__cell {
-        padding: 16px 20px;
+        background: var(--color-card);
+        border-radius: 12px;
+        padding: 16px;
         text-align: left;
         border-bottom: none;
     }
 
     .comparison__cell--wlf {
         background: #fff;
-        border-right: 1px solid rgba(0,0,0,0.06);
+        border-left: 3px solid var(--color-blue);
     }
 
     .comparison__cell--other {
-        background: rgba(0,0,0,0.02);
+        background: rgba(0,0,0,0.03);
+        border-left: 3px solid #ccc;
     }
 
     .comparison__cell::before {
-        content: attr(data-column);
-        display: block;
-        font-size: 10px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #999;
-        margin-bottom: 8px;
-    }
-
-    .comparison__cell--wlf::before {
-        color: var(--color-blue);
+        display: none;
     }
 
     .comparison__cell-title {
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 600;
         margin-bottom: 4px;
     }
 
-    .comparison__cell-text {
-        font-size: 13px;
-        line-height: 1.4;
+    .comparison__cell--wlf .comparison__cell-title {
+        color: var(--color-blue);
     }
 
-    .comparison__row:last-child .comparison__cell--wlf,
-    .comparison__row:last-child .comparison__cell--other {
-        border-radius: 0;
+    .comparison__cell-text {
+        font-size: 12px;
+        line-height: 1.4;
+        color: #666;
+    }
+
+    /* Add sticky column headers */
+    .comparison__table::before {
+        content: "WLF";
+        font-family: var(--font-sans);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-blue);
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    .comparison__table::after {
+        content: "Others";
+        font-family: var(--font-sans);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #999;
+        padding: 8px 0;
+        text-align: center;
     }
 }
 @media (max-width: 600px) {
     .faculty-v5 { padding: 60px 20px 80px; }
     .faculty-v5__headline { font-size: 36px; }
     .faculty-v5__subheadline { font-size: 16px; }
-    .faculty-v5__grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .expert-card { gap: 12px; }
-    .expert-card__visual { aspect-ratio: 3 / 4; }
-    .expert-card__content { flex-direction: column; gap: 4px; }
-    .expert-card__name { min-width: auto; font-size: 14px; }
-    .expert-card__topic { font-size: 12px; }
+    .faculty-v5__grid { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+    .expert-card { gap: 8px; }
+    .expert-card__visual {
+        aspect-ratio: 1 / 1;
+        border-radius: 12px;
+    }
+    .expert-card__visual img {
+        object-fit: contain;
+        object-position: center center;
+    }
+    .expert-card__content { flex-direction: column; gap: 2px; }
+    .expert-card__name { min-width: auto; font-size: 13px; }
+    .expert-card__topic { font-size: 11px; line-height: 1.3; }
     .diagnostics { padding: 100px 20px 120px; }
     .diagnostics__headline { font-size: 36px; }
     .diagnostics__description { font-size: 16px; }
@@ -5756,8 +5764,7 @@ img {
     .selection__label {
         display: inline-flex !important;
         align-items: center !important;
-        justify-content: center !important;
-        width: 100% !important;
+        gap: 8px !important;
     }
 
     .hero__label-dot,
@@ -6098,5 +6105,79 @@ img {
     .testimonials__headline {
         font-size: 40px !important;
         line-height: 1.15 !important;
+    }
+}
+
+/* ===========================================
+   MOBILE: Center section headers
+   =========================================== */
+@media (max-width: 768px) {
+    .investment__header,
+    .investment__content {
+        text-align: center !important;
+    }
+
+    .investment__label {
+        justify-content: center !important;
+    }
+
+    .investment__container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+}
+
+/* ===========================================
+   MOBILE: Fix stat cards alignment
+   All cards should have icon left, text left-aligned
+   =========================================== */
+@media (max-width: 768px) {
+    .stat-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: left !important;
+    }
+
+    .stat__content {
+        margin-top: 0 !important;
+        text-align: left !important;
+    }
+
+    .stat__number,
+    .stat__label,
+    .stat__sublabel {
+        text-align: left !important;
+    }
+}
+
+/* ===========================================
+   MOBILE: Smaller buttons
+   =========================================== */
+@media (max-width: 768px) {
+    .pillar-cta {
+        padding: 14px 24px !important;
+        font-size: 14px !important;
+        gap: 8px !important;
+    }
+
+    .pillar-cta svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .hero__cta {
+        padding: 14px 28px !important;
+        font-size: 14px !important;
+    }
+
+    .pricing-card__cta {
+        padding: 14px 24px !important;
+        font-size: 14px !important;
+    }
+
+    .fit-quiz__start-btn {
+        padding: 14px 28px !important;
+        font-size: 14px !important;
     }
 }
