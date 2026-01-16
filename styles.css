@@ -5931,7 +5931,7 @@ img {
 /* ISSUE: Bento boxes (stat cards) - make compact */
 @media (max-width: 768px) {
     .stats {
-        padding: 40px 20px !important;
+        padding: 20px 20px 40px !important;
     }
 
     .stats__container {
@@ -5945,6 +5945,7 @@ img {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
+        justify-content: flex-start !important;
         min-height: auto !important;
         padding: 20px !important;
         gap: 16px !important;
@@ -5954,6 +5955,7 @@ img {
         width: 48px !important;
         height: 48px !important;
         min-width: 48px !important;
+        flex-shrink: 0 !important;
         margin-bottom: 0 !important;
     }
 
@@ -5963,22 +5965,30 @@ img {
     }
 
     .stat__content {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
         text-align: left !important;
+        margin-top: 0 !important;
     }
 
     .stat__number {
         font-size: 32px !important;
         line-height: 1 !important;
         margin-bottom: 4px !important;
+        text-align: left !important;
     }
 
     .stat__label {
         font-size: 14px !important;
         margin-bottom: 2px !important;
+        text-align: left !important;
     }
 
     .stat__sublabel {
         font-size: 12px !important;
+        text-align: left !important;
     }
 }
 
