@@ -5555,11 +5555,11 @@ img {
         font-size: 32px !important;
     }
     .faculty-v5__grid {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px 12px !important;
     }
     .expert-card__visual img {
-        max-width: 200px !important;
+        max-width: 100% !important;
         margin: 0 auto !important;
         display: block !important;
     }
