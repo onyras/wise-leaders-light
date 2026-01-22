@@ -5773,6 +5773,20 @@ img {
         gap: 10px !important;
     }
 
+    .hero__label-text,
+    .journey__label-text,
+    .pillars__label-text,
+    .structure-intro__label-text,
+    .testimonials-alt11__label-text,
+    .faculty-v5__label-text,
+    .comparison__label-text,
+    .diagnostics__label-text,
+    .investment__label-text,
+    .fit__label-text,
+    .selection__label-text {
+        line-height: 1 !important;
+    }
+
     .hero__label-dot,
     .journey__label-dot,
     .pillars__label-dot,
@@ -5790,7 +5804,6 @@ img {
         min-height: 8px !important;
         flex-shrink: 0 !important;
         border-radius: 50% !important;
-        transform: translateY(-1px);
     }
 }
 
