@@ -5785,6 +5785,7 @@ img {
     .fit__label-text,
     .selection__label-text {
         line-height: 1 !important;
+        padding-top: 2px !important;
     }
 
     .hero__label-dot,
