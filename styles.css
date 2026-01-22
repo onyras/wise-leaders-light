@@ -5768,7 +5768,7 @@ img {
     .fit__label,
     .selection__label {
         display: inline-flex !important;
-        align-items: center !important;
+        align-items: flex-start !important;
         gap: 10px !important;
     }
 
@@ -5783,8 +5783,7 @@ img {
     .investment__label-text,
     .fit__label-text,
     .selection__label-text {
-        line-height: 1 !important;
-        padding-top: 2px !important;
+        line-height: 1.2 !important;
     }
 
     .hero__label-dot,
@@ -5804,6 +5803,7 @@ img {
         min-height: 8px !important;
         flex-shrink: 0 !important;
         border-radius: 50% !important;
+        margin-top: 4px !important;
     }
 }
 
