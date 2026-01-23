@@ -3887,6 +3887,8 @@ body {
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.06);
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 .diag-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.12); }
 .diag-card__visual {
@@ -3999,7 +4001,12 @@ body {
 .action-line:nth-child(3) { bottom: 20%; left: 15%; transform: rotate(20deg); animation-delay: 1s; }
 .action-line:nth-child(4) { bottom: 25%; right: 10%; transform: rotate(-40deg); animation-delay: 1.5s; }
 @keyframes line-fade { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.8; } }
-.diag-card__content { padding: 32px; }
+.diag-card__content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 .diag-card__meta { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
 .diag-card__meta-item {
     display: flex;
@@ -4046,6 +4053,7 @@ body {
     color: var(--color-white);
     text-decoration: none;
     transition: gap 0.3s ease;
+    margin-top: auto;
 }
 .diag-card__link:hover { gap: 14px; }
 .diag-card__link svg { width: 16px; height: 16px; }
