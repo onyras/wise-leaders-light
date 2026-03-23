@@ -113,7 +113,11 @@ window.addEventListener('load', init);
 const player = document.getElementById('videoPlayer');
 if (player) {
     player.addEventListener('click', function() {
-        this.innerHTML = '<iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+        if (window.location.protocol === 'file:') {
+            window.open('https://www.youtube.com/watch?v=6xoLFdYdmJA', '_blank');
+        } else {
+            this.innerHTML = '<iframe src="https://www.youtube.com/embed/6xoLFdYdmJA?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+        }
     });
 }
 
