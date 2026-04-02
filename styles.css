@@ -855,10 +855,11 @@ body {
 /* Phase Labels - Above the cubes */
 .phase-labels {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    max-width: 600px;
+    margin: 0 auto 30px;
     padding: 0 var(--padding-x);
-    margin-bottom: 30px;
 }
 
 .phase-label {
@@ -1100,10 +1101,11 @@ body {
 /* CSS-based Cubes Timeline - uses same grid as phase labels */
 .timeline-cubes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    max-width: 600px;
+    margin: 40px auto 0;
     padding: 0 var(--padding-x);
-    margin-top: 40px;
 }
 
 /* Each cube container */
