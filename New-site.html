@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellowship</title>
+    <meta name="description" content="A year of practice for CEOs who have outgrown standard advice. Silent is the constant. The rest rotates.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fellowship">
+    <meta property="og:description" content="A year of practice for CEOs who have outgrown standard advice. Silent is the constant. The rest rotates.">
+    <meta property="og:image" content="https://www.wiseleadersfellowship.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.wiseleadersfellowship.com">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fellowship">
+    <meta name="twitter:description" content="A year of practice for CEOs who have outgrown standard advice. Silent is the constant. The rest rotates.">
+    <meta name="twitter:image" content="https://www.wiseleadersfellowship.com/images/og-image.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon/favicon.png">
+    <link rel="stylesheet" href="new-site.styles.css?v=1">
+</head>
+<body>
+    <!-- ==========================================
+         COOKIE CONSENT
+         ========================================== -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-consent__content">
+            <p class="cookie-consent__text">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="privacy.html" class="cookie-consent__link">Learn more</a></p>
+            <div class="cookie-consent__buttons">
+                <button class="cookie-consent__btn cookie-consent__btn--accept" id="cookieAccept">Accept</button>
+                <button class="cookie-consent__btn cookie-consent__btn--decline" id="cookieDecline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav class="nav">
+        <a href="/" class="nav__logo">Fellowship</a>
+        <div class="nav__links">
+            <a href="#journey" class="nav__link">Fellowship</a>
+            <a href="#structure" class="nav__link">Approach</a>
+        </div>
+        <a href="https://niko96.typeform.com/to/x7j5lzdV" class="nav__cta nav__cta--desktop" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__content">
+            <a href="#journey" class="mobile-menu__link">Fellowship</a>
+            <a href="#structure" class="mobile-menu__link">Approach</a>
+            <a href="https://niko96.typeform.com/to/x7j5lzdV" class="mobile-menu__cta" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SECTION 1: HERO
+         ========================================== -->
+    <section class="hero">
+        <div class="hero__inner">
+        <div class="hero__content">
+            <div class="hero__label">
+                <span class="hero__label-dot"></span>
+                <span class="hero__label-text">For CEOs who have outgrown peer groups</span>
+            </div>
+            <h1 class="hero__headline">
+                A <em>practice community</em> for CEOs.
+            </h1>
+            <p class="hero__body">
+                A community of CEOs who treat leadership as a lifelong practice. We gather to train it together, year after year.
+            </p>
+            <div class="hero__ctas">
+                <a href="https://niko96.typeform.com/to/x7j5lzdV" class="hero__cta" target="_blank" rel="noopener noreferrer">Apply for 2027</a>
+                <div class="refer-wrapper">
+                    <a href="#" class="hero__cta hero__cta--secondary" id="referBtn">Refer a CEO</a>
+                    <div class="refer-popup" id="referPopup">
+                        <button class="refer-popup__close" id="referClose">&times;</button>
+                        <form class="refer-popup__form" id="referForm">
+                            <div class="refer-popup__field">
+                                <label for="referProfile">Social Media Profile</label>
+                                <input type="text" id="referProfile" placeholder="LinkedIn, Twitter, etc.">
+                            </div>
+                            <div class="refer-popup__field">
+                                <label for="referWhy">Why would they benefit?</label>
+                                <textarea id="referWhy" rows="3" placeholder="What makes them a good fit..."></textarea>
+                            </div>
+                            <div class="refer-popup__field">
+                                <label for="referName">Your Name</label>
+                                <input type="text" id="referName" placeholder="Your full name">
+                            </div>
+                            <button type="submit" class="refer-popup__submit">Submit Referral</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero__visual">
+            <div class="radar-container">
+                <div class="radar-glow"></div>
+                <svg class="radar-svg" viewBox="0 0 600 600" id="radarSvg">
+                    <circle class="radar-grid" cx="300" cy="300" r="70"/>
+                    <circle class="radar-grid" cx="300" cy="300" r="140"/>
+                    <circle class="radar-grid" cx="300" cy="300" r="210"/>
+                    <g id="axes"></g>
+                    <g id="areas"></g>
+                    <g id="points"></g>
+                    <g id="labels"></g>
+                </svg>
+                <div class="radar-center">
+                    <div class="radar-score" id="radarScore">0</div>
+                    <div class="radar-score-label">Body Reserve</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: FROM THE CIRCLE (VIDEO)
+         ========================================== -->
+    <section class="circle-video" style="padding: 80px 40px; background: #fafaf7;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(127, 171, 200, 0.12); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7FABC8; margin-bottom: 24px;">
+                    <span style="width: 6px; height: 6px; background: #7FABC8; border-radius: 50%;"></span>
+                    <span>From the Circle</span>
+                </div>
+                <h2 style="font-size: clamp(32px, 4vw, 44px); font-weight: 400; line-height: 1.15; color: #1a1a1a; margin: 0 0 16px; max-width: 720px; margin-left: auto; margin-right: auto;">A message to CEOs who feel the <em style="font-style: italic; color: #7FABC8;">same wall</em>.</h2>
+                <p style="font-size: 18px; line-height: 1.5; color: #555; max-width: 620px; margin: 0 auto;">Niko on why the Fellowship exists, and who it's for.</p>
+            </div>
+            <div style="position: relative; width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; background: linear-gradient(135deg, #2a2a2a, #1a1a1a); border-radius: 16px; overflow: hidden; cursor: pointer; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 84px; height: 84px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 24px; left: 24px; color: rgba(255,255,255,0.9); font-size: 14px; letter-spacing: 0.05em;">Video coming soon</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: LOGO CLOUD
+         ========================================== -->
+    <section class="logos">
+        <div class="logos__container">
+            <p class="logos__headline">Trusted by leaders building what matters</p>
+            <div class="logos__grid">
+                <div class="logo-item"><span>Mojo</span></div>
+                <div class="logo-item"><span>SirPlus</span></div>
+                <div class="logo-item"><span>Amorelie</span></div>
+                <div class="logo-item"><span>LiveEO</span></div>
+                <div class="logo-item"><span>Yuri</span></div>
+                <div class="logo-item"><span>Beat81</span></div>
+                <div class="logo-item"><span>Klang Games</span></div>
+                <div class="logo-item"><span>PSL</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: FELLOWSHIP JOURNEY (Animated Pathway)
+         ========================================== -->
+    <section class="journey" id="journey">
+        <div class="journey__header">
+            <div class="journey__label">
+                <span class="journey__label-dot"></span>
+                <span class="journey__label-text">The Menu</span>
+            </div>
+            <h2 class="journey__headline">Four retreats. You pick <em>two</em>.</h2>
+            <p class="journey__subheadline">Silent is always on the menu. The rest rotates year to year.</p>
+
+        </div>
+
+        <div class="pathways" id="pathways">
+
+            <!-- Phase Labels Above -->
+            <div class="phase-labels">
+                <div class="phase-label phase-label--green">
+                    <span class="phase-label__badge">January 2027</span>
+                    <h3 class="phase-label__title">Silent Retreat</h3>
+                    <p class="phase-label__meta">5 days</p>
+                </div>
+                <div class="phase-label phase-label--orange">
+                    <span class="phase-label__badge">July 2027</span>
+                    <h3 class="phase-label__title">Performance Retreat</h3>
+                    <p class="phase-label__meta">3 days</p>
+                </div>
+            </div>
+
+            <!-- CSS-based Geometric Timeline (same flex layout as labels) -->
+            <div class="timeline-cubes">
+                <!-- Cube 1: Silent Retreat (GREEN) - Dense -->
+                <div class="cube-container cube-container--green">
+                    <div class="cube cube--dense">
+                        <div class="cube__layer cube__layer--1"></div>
+                        <div class="cube__layer cube__layer--2"></div>
+                        <div class="cube__layer cube__layer--3"></div>
+                        <div class="cube__layer cube__layer--4"></div>
+                        <div class="cube__layer cube__layer--5"></div>
+                        <div class="cube__layer cube__layer--front"></div>
+                    </div>
+                    <div class="cube__bar"></div>
+                </div>
+
+
+                <!-- Cube 4: Performance Retreat (ORANGE) - Open -->
+                <div class="cube-container cube-container--orange">
+                    <div class="cube cube--open">
+                        <div class="cube__layer cube__layer--1"></div>
+                        <div class="cube__layer cube__layer--front"></div>
+                    </div>
+                    <div class="cube__bar"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: MANIFESTO (LIGHT)
+         ========================================== -->
+    <section class="manifesto" id="manifesto">
+        <div class="manifesto__container">
+            <p class="manifesto__text">
+                <span class="manifesto__line">You don't need <span class="typing-word" id="typingWord"></span><span class="typing-cursor">|</span></span>
+                <span class="manifesto__line manifesto__answer">You need a <em>practice</em>, and a <em>circle</em>.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: TESTIMONIALS - Alt 11 (Featured + List)
+         ========================================== -->
+    <section class="testimonials-alt11">
+        <div class="testimonials-alt11__container">
+            <!-- Header -->
+            <div class="testimonials-alt11__header">
+                <div class="testimonials-alt11__label">
+                    <span class="testimonials-alt11__label-dot"></span>
+                    <span class="testimonials-alt11__label-text">Testimonials</span>
+                </div>
+                <h2 class="testimonials-alt11__headline">What <em>alumni</em> say</h2>
+            </div>
+
+            <!-- Featured large quote -->
+            <div class="testimonials-alt11__featured">
+                <img class="testimonials-alt11__featured-photo" src="images/testimonials/Francescu Santoni.jpg" alt="Francescu Santoni">
+                <p class="testimonials-alt11__featured-quote">"The most <em>transformative</em> experience in leadership development."</p>
+                <p class="testimonials-alt11__featured-author"><strong>Francescu Santoni</strong> <span>CEO Mojo, YC W19</span></p>
+            </div>
+
+            <!-- Smaller quotes list -->
+            <div class="testimonials-alt11__list">
+                <div class="testimonials-alt11__item">
+                    <img class="testimonials-alt11__photo" src="images/testimonials/Raphael Fellmer.jpg" alt="Raffael Fellmer">
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"This program has changed my mind. It will change yours."</p>
+                        <p class="testimonials-alt11__author"><strong>Raffael Fellmer</strong> <span>CEO SirPlus</span></p>
+                    </div>
+                </div>
+                <div class="testimonials-alt11__item">
+                    <img class="testimonials-alt11__photo" src="images/testimonials/Claire Midwood .jpg" alt="Claire Midwood">
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"I never knew I have so much kindness in me."</p>
+                        <p class="testimonials-alt11__author"><strong>Claire Midwood</strong> <span>former CEO Amorelie</span></p>
+                    </div>
+                </div>
+                <div class="testimonials-alt11__item">
+                    <img class="testimonials-alt11__photo" src="images/testimonials/Franziska Schmitt .jpg" alt="Franziska Schmitt">
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"Nikolas teaches the science of meditation in a way that immediately is applicable to help me be a better leader."</p>
+                        <p class="testimonials-alt11__author"><strong>Franziska Schmitt</strong> <span>CEO Humanize</span></p>
+                    </div>
+                </div>
+                <div class="testimonials-alt11__item">
+                    <img class="testimonials-alt11__photo" src="images/testimonials/Oddur Magnusson.jpg" alt="Oddur Magnusson">
+                    <div class="testimonials-alt11__content">
+                        <p class="testimonials-alt11__quote">"An amazing program to reflect how I am showing up as a leader."</p>
+                        <p class="testimonials-alt11__author"><strong>Oddur Magnusson</strong> <span>Founder Klang Games</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: PILLARS (LIGHT)
+         ========================================== -->
+    <section class="pillars pillars--v4-j" id="pillars">
+        <div class="pillars__container">
+            <div class="pillars__label">
+                <span class="pillars__label-dot"></span>
+                <span class="pillars__label-text">Our Approach</span>
+            </div>
+            <h2 class="pillars__headline">We create <em>reflection spaces</em> for people in responsibility.</h2>
+
+            <div class="pillars__cards-v4">
+                <div class="pillar-large">
+                    <div class="pillar-large__graphic pillar-large__graphic--green">
+                        <img src="images/reflection spaces/silence3.jpg" alt="Stillness" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="pillar-large__text">
+                        <h3 class="pillar-large__title pillar-large__title--green">Stillness</h3>
+                        <p class="pillar-large__desc">Space to step back from the noise.</p>
+                    </div>
+                </div>
+                <div class="pillar-large">
+                    <div class="pillar-large__graphic pillar-large__graphic--blue">
+                        <img src="images/reflection spaces/science.jpg" alt="Science" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="pillar-large__text">
+                        <h3 class="pillar-large__title pillar-large__title--blue">Science</h3>
+                        <p class="pillar-large__desc">Diagnostics that make the invisible visible.</p>
+                    </div>
+                </div>
+                <div class="pillar-large">
+                    <div class="pillar-large__graphic pillar-large__graphic--orange">
+                        <img src="images/reflection spaces/allies.jpg" alt="Allies" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="pillar-large__text">
+                        <h3 class="pillar-large__title pillar-large__title--orange">Allies</h3>
+                        <p class="pillar-large__desc">Peers who understand what you carry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: STRUCTURE INTRO (DARK)
+         ========================================== -->
+    <section class="structure-intro" id="structure">
+        <div class="structure-intro__container">
+            <div class="structure-intro__header">
+                <div class="structure-intro__label">
+                    <span class="structure-intro__label-dot"></span>
+                    <span class="structure-intro__label-text">The Menu</span>
+                </div>
+                <h2 class="structure-intro__headline">One year. <em>A practice.</em></h2>
+                <p class="structure-intro__subheadline">Four retreats on the menu each year. You pick two. Some are practices you return to. Others teach you something new.</p>
+            </div>
+
+            <div class="structure-intro__list">
+                <a href="#pillar-1" class="structure-intro__item">
+                    <div class="structure-intro__content">
+                        <h3 class="structure-intro__title structure-intro__title--green">Silent Retreat</h3>
+                        <p class="structure-intro__desc">Five days of silence. Every year. The constant.</p>
+                    </div>
+                    <span class="structure-intro__timing">January · 5 days</span>
+                </a>
+                <a href="#pillar-2" class="structure-intro__item">
+                    <div class="structure-intro__content">
+                        <h3 class="structure-intro__title structure-intro__title--orange">Breathwork for Leadership</h3>
+                        <p class="structure-intro__desc">Nervous system recalibration. Breath as the fastest lever.</p>
+                    </div>
+                    <span class="structure-intro__timing">April · 3 days</span>
+                </a>
+                <a href="#pillar-3" class="structure-intro__item">
+                    <div class="structure-intro__content">
+                        <h3 class="structure-intro__title structure-intro__title--orange">Performance Retreat</h3>
+                        <p class="structure-intro__desc">Stress diagnostics to the biomarker. Recovery protocols.</p>
+                    </div>
+                    <span class="structure-intro__timing">July · 3 days</span>
+                </a>
+                <a href="#pillar-4" class="structure-intro__item structure-intro__item--last">
+                    <div class="structure-intro__content">
+                        <h3 class="structure-intro__title structure-intro__title--green">Improvisation Training</h3>
+                        <p class="structure-intro__desc">Thinking on your feet. Leading without a script when the plan breaks.</p>
+                    </div>
+                    <span class="structure-intro__timing">October · 3 days</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 10: PILLAR 1 - SILENT RETREAT
+         ========================================== -->
+    <section class="pillar-dark" id="pillar-1" style="
+        background: #1a1a1a;
+        padding: 120px 40px;
+    ">
+        <div class="pillar-dark__grid" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center;">
+            <div>
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Pillar 1</span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; color: var(--color-green); margin-left: 12px;">January 2027</span>
+                </div>
+
+                <h2 style="font-family: var(--font-serif); font-size: 72px; font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 32px;">
+                    Silent <em style="font-style: italic; color: var(--color-green);">Retreat</em>
+                </h2>
+
+                <p style="font-family: var(--font-sans); font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 520px; margin-bottom: 48px;">
+                    Five days of extended silence, daily leadership labs, and deep peer connection. This is where the real work begins.
+                </p>
+
+                <div class="pillar-dark__features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Deep Stillness</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">No words, devices, or distraction</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Leadership Labs</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Purpose, patterns, and presence</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Peer Connection</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Your Wisdom Council forms here</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Lasting Practices</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Skills you keep for life</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://niko96.typeform.com/to/x7j5lzdV" class="pillar-cta" style="display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #1a1a1a; padding: 18px 32px; border-radius: 100px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">
+                    Apply now
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right side: Journey Arc -->
+            <div class="pillar-bubble hide-mobile" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px;">
+                <h3 style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.4); margin-bottom: 40px;">The Journey</h3>
+                <div style="display: flex; flex-direction: column; gap: 32px;">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="width: 12px; height: 12px; background: var(--color-green); border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Arrive</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Release the role. Land in the body.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="width: 12px; height: 12px; background: var(--color-green); border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Map</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">See your patterns with ruthless clarity.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="width: 12px; height: 12px; background: var(--color-green); border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Silence</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Strip away the noise. Meet yourself.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="width: 12px; height: 12px; background: var(--color-green); border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Train</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Build a mind that works for you.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="width: 12px; height: 12px; background: var(--color-green); border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Return</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Leave with practices, commitments, and a Wisdom Council for life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION: VIDEO - RETREAT TESTIMONIAL
+         ========================================== -->
+    <section class="video-section">
+        <div class="video-section__container">
+            <div class="video-section__content">
+                <div class="video-section__label">
+                    <span class="video-section__label-dot"></span>
+                    <span class="video-section__label-text">The Foundation Retreat</span>
+                </div>
+                <h2 class="video-section__headline">What participants say about the <em>retreat</em></h2>
+                <p class="video-section__body">No phones. No agenda. Just silence, nature, and the space to finally hear yourself think. Participants call it the most transformative week of their leadership journey.</p>
+                <blockquote class="video-section__quote">
+                    "I came expecting a leadership workshop. I left understanding myself."
+                    <span class="video-section__quote-author">— 2024 Retreat Participant</span>
+                </blockquote>
+            </div>
+            <div class="video-section__visual">
+                <div class="video-section__player" id="videoPlayer">
+                    <img class="video-section__thumbnail" src="https://img.youtube.com/vi/6xoLFdYdmJA/maxresdefault.jpg" alt="Retreat participant testimonial">
+                    <div class="video-section__play">
+                        <div class="video-section__play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY: SILENT RETREAT
+         ========================================== -->
+    <section style="background: #fafaf7; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(166, 190, 164, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6a8a66; margin-bottom: 16px;">
+                    <span style="width: 6px; height: 6px; background: #A6BEA4; border-radius: 50%;"></span>
+                    <span>Inside the Silent Retreat</span>
+                </div>
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Five days, no words, one <em style="color: #6a8a66;">mirror</em>.</h3>
+                <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">Mornings in silence. Afternoons in leadership labs. Evenings with the circle.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #d4dbc9, #a6bea4); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #c8d4bc, #8faa8c); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #e0e5d5, #b8c9b0); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #dce2cf, #9fb89a); border-radius: 12px;"></div>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 16px;">Photo gallery coming soon</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIAL VIDEOS: SILENT RETREAT
+         ========================================== -->
+    <section style="background: #ffffff; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">CEOs who came back <em style="color: #6a8a66;">different</em>.</h3>
+                <p style="font-size: 17px; color: #555;">Three voices from the Silent Retreat.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a2a2a, #1a1a1a); border-radius: 12px; position: relative; cursor: pointer;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a2a2a, #1a1a1a); border-radius: 12px; position: relative; cursor: pointer;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a2a2a, #1a1a1a); border-radius: 12px; position: relative; cursor: pointer;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION: BREATHWORK FOR LEADERSHIP (Pillar 2)
+         ========================================== -->
+    <section class="pillar-dark" id="pillar-2" style="background: #1a1a1a; padding: 120px 40px;">
+        <div class="pillar-dark__grid" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center;">
+            <div>
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-blue); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Pillar 2</span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; color: var(--color-blue); margin-left: 12px;">April 2027</span>
+                </div>
+
+                <h2 style="font-family: var(--font-serif); font-size: 72px; font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 32px;">
+                    Breathwork for <em style="font-style: italic; color: var(--color-blue);">Leadership</em>
+                </h2>
+
+                <p style="font-family: var(--font-sans); font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 520px; margin-bottom: 48px;">
+                    The fastest lever you have over your nervous system. Three days with Peter van Woerkum learning to regulate state on demand, before the next board meeting, pitch, or crisis.
+                </p>
+
+                <div class="pillar-dark__features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(127, 171, 200, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-blue)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Tummo Breathing</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Wim Hof method. Energy on demand.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(127, 171, 200, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-blue)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Buteyko Method</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Oxygen Advantage. Down-regulation.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(127, 171, 200, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-blue)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Conscious Connected</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Deep release. Integration.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(127, 171, 200, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-blue)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Daily Protocols</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Two-minute tools for the desk.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 32px; margin-bottom: 48px; padding: 24px; background: rgba(127,171,200,0.08); border-radius: 16px;">
+                    <div>
+                        <div style="font-family: var(--font-serif); font-size: 28px; color: var(--color-blue);">25%</div>
+                        <div style="font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Audi innovation lift</div>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-serif); font-size: 28px; color: var(--color-blue);">96%</div>
+                        <div style="font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Personio positive impact</div>
+                    </div>
+                </div>
+
+                <a href="https://niko96.typeform.com/to/x7j5lzdV" class="pillar-cta" style="display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #1a1a1a; padding: 18px 32px; border-radius: 100px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">
+                    Apply now
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right side: Coach card -->
+            <div class="pillar-bubble hide-mobile" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px;">
+                <h3 style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.4); margin-bottom: 32px;">Your Coach</h3>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 32px;">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+                        <img src="images/fellows/Peter van Woerkum .jpg" alt="Peter van Woerkum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-sans); font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 4px;">Peter van Woerkum</h4>
+                        <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Founder, Regulate</p>
+                    </div>
+                </div>
+                <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;">Corporate breathwork trainer. Works with Audi, Personio, RBI. Teaches CEOs to regulate state the way athletes do, with methods grounded in Stanford and Harvard research.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY: BREATHWORK
+         ========================================== -->
+    <section style="background: #fafaf7; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(127, 171, 200, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5a8aa8; margin-bottom: 16px;">
+                    <span style="width: 6px; height: 6px; background: #7FABC8; border-radius: 50%;"></span>
+                    <span>Inside the Breathwork Retreat</span>
+                </div>
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Three days of <em style="color: #5a8aa8;">breath</em>.</h3>
+                <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">Cold exposure. Breath holds. Group sessions. Protocols you can take back to your desk.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #c8d8e5, #7FABC8); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #b8cddb, #5a8aa8); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #d4e0ea, #8fb3cc); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #beced8, #6b9ab8); border-radius: 12px;"></div>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 16px;">Photo gallery coming soon</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIAL VIDEOS: BREATHWORK
+         ========================================== -->
+    <section style="background: #ffffff; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">State change in <em style="color: #5a8aa8;">minutes</em>.</h3>
+                <p style="font-size: 17px; color: #555;">Leaders on what breathwork unlocked for them.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a3a4a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a3a4a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a3a4a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION: PERFORMANCE RETREAT (Pillar 3)
+         ========================================== -->
+    <section class="pillar-dark" id="pillar-3" style="
+        background: #1a1a1a;
+        padding: 120px 40px;
+    ">
+        <div class="pillar-dark__grid" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center;">
+            <div>
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-orange); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Pillar 3</span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; color: var(--color-orange); margin-left: 12px;">July 2027</span>
+                </div>
+
+                <h2 style="font-family: var(--font-serif); font-size: 72px; font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 32px;">
+                    Performance <em style="font-style: italic; color: var(--color-orange);">Retreat</em>
+                </h2>
+
+                <p style="font-family: var(--font-sans); font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 520px; margin-bottom: 48px;">
+                    Work with your individual stress and recovery data, learn practical breath protocols, and build a personal routine that fits your real life as a CEO.
+                </p>
+
+                <div class="pillar-dark__features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(224, 143, 106, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-orange)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Stress Diagnostics</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">250+ biomarkers analyzed</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(224, 143, 106, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-orange)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Breathwork Training</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Rapid state-shift protocols</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(224, 143, 106, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-orange)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Immersive Retreat</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Two days of integration</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(224, 143, 106, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-orange)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Personal Playbook</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Routines for your biology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" style="display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #1a1a1a; padding: 18px 32px; border-radius: 100px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none;">
+                    Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right side: Coaches -->
+            <div style="background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px;">
+                <h3 style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.4); margin-bottom: 40px;">Your Coaches</h3>
+                <div style="display: flex; flex-direction: column; gap: 32px;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+                            <img src="images/fellows/Jan-Philipp Martini .jpg" alt="Jan Philipp Martini" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Jan Philipp Martini</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Human Performance Scientist</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+                            <img src="images/fellows/Peter van Woerkum .jpg" alt="Peter van Woerkum" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px;">Peter van Woerkum</h4>
+                            <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Breathwork & Self-Regulation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY: PERFORMANCE
+         ========================================== -->
+    <section style="background: #fafaf7; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(224, 143, 106, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #c07050; margin-bottom: 16px;">
+                    <span style="width: 6px; height: 6px; background: #E08F6A; border-radius: 50%;"></span>
+                    <span>Inside the Performance Retreat</span>
+                </div>
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Three days, your <em style="color: #c07050;">biology</em>.</h3>
+                <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">250+ biomarkers. One-on-one debriefs. A personal protocol you walk home with.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #ebc8b4, #E08F6A); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #dcb09a, #c07050); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #f0d5c4, #e5a586); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #e2bba3, #cd8566); border-radius: 12px;"></div>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 16px;">Photo gallery coming soon</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIAL VIDEOS: PERFORMANCE
+         ========================================== -->
+    <section style="background: #ffffff; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">From alumni who saw their <em style="color: #c07050;">data</em>.</h3>
+                <p style="font-size: 17px; color: #555;">CEOs on what changed after they saw the numbers.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #3a2a1a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #3a2a1a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #3a2a1a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION: IMPROVISATION TRAINING (Pillar 4)
+         ========================================== -->
+    <section class="pillar-dark" id="pillar-4" style="background: #1a1a1a; padding: 120px 40px;">
+        <div class="pillar-dark__grid" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center;">
+            <div>
+                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                    <span style="width: 8px; height: 8px; background: var(--color-green); border-radius: 50%;"></span>
+                    <span style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Pillar 4</span>
+                    <span style="font-family: var(--font-sans); font-size: 14px; color: var(--color-green); margin-left: 12px;">October 2027</span>
+                </div>
+
+                <h2 style="font-family: var(--font-serif); font-size: 72px; font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 32px;">
+                    Improvisation <em style="font-style: italic; color: var(--color-green);">Training</em>
+                </h2>
+
+                <p style="font-family: var(--font-sans); font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 520px; margin-bottom: 48px;">
+                    The plan breaks. The room shifts. The board asks something you haven't rehearsed. Three days learning to lead without a script, with Jacob and the circle.
+                </p>
+
+                <div class="pillar-dark__features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.63 7.5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Yes, And</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Build on what lands in the room.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Status Work</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Read a room. Shift the frame.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Live Scenes</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Your real problems. Rehearsed.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 48px; height: 48px; background: rgba(166, 190, 164, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-green)" stroke-width="1.5" style="width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: #fff; display: block;">Composure Under Fire</span>
+                            <span style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5);">Stay useful when the plan dies.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://niko96.typeform.com/to/x7j5lzdV" class="pillar-cta" style="display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #1a1a1a; padding: 18px 32px; border-radius: 100px; font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">
+                    Apply now
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right side: Coach -->
+            <div class="pillar-bubble hide-mobile" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px;">
+                <h3 style="font-family: var(--font-sans); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.4); margin-bottom: 32px;">Your Coach</h3>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 32px;">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #a6bea4, #6a8a66); flex-shrink: 0;"></div>
+                    <div>
+                        <h4 style="font-family: var(--font-sans); font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 4px;">Jacob</h4>
+                        <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.5;">Improvisation & Leadership Presence</p>
+                    </div>
+                </div>
+                <p style="font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;">Full bio landing soon. Works with executives on composure, spontaneity, and leading in rooms where the script breaks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY: IMPROVISATION
+         ========================================== -->
+    <section style="background: #fafaf7; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(166, 190, 164, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6a8a66; margin-bottom: 16px;">
+                    <span style="width: 6px; height: 6px; background: #A6BEA4; border-radius: 50%;"></span>
+                    <span>Inside the Improvisation Retreat</span>
+                </div>
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Live practice, <em style="color: #6a8a66;">real stakes</em>.</h3>
+                <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">Short scenes. Fast debriefs. Your blind spots, surfaced in the room.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #d4dbc9, #a6bea4); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #c8d4bc, #8faa8c); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #e0e5d5, #b8c9b0); border-radius: 12px;"></div>
+                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #dce2cf, #9fb89a); border-radius: 12px;"></div>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 16px;">Photo gallery coming soon</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIAL VIDEOS: IMPROVISATION
+         ========================================== -->
+    <section style="background: #ffffff; padding: 80px 40px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">CEOs on leading without a <em style="color: #6a8a66;">script</em>.</h3>
+                <p style="font-size: 17px; color: #555;">Three takes from the Improvisation Retreat.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a3a2a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a3a2a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+                <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2a3a2a, #1a1a1a); border-radius: 12px; position: relative;">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 16px; left: 16px; color: rgba(255,255,255,0.85); font-size: 13px;">Coming soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 14: DIAGNOSTICS
+         ========================================== -->
+    <section class="diagnostics" id="diagnostics">
+        <div class="diagnostics__bg"></div>
+        <div class="diagnostics__orb diagnostics__orb--1"></div>
+        <div class="diagnostics__orb diagnostics__orb--2"></div>
+        <div class="diagnostics__orb diagnostics__orb--3"></div>
+
+        <div class="diagnostics__container">
+            <div class="diagnostics__header">
+                <div class="diagnostics__label">
+                    <span class="diagnostics__label-dot"></span>
+                    <span class="diagnostics__label-text">For CEOs who have outgrown standard advice</span>
+                </div>
+                <h2 class="diagnostics__headline">Stress-proof your leadership with <em>body data.</em></h2>
+                <p class="diagnostics__description">Every Fellow receives comprehensive personalized stress-diagnostics and a resilience plan. This isn't generic wellness advice. It's a scientific assessment of how your body handles the demands of leadership.</p>
+            </div>
+
+            <div class="diagnostics__grid">
+                <div class="diag-card">
+                    <div class="diag-card__visual">
+                        <span class="diag-card__badge">Retreat</span>
+                        <div class="diag-card__illustration">
+                            <div class="illustration-biomarker">
+                                <div class="biomarker-ring biomarker-ring--1"></div>
+                                <div class="biomarker-ring biomarker-ring--2"></div>
+                                <div class="biomarker-ring biomarker-ring--3"></div>
+                                <div class="biomarker-dot biomarker-dot--1"></div>
+                                <div class="biomarker-dot biomarker-dot--2"></div>
+                                <div class="biomarker-dot biomarker-dot--3"></div>
+                                <div class="biomarker-dot biomarker-dot--4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diag-card__content">
+                        <div class="diag-card__meta">
+                            <span class="diag-card__meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                                Pre-retreat
+                            </span>
+                        </div>
+                        <h3 class="diag-card__title">Diagnostics</h3>
+                        <ul class="diag-card__list">
+                            <li>Hair Stress Hormone Profile (Cortisol, Cortisone, DHEA + 7 biomarkers)</li>
+                            <li>Saliva Cortisol Profile (morning ramp-up, evening wind-down)</li>
+                            <li>Recovery Analytics with ECG Monitor (one workweek)</li>
+                            <li>Scientifically Validated Self-Assessment</li>
+                        </ul>
+                        <a href="#" class="diag-card__link">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="diag-card">
+                    <div class="diag-card__visual">
+                        <span class="diag-card__badge">Labs</span>
+                        <div class="diag-card__illustration">
+                            <div class="illustration-report">
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                                <div class="report-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diag-card__content">
+                        <div class="diag-card__meta">
+                            <span class="diag-card__meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                                Year-round
+                            </span>
+                        </div>
+                        <h3 class="diag-card__title">Your Report</h3>
+                        <ul class="diag-card__list">
+                            <li>Body Reserve Index (your score out of 100)</li>
+                            <li>Stress Age vs. Actual Age</li>
+                            <li>System-by-system breakdown (Hormonal, Nervous, Immune, GI)</li>
+                            <li>Protective Factors and Stress Drivers</li>
+                            <li>Thought Patterns analysis</li>
+                        </ul>
+                        <a href="#" class="diag-card__link">
+                            Explore topics
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="diag-card">
+                    <div class="diag-card__visual">
+                        <span class="diag-card__badge">Retreat</span>
+                        <div class="diag-card__illustration">
+                            <div class="illustration-action">
+                                <div class="action-lines">
+                                    <div class="action-line"></div>
+                                    <div class="action-line"></div>
+                                    <div class="action-line"></div>
+                                    <div class="action-line"></div>
+                                </div>
+                                <div class="action-circle">
+                                    <svg class="action-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diag-card__content">
+                        <div class="diag-card__meta">
+                            <span class="diag-card__meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>
+                                April
+                            </span>
+                        </div>
+                        <h3 class="diag-card__title">Your Action Plan</h3>
+                        <ul class="diag-card__list">
+                            <li>Personalized focus areas</li>
+                            <li>Specific daily protocols</li>
+                            <li>Nutrition recommendations</li>
+                            <li>Movement prescriptions</li>
+                            <li>Recovery routines</li>
+                            <li>Expert debrief session</li>
+                        </ul>
+                        <a href="#" class="diag-card__link">
+                            See details
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 15: COMPARISON
+         ========================================== -->
+    <section class="comparison" id="comparison">
+        <div class="comparison__container">
+            <div class="comparison__header">
+                <div class="comparison__label">
+                    <span class="comparison__label-dot"></span>
+                    <span class="comparison__label-text">The New Way vs. The Old Way</span>
+                </div>
+                <h2 class="comparison__headline">Fellowship isn't another <em>peer group.</em></h2>
+                <p class="comparison__subheadline">Peer groups share. Fellowship trains. Here's the difference, side by side.</p>
+            </div>
+
+            <div class="comparison__table">
+                <div class="comparison__table-header">
+                    <div class="comparison__table-header-spacer"></div>
+                    <div class="comparison__column-header comparison__column-header--wlf">
+                        <svg class="comparison__column-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.038 4.36 9.75 5.25 9.75h.904" />
+                        </svg>
+                        <h3 class="comparison__column-title">Fellowship</h3>
+                        <p class="comparison__column-subtitle">Here's what actually changes you</p>
+                    </div>
+                    <div class="comparison__column-header comparison__column-header--other">
+                        <svg class="comparison__column-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                        </svg>
+                        <h3 class="comparison__column-title">CEO Peer Groups</h3>
+                        <p class="comparison__column-subtitle">The old way stops working</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Cadence">
+                    <div class="comparison__row-label">Cadence</div>
+                    <div class="comparison__cell comparison__cell--wlf" data-column="Fellowship">
+                        <p class="comparison__cell-title">Two retreats a year, for life</p>
+                        <p class="comparison__cell-text">Immersive weeks. A WhatsApp circle between them. You return to the same people.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other" data-column="CEO Peer Groups">
+                        <p class="comparison__cell-title">Monthly calls, random turnover</p>
+                        <p class="comparison__cell-text">The same stories on repeat. People cycle out when the company sells.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="What you train">
+                    <div class="comparison__row-label">What you train</div>
+                    <div class="comparison__cell comparison__cell--wlf" data-column="Fellowship">
+                        <p class="comparison__cell-title">Your nervous system, your presence, your blind spots</p>
+                        <p class="comparison__cell-text">Silence, breath, biology, composure. Skills you apply on Monday.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other" data-column="CEO Peer Groups">
+                        <p class="comparison__cell-title">Other people's tactical problems</p>
+                        <p class="comparison__cell-text">Useful, but doesn't touch why the same problems keep showing up.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Practice">
+                    <div class="comparison__row-label">Practice</div>
+                    <div class="comparison__cell comparison__cell--wlf" data-column="Fellowship">
+                        <p class="comparison__cell-title">Measured and repeatable</p>
+                        <p class="comparison__cell-text">Diagnostics before and after. Daily protocols. Practices you keep for life.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other" data-column="CEO Peer Groups">
+                        <p class="comparison__cell-title">No practice, just conversation</p>
+                        <p class="comparison__cell-text">No diagnostics. No embodied training. The same ceiling year after year.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="Circle">
+                    <div class="comparison__row-label">Circle</div>
+                    <div class="comparison__cell comparison__cell--wlf" data-column="Fellowship">
+                        <p class="comparison__cell-title">Application-only, hand-matched</p>
+                        <p class="comparison__cell-text">Curated by experience and temperament. First 15 per retreat. Built to last.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other" data-column="CEO Peer Groups">
+                        <p class="comparison__cell-title">Grouped by zip code</p>
+                        <p class="comparison__cell-text">Anyone who pays. Random match. Surface stays surface.</p>
+                    </div>
+                </div>
+
+                <div class="comparison__row" data-label="What you leave with">
+                    <div class="comparison__row-label">What you leave with</div>
+                    <div class="comparison__cell comparison__cell--wlf" data-column="Fellowship">
+                        <p class="comparison__cell-title">A practice, a protocol, a circle</p>
+                        <p class="comparison__cell-text">Skills in your body. A plan that fits your biology. CEOs who know you at your edges.</p>
+                    </div>
+                    <div class="comparison__cell comparison__cell--other" data-column="CEO Peer Groups">
+                        <p class="comparison__cell-title">Notes and a contact list</p>
+                        <p class="comparison__cell-text">Useful advice. But the person going back to the office is the same one who walked in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 17B: FIT QUIZ (Alternative Version)
+         ========================================== -->
+    <section class="fit-quiz" id="fit-quiz">
+        <div class="fit-quiz__container">
+            <div class="fit-quiz__header">
+                <div class="fit-quiz__label">
+                    <span class="fit-quiz__label-dot"></span>
+                    <span class="fit-quiz__label-text">Quick Check</span>
+                </div>
+                <h2 class="fit-quiz__headline">Is this right for you?</h2>
+                <p class="fit-quiz__subheadline">6 questions to find out</p>
+            </div>
+
+            <button type="button" class="fit-quiz__launcher" id="fitQuizLauncher" aria-label="Open the Quick Check">
+                <img class="fit-quiz__launcher-img" src="images/reflection spaces/silence.jpg" alt="" loading="lazy">
+                <span class="fit-quiz__launcher-overlay">
+                    <span class="fit-quiz__launcher-label">Begin</span>
+                    <span class="fit-quiz__launcher-title">Start the Quick Check</span>
+                    <span class="fit-quiz__launcher-cta">Open</span>
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 17C: FIT QUIZ DRAWER (Slide-in from right)
+         ========================================== -->
+    <div class="fit-drawer" id="fitDrawer" aria-hidden="true">
+        <div class="fit-drawer__backdrop" data-close></div>
+        <aside class="fit-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="fitDrawerTitle">
+            <button type="button" class="fit-drawer__close" data-close aria-label="Close">&times;</button>
+            <div class="fit-drawer__content">
+                <div class="fit-drawer__quiz-wrap">
+                    <h2 id="fitDrawerTitle" class="fit-drawer__title">Is this right for you?</h2>
+                    <p class="fit-drawer__subtitle">6 questions to find out</p>
+                    <div class="fit-quiz__card">
+                        <!-- Intro screen -->
+                <div class="fit-quiz__intro fit-quiz__intro--active">
+                    <div class="fit-quiz__intro-graphic">
+                        <svg viewBox="0 0 120 120" fill="none">
+                            <!-- Two overlapping circles representing mutual fit -->
+                            <circle cx="45" cy="60" r="35" stroke="var(--color-blue)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                            <circle cx="75" cy="60" r="35" stroke="var(--color-green)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                            <!-- Intersection highlight -->
+                            <path d="M60 32.5 A35 35 0 0 1 60 87.5 A35 35 0 0 1 60 32.5" fill="var(--color-blue)" opacity="0.15"/>
+                            <!-- Center dot -->
+                            <circle cx="60" cy="60" r="4" fill="var(--color-blue)"/>
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__intro-headline">Let's see if we're right for each other</h3>
+                    <button class="fit-quiz__start-btn" id="quizStartBtn">Begin</button>
+                </div>
+
+                <!-- Progress bar (hidden initially) -->
+                <div class="fit-quiz__progress" style="display: none;">
+                    <div class="fit-quiz__progress-bar" style="width: 0%"></div>
+                </div>
+                <div class="fit-quiz__progress-text" style="display: none;">Question <span class="fit-quiz__current">1</span> of 6</div>
+
+                <!-- Questions -->
+                <!-- data-good-answer indicates which answer means "good fit" for scoring -->
+                <div class="fit-quiz__questions">
+                    <!-- Question 1: YES = good fit - Qualifying: Are they a real CEO? -->
+                    <div class="fit-quiz__question" data-question="1" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Do you carry ultimate responsibility for the direction of your company?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, the buck stops with me</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, I report to others</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2: Input - Scale: employees and revenue -->
+                    <div class="fit-quiz__question" data-question="2" data-good-answer="input">
+                        <h3 class="fit-quiz__question-text">Tell us about your company</h3>
+                        <div class="fit-quiz__inputs">
+                            <div class="fit-quiz__input-group">
+                                <label class="fit-quiz__input-label">Number of employees</label>
+                                <input type="number" class="fit-quiz__input" id="quizEmployees" placeholder="e.g. 50" min="1">
+                            </div>
+                            <div class="fit-quiz__input-group">
+                                <label class="fit-quiz__input-label">Annual revenue (€)</label>
+                                <input type="number" class="fit-quiz__input" id="quizRevenue" placeholder="e.g. 5000000" min="0">
+                            </div>
+                            <button class="fit-quiz__next-btn" id="quizScaleNext">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 3: YES = good fit - Isolation: Do they feel alone at the top? -->
+                    <div class="fit-quiz__question" data-question="3" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Do you often feel alone with decisions that you can't fully discuss with your team or board?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, more than I'd like to admit</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, I have people I can talk to</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 4: YES = good fit - Transition: Are they at a pivotal moment? -->
+                    <div class="fit-quiz__question" data-question="4" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Are you navigating a significant transition—scaling, fundraising, preparing for exit, or feeling stuck?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, I'm at a pivotal point</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, things are stable</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 5: NO = good fit - Outgrown: Have they tried other things? -->
+                    <div class="fit-quiz__question" data-question="5" data-good-answer="no">
+                        <h3 class="fit-quiz__question-text">Do peer groups like YPO or EO still give you what you need?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, they work well for me</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, I need something deeper</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 6: YES = good fit - Commitment: Can they commit fully? -->
+                    <div class="fit-quiz__question" data-question="6" data-good-answer="yes">
+                        <h3 class="fit-quiz__question-text">Can you commit to a full year of hard work, honest feedback, and real change?</h3>
+                        <div class="fit-quiz__options">
+                            <button class="fit-quiz__option" data-value="yes">
+                                <span class="fit-quiz__option-text">Yes, I'm ready for that</span>
+                            </button>
+                            <button class="fit-quiz__option" data-value="no">
+                                <span class="fit-quiz__option-text">No, not right now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="fit-quiz__result fit-quiz__result--fit" style="display: none;">
+                    <div class="fit-quiz__result-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__result-title">You might be a great fit.</h3>
+                    <p class="fit-quiz__result-text">Based on your answers, the Fellowship could be exactly what you need at this stage of your leadership.</p>
+                    <a href="https://niko96.typeform.com/to/x7j5lzdV" class="fit-quiz__result-cta" target="_blank" rel="noopener noreferrer">Apply Now</a>
+                    <button class="fit-quiz__restart">Take the quiz again</button>
+                </div>
+
+                <div class="fit-quiz__result fit-quiz__result--maybe" style="display: none;">
+                    <div class="fit-quiz__result-icon fit-quiz__result-icon--maybe">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__result-title">Let's explore further.</h3>
+                    <p class="fit-quiz__result-text">You have some of the qualities we look for. The best way to know if this is right for you is a conversation.</p>
+                    <a href="#" class="fit-quiz__result-cta fit-quiz__result-cta--secondary">Book a Call</a>
+                    <button class="fit-quiz__restart">Take the quiz again</button>
+                </div>
+
+                <div class="fit-quiz__result fit-quiz__result--not" style="display: none;">
+                    <div class="fit-quiz__result-icon fit-quiz__result-icon--not">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <h3 class="fit-quiz__result-title">This might not be the right time.</h3>
+                    <p class="fit-quiz__result-text">Based on your answers, the Fellowship may not be the best fit right now. That's okay—the right moment will come.</p>
+                    <button class="fit-quiz__restart">Take the quiz again</button>
+                </div>
+                    </div>
+                </div>
+                <div class="fit-drawer__video-wrap">
+                    <video id="fitDrawerVideo" controls muted playsinline preload="metadata">
+                        <source src="videos/quiz-intro.mov">
+                    </video>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ==========================================
+         SECTION 18: SELECTION
+         ========================================== -->
+    <section class="selection" id="selection">
+        <div class="selection__container">
+            <div class="selection__content">
+                <div class="selection__label">
+                    <span class="selection__label-dot"></span>
+                    <span class="selection__label-text">Selection</span>
+                </div>
+                <h2 class="selection__headline">Applications for 2027 are <em>open.</em></h2>
+                <p class="selection__subheadline">€5,500 per year. First 15 per retreat. Application only.</p>
+                <div class="selection__ctas">
+                    <a href="https://niko96.typeform.com/to/x7j5lzdV" class="selection__cta" target="_blank" rel="noopener noreferrer">Apply</a>
+                    <div class="refer-wrapper refer-wrapper--dark">
+                        <a href="#" class="selection__cta selection__cta--secondary refer-btn">Refer a CEO</a>
+                        <div class="refer-popup refer-popup--dark">
+                            <button class="refer-popup__close">&times;</button>
+                            <form class="refer-popup__form refer-form">
+                                <div class="refer-popup__field">
+                                    <label for="referProfile2">Social Media Profile</label>
+                                    <input type="text" id="referProfile2" placeholder="LinkedIn, Twitter, etc.">
+                                </div>
+                                <div class="refer-popup__field">
+                                    <label for="referWhy2">Why would they benefit?</label>
+                                    <textarea id="referWhy2" rows="3" placeholder="What makes them a good fit..."></textarea>
+                                </div>
+                                <div class="refer-popup__field">
+                                    <label for="referName2">Your Name</label>
+                                    <input type="text" id="referName2" placeholder="Your full name">
+                                </div>
+                                <button type="submit" class="refer-popup__submit">Submit Referral</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selection__criteria-wrapper">
+                <h3 class="selection__criteria-title">How we choose you</h3>
+                
+                <div class="selection__criteria">
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Leadership impact</h4>
+                            <p class="criterion__text">Evidence you've built something real.</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Clarity of vision</h4>
+                            <p class="criterion__text">You know what you're wrestling with.</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Experience with inner work</h4>
+                            <p class="criterion__text">Meditation, coaching or therapy.</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion">
+                        <svg class="criterion__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                        </svg>
+                        <div class="criterion__content">
+                            <h4 class="criterion__title">Contribution to the circle</h4>
+                            <p class="criterion__text">Show up honestly, hold space for others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="impressum.html" class="footer__link">Impressum</a>
+                <a href="privacy.html" class="footer__link">Privacy Policy</a>
+            </div>
+            <p class="footer__copyright">&copy; 2026 Nikolas Konstantin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         RADAR CHART JAVASCRIPT
+         ========================================== -->
+    <script src="new-site.scripts.js?v=1"></script>
+<script src="/spikes.js" data-project="acai" data-theme="dark" data-position="bottom-right" data-color="#e74c3c"></script>
+</body>
+</html>
