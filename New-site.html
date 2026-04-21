@@ -570,10 +570,11 @@
     </section>
 
     <!-- ==========================================
-         PHOTO GALLERY: SILENT RETREAT
+         PHOTO GALLERY: SILENT RETREAT — OPTION A (Editorial Hero + Quote Overlay)
          ========================================== -->
-    <section style="background: #fafaf7; padding: 80px 40px;">
-        <div style="max-width: 1100px; margin: 0 auto;">
+    <section style="background: #fafaf7; padding: 80px 40px; border-top: 1px dashed #d4d4d4;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="max-width: 900px; margin: 0 auto 12px; color: #c07050; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Option A — Editorial Hero + Overlay Quote</div>
             <div style="text-align: center; margin-bottom: 48px;">
                 <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(166, 190, 164, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6a8a66; margin-bottom: 16px;">
                     <span style="width: 6px; height: 6px; background: #A6BEA4; border-radius: 50%;"></span>
@@ -582,13 +583,131 @@
                 <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Five days, no words, one <em style="color: #6a8a66;">mirror</em>.</h3>
                 <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">Mornings in silence. Afternoons in leadership labs. Evenings with the circle.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #d4dbc9, #a6bea4); border-radius: 12px;"></div>
-                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #c8d4bc, #8faa8c); border-radius: 12px;"></div>
-                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #e0e5d5, #b8c9b0); border-radius: 12px;"></div>
-                <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #dce2cf, #9fb89a); border-radius: 12px;"></div>
+
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: stretch;">
+                <!-- Left: Hero image with overlay quote -->
+                <div style="position: relative; aspect-ratio: 4/5; background: linear-gradient(135deg, #b8c9b0 0%, #6a8a66 100%); border-radius: 16px; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 55%);"></div>
+                    <figcaption style="position: absolute; left: 40px; right: 40px; bottom: 40px; color: #fff;">
+                        <blockquote style="font-family: var(--font-serif); font-size: clamp(24px, 2.2vw, 32px); line-height: 1.2; font-weight: 400; margin: 0 0 16px;">
+                            &ldquo;I came in as a CEO. I left as a person.&rdquo;
+                        </blockquote>
+                        <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85;">Fellow · Silent Retreat 2025</div>
+                    </figcaption>
+                </div>
+
+                <!-- Right: 3 stacked images with captions -->
+                <div style="display: grid; grid-template-rows: 1fr 1fr 1fr; gap: 16px;">
+                    <figure style="margin: 0;">
+                        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #d4dbc9, #a6bea4); border-radius: 12px;"></div>
+                        <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">Morning sit. No phones. No agenda.</figcaption>
+                    </figure>
+                    <figure style="margin: 0;">
+                        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #c8d4bc, #8faa8c); border-radius: 12px;"></div>
+                        <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">Leadership labs after lunch.</figcaption>
+                    </figure>
+                    <figure style="margin: 0;">
+                        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #e0e5d5, #b8c9b0); border-radius: 12px;"></div>
+                        <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">The circle, end of day.</figcaption>
+                    </figure>
+                </div>
             </div>
-            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 16px;">Photo gallery coming soon</p>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 24px;">Photo gallery coming soon</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY: SILENT RETREAT — OPTION B (Quote Card in Grid)
+         ========================================== -->
+    <section style="background: #f3f1ea; padding: 80px 40px; border-top: 1px dashed #d4d4d4;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="max-width: 900px; margin: 0 auto 12px; color: #c07050; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Option B — Quote Card Inside the Grid</div>
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(166, 190, 164, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6a8a66; margin-bottom: 16px;">
+                    <span style="width: 6px; height: 6px; background: #A6BEA4; border-radius: 50%;"></span>
+                    <span>Inside the Silent Retreat</span>
+                </div>
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Five days, no words, one <em style="color: #6a8a66;">mirror</em>.</h3>
+                <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">Mornings in silence. Afternoons in leadership labs. Evenings with the circle.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 16px;">
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #d4dbc9, #a6bea4); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">Morning sit, day one.</figcaption>
+                </figure>
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #c8d4bc, #8faa8c); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">Walking practice.</figcaption>
+                </figure>
+                <!-- Quote card spans rows -->
+                <div style="grid-row: span 2; background: #1a1a1a; color: #fff; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #A6BEA4;">Fellow · 2025</div>
+                    <blockquote style="font-family: var(--font-serif); font-size: clamp(22px, 2.1vw, 30px); line-height: 1.25; font-weight: 400; margin: 0;">
+                        &ldquo;The hardest, most honest five days of my career. I still use what I learned, every week.&rdquo;
+                    </blockquote>
+                    <div style="font-size: 13px; color: rgba(255,255,255,0.5);">Founder, B2B SaaS</div>
+                </div>
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #e0e5d5, #b8c9b0); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">Leadership lab.</figcaption>
+                </figure>
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 4/5; background: linear-gradient(135deg, #dce2cf, #9fb89a); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 13px; color: #666; margin-top: 8px;">Evening circle.</figcaption>
+                </figure>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 24px;">Photo gallery coming soon</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY: SILENT RETREAT — OPTION C (Panoramic + Centered Quote + Caption Strip)
+         ========================================== -->
+    <section style="background: #fafaf7; padding: 80px 40px; border-top: 1px dashed #d4d4d4;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="max-width: 900px; margin: 0 auto 12px; color: #c07050; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Option C — Panoramic + Centered Quote + Caption Strip</div>
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(166, 190, 164, 0.15); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6a8a66; margin-bottom: 16px;">
+                    <span style="width: 6px; height: 6px; background: #A6BEA4; border-radius: 50%;"></span>
+                    <span>Inside the Silent Retreat</span>
+                </div>
+                <h3 style="font-size: clamp(28px, 3.2vw, 38px); font-weight: 400; color: #1a1a1a; margin: 0 0 12px;">Five days, no words, one <em style="color: #6a8a66;">mirror</em>.</h3>
+                <p style="font-size: 17px; color: #555; max-width: 580px; margin: 0 auto;">Mornings in silence. Afternoons in leadership labs. Evenings with the circle.</p>
+            </div>
+
+            <!-- Panoramic hero -->
+            <figure style="margin: 0 0 48px;">
+                <div style="aspect-ratio: 21/9; background: linear-gradient(135deg, #d4dbc9 0%, #8faa8c 100%); border-radius: 16px;"></div>
+                <figcaption style="font-size: 13px; color: #666; margin-top: 12px; text-align: center;">Day three. The silence that actually works.</figcaption>
+            </figure>
+
+            <!-- Centered big quote -->
+            <blockquote style="max-width: 820px; margin: 0 auto 48px; text-align: center; font-family: var(--font-serif); font-size: clamp(28px, 3vw, 44px); line-height: 1.2; font-weight: 400; color: #1a1a1a;">
+                &ldquo;<em style="font-style: italic; color: #6a8a66;">Silence isn't the absence of noise. It's the presence of truth.</em>&rdquo;
+                <cite style="display: block; font-family: var(--font-sans); font-style: normal; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #999; margin-top: 20px;">Niko · Silent Retreat</cite>
+            </blockquote>
+
+            <!-- Caption strip -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #d4dbc9, #a6bea4); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 12px; color: #666; margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase;">Arrive</figcaption>
+                </figure>
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #c8d4bc, #8faa8c); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 12px; color: #666; margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase;">Sit</figcaption>
+                </figure>
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #e0e5d5, #b8c9b0); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 12px; color: #666; margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase;">Train</figcaption>
+                </figure>
+                <figure style="margin: 0;">
+                    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #dce2cf, #9fb89a); border-radius: 12px;"></div>
+                    <figcaption style="font-size: 12px; color: #666; margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase;">Return</figcaption>
+                </figure>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 13px; margin-top: 24px;">Photo gallery coming soon</p>
         </div>
     </section>
 
