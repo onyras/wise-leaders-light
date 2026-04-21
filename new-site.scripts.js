@@ -140,7 +140,7 @@ if (pathways) {
 // Manifesto typing words
 const typingWord = document.getElementById('typingWord');
 if (typingWord) {
-    const words = ['more peer advice', 'more frameworks', 'more coaches', 'more retreats', 'more tactics'];
+    const words = ['more advice', 'more hustle', 'more input'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
