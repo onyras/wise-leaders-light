@@ -76,6 +76,18 @@
 
     /* Legacy (deprecated - use above) */
     --max-width: 1600px;
+
+    /* =========================
+       GRID SYSTEM (2026 rebuild)
+       Matches Figma MacBook Pro 16" artboard: 1728px.
+       ========================= */
+    --grid-page:   1728px;   /* Figma artboard — canonical page width */
+    --grid-hero:   1796px;   /* Hero card bleeds slightly wider than page */
+    --grid-wide:   1600px;   /* Wide sections (video, journey, pillars) */
+    --grid-main:   1200px;   /* Standard content sections */
+    --grid-narrow: 900px;    /* Readable text blocks */
+    --grid-tight:  640px;    /* Single-column forms, quotes */
+    --gutter:      clamp(16px, 4vw, 64px);
 }
 
 /* ==========================================
@@ -152,16 +164,174 @@ body {
 }
 
 /* ==========================================
-   SECTION 1: HERO WITH RADAR
+   SECTION 1: HERO — STILLNESS (Figma 10587:14609)
    ========================================== */
 .hero {
-    min-height: 100vh;
     width: 100%;
+    background-color: var(--color-off-white);
+    padding: 96px 24px 48px;
     display: flex;
     justify-content: center;
-    background-color: var(--color-off-white);
+}
+
+.hero--stillness {
     position: relative;
+}
+
+.hero--stillness .hero__photo,
+.hero--stillness .hero__mark {
+    position: relative;
+}
+
+.hero--stillness {
+    padding: 96px 24px 48px;
+}
+
+.hero--stillness > .hero__photo {
+    position: relative;
+    width: min(100%, 1796px);
+    aspect-ratio: 1796 / 910;
+    border-radius: 22.6px;
     overflow: hidden;
+}
+
+.hero--stillness > .hero__photo img {
+    position: absolute;
+    left: -11.7%;
+    top: -47.8%;
+    width: 136.1%;
+    height: 179%;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+}
+
+.hero--stillness .hero__photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.39);
+}
+
+.hero--stillness .hero__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 13% 24px 10% 24px;
+    gap: 0;
+    container-type: inline-size;
+}
+
+.hero--stillness .hero__mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 3.5%;
+}
+
+.hero--stillness .hero__mark-icon {
+    display: block;
+    width: clamp(64px, 5vw, 90px);
+    height: auto;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.hero--stillness .hero__mark-word {
+    font-family: 'Halant', var(--font-serif);
+    font-weight: 500;
+    color: var(--color-white);
+    font-size: clamp(30px, 3.4vw, 60.54px);
+    line-height: 1.0;
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+
+.hero--stillness .hero__headline {
+    font-family: 'Halant', var(--font-serif);
+    font-weight: 400;
+    color: var(--color-white);
+    font-size: clamp(36px, 4vw, 71.23px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    max-width: 680px;
+    margin: 0 0 1.2%;
+}
+
+.hero--stillness .hero__body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-white);
+    font-size: clamp(15px, 1.67vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    max-width: 760px;
+    margin: 0 0 2.2%;
+}
+
+.hero--stillness .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 0;
+}
+
+.hero--stillness .hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.hero--stillness .hero__btn--primary {
+    background-color: var(--color-off-white);
+    color: #1d1917;
+    border: 1px solid var(--color-off-white);
+}
+
+.hero--stillness .hero__btn--primary:hover {
+    transform: translateY(-1px);
+    background-color: #ffffff;
+}
+
+.hero--stillness .hero__btn--ghost {
+    background-color: transparent;
+    color: var(--color-off-white);
+    border: 1px solid var(--color-off-white);
+}
+
+.hero--stillness .hero__btn--ghost:hover {
+    background-color: var(--color-off-white);
+    color: #1d1917;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 72px 16px 32px;
+    }
+    .hero--stillness > .hero__photo {
+        aspect-ratio: 4 / 5;
+        border-radius: 16px;
+    }
+    .hero--stillness .hero__overlay {
+        padding: 48px 20px 32px;
+        gap: 14px;
+    }
 }
 
 .hero__inner {
@@ -532,7 +702,182 @@ body {
 }
 
 /* ==========================================
-   SECTION 2: STATS BENTO
+   SECTION 2: CIRCLE VIDEO (Figma 10637:178)
+   ========================================== */
+.circle-video {
+    background: var(--color-off-white);
+    padding: 80px var(--gutter) 96px;
+}
+
+.circle-video__container {
+    max-width: var(--grid-wide);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.circle-video__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 920px;
+}
+
+.circle-video__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #efe7dd;
+    color: #1d1917;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    padding: 7px 18px;
+    border-radius: 10px;
+    backdrop-filter: blur(18px);
+}
+
+.circle-video__headline {
+    font-family: 'Halant', var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(32px, 4.2vw, 54px);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: #1d1917;
+    margin: 0;
+    max-width: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .circle-video__headline {
+        white-space: normal;
+        max-width: 680px;
+    }
+}
+
+.circle-video__accent {
+    position: relative;
+    white-space: nowrap;
+    background-image: url("images/video-section/underline.svg");
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: 100% 0.28em;
+    padding-bottom: 0.22em;
+}
+
+.circle-video__subheadline {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(16px, 1.5vw, 21px);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: #57544f;
+    margin: 0;
+    max-width: 620px;
+}
+
+.circle-video__player {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-video__halo {
+    position: absolute;
+    inset: -40% -18%;
+    background-image: url("images/video-section/halo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.circle-video__card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 820 / 489;
+    border: 8px solid #f6f0e9;
+    border-radius: 55px;
+    overflow: hidden;
+    padding: 0;
+    background: #000;
+    cursor: pointer;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.circle-video__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 28px 72px rgba(0, 0, 0, 0.2);
+}
+
+.circle-video__thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.circle-video__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.circle-video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(64px, 8vw, 89px);
+    height: clamp(64px, 8vw, 89px);
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d1917;
+    box-shadow: 0 8px 34px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.circle-video__card:hover .circle-video__play {
+    transform: translate(-50%, -50%) scale(1.06);
+}
+
+.circle-video__play svg {
+    width: 34%;
+    height: 34%;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .circle-video {
+        padding: 60px 16px 72px;
+    }
+    .circle-video__container {
+        gap: 32px;
+    }
+    .circle-video__card {
+        border-width: 6px;
+        border-radius: 32px;
+    }
+}
+
+/* ==========================================
+   SECTION 2B: STATS BENTO
    ========================================== */
 .stats {
     background: var(--color-off-white);
@@ -740,8 +1085,7 @@ body {
    ========================================== */
 .logos {
     background: var(--color-off-white);
-    padding: 80px 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 72px 40px 88px;
 }
 
 .logos__container {
@@ -750,40 +1094,46 @@ body {
 }
 
 .logos__headline {
-    font-family: var(--font-sans);
-    font-size: 14px;
-    font-weight: 500;
-    color: #999;
+    font-family: 'Halant', var(--font-serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #1d1917;
     text-align: center;
-    margin-bottom: 48px;
-    letter-spacing: 0.02em;
+    margin: 0 0 56px;
 }
 
 .logos__grid {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 48px 56px;
+    gap: 32px 56px;
 }
 
 .logo-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
+    flex: 0 0 auto;
 }
 
-.logo-item:hover { opacity: 0.7; }
-
-.logo-item span {
-    font-family: var(--font-sans);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-black);
-    letter-spacing: 0.02em;
+.logo-item img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
+
+.logo-item--siemens img { height: 22px; }
+.logo-item--apple img    { height: 42px; }
+.logo-item--yuri img     { height: 42px; filter: grayscale(1) brightness(0.85); mix-blend-mode: multiply; }
+.logo-item--deepmind img { height: 32px; }
+.logo-item--meggst img   { height: 48px; }
+.logo-item--eu img       { height: 52px; }
+.logo-item--mojo img     { height: 34px; }
 
 /* ==========================================
    SECTION 4: FELLOWSHIP JOURNEY (Animated Pathway)
@@ -3599,10 +3949,16 @@ body {
     .radar-container { width: 320px; height: 320px; }
     .manifesto { padding: 80px 20px; }
     .manifesto__text { font-size: 28px; line-height: 1.45; }
-    .logos { padding: 50px 20px; }
-    .logos__headline { margin-bottom: 36px; }
-    .logos__grid { gap: 24px 32px; }
-    .logo-item span { font-size: 14px; }
+    .logos { padding: 56px 20px 64px; }
+    .logos__headline { font-size: 22px; margin-bottom: 36px; }
+    .logos__grid { justify-content: center; gap: 28px 36px; }
+    .logo-item--siemens img { height: 18px; }
+    .logo-item--apple img    { height: 32px; }
+    .logo-item--yuri img     { height: 32px; }
+    .logo-item--deepmind img { height: 24px; }
+    .logo-item--meggst img   { height: 38px; }
+    .logo-item--eu img       { height: 40px; }
+    .logo-item--mojo img     { height: 26px; }
     .video-section { padding: 60px 20px 80px; }
     .video-section__label { margin-bottom: 32px; }
     .video-section__headline { font-size: 32px; margin-bottom: 24px; }
@@ -6451,5 +6807,17 @@ img {
     .fit-quiz__start-btn {
         padding: 14px 28px !important;
         font-size: 14px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .teachers__grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .teachers__grid {
+        grid-template-columns: 1fr !important;
     }
 }

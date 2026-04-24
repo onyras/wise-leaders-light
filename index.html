@@ -21,7 +21,10 @@
 
     <link rel="icon" type="image/png" href="images/favicon/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon/favicon.png">
-    <link rel="stylesheet" href="styles.css?v=drawer1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=grid3">
 </head>
 <body>
     <!-- ==========================================
@@ -66,23 +69,35 @@
     <!-- ==========================================
          SECTION 1: HERO
          ========================================== -->
-    <section class="hero">
-        <div class="hero__inner">
-        <div class="hero__content">
-            <div class="hero__label">
-                <span class="hero__label-dot"></span>
-                <span class="hero__label-text">For CEOs who have outgrown peer groups</span>
+    <section class="hero hero--stillness" data-node-id="10637:177">
+        <div class="hero__photo" aria-hidden="true">
+            <img src="images/stillness/bg.jpg" alt="">
+            <div class="hero__photo-overlay"></div>
+        </div>
+        <div class="hero__overlay">
+            <div class="hero__mark">
+                <svg class="hero__mark-icon" viewBox="0 0 90.5727 45.3623" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-node-id="10587:14983">
+                    <g stroke="currentColor" stroke-width="1.14546" stroke-miterlimit="10">
+                        <circle cx="22.5813" cy="22.6811" r="22.0085"/>
+                        <circle cx="22.5811" cy="22.6811" r="14.9141"/>
+                        <path d="M22.6635 22.8275H90.5727"/>
+                        <path d="M68.4341 45.2099V0.184967"/>
+                        <path d="M84.2796 38.6176L52.5859 6.78012"/>
+                        <path d="M84.3526 6.89805L52.6557 38.7355"/>
+                        <path d="M89.3376 30.7813L47.4868 14.6542"/>
+                        <path d="M76.5518 1.77823L60.4975 43.8157"/>
+                        <path d="M76.6719 43.6917L60.2661 1.79108"/>
+                        <path d="M89.3437 14.6386L47.6323 31.1221"/>
+                    </g>
+                </svg>
+                <p class="hero__mark-word">Fellowship</p>
             </div>
-            <h1 class="hero__headline">
-                A <em>practice community</em> for CEOs.
-            </h1>
-            <p class="hero__body">
-                A community of CEOs who treat leadership as a lifelong practice. We gather to train it together, year after year.
-            </p>
-            <div class="hero__ctas">
-                <a href="https://niko96.typeform.com/to/x7j5lzdV" class="hero__cta" target="_blank" rel="noopener noreferrer">Apply for 2027</a>
+            <h1 class="hero__headline">A practice<br>community for CEOs.</h1>
+            <p class="hero__body">A community of CEOs who treat leadership as a lifelong practice. We gather to train it together, year after year.</p>
+            <div class="hero__actions">
+                <a href="https://niko96.typeform.com/to/x7j5lzdV" class="hero__btn hero__btn--primary" target="_blank" rel="noopener noreferrer">Apply for 2027</a>
                 <div class="refer-wrapper">
-                    <a href="#" class="hero__cta hero__cta--secondary" id="referBtn">Refer a CEO</a>
+                    <a href="#" class="hero__btn hero__btn--ghost" id="referBtn">Refer a CEO</a>
                     <div class="refer-popup" id="referPopup">
                         <button class="refer-popup__close" id="referClose">&times;</button>
                         <form class="refer-popup__form" id="referForm">
@@ -104,48 +119,29 @@
                 </div>
             </div>
         </div>
-        
-        <div class="hero__visual">
-            <div class="radar-container">
-                <div class="radar-glow"></div>
-                <svg class="radar-svg" viewBox="0 0 600 600" id="radarSvg">
-                    <circle class="radar-grid" cx="300" cy="300" r="70"/>
-                    <circle class="radar-grid" cx="300" cy="300" r="140"/>
-                    <circle class="radar-grid" cx="300" cy="300" r="210"/>
-                    <g id="axes"></g>
-                    <g id="areas"></g>
-                    <g id="points"></g>
-                    <g id="labels"></g>
-                </svg>
-                <div class="radar-center">
-                    <div class="radar-score" id="radarScore">0</div>
-                    <div class="radar-score-label">Body Reserve</div>
-                </div>
-            </div>
-        </div>
-        </div>
     </section>
 
     <!-- ==========================================
          SECTION 2: FROM THE CIRCLE (VIDEO)
          ========================================== -->
-    <section class="circle-video" style="padding: 80px 40px; background: #fafaf7;">
-        <div style="max-width: 1100px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 48px;">
-                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(127, 171, 200, 0.12); border-radius: 999px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7FABC8; margin-bottom: 24px;">
-                    <span style="width: 6px; height: 6px; background: #7FABC8; border-radius: 50%;"></span>
-                    <span>From the Circle</span>
-                </div>
-                <h2 style="font-size: clamp(32px, 4vw, 44px); font-weight: 400; line-height: 1.15; color: #1a1a1a; margin: 0 0 16px; max-width: 720px; margin-left: auto; margin-right: auto;">A message to CEOs who feel the <em style="font-style: italic; color: #7FABC8;">same wall</em>.</h2>
-                <p style="font-size: 18px; line-height: 1.5; color: #555; max-width: 620px; margin: 0 auto;">Niko on why the Fellowship exists, and who it's for.</p>
+    <section class="circle-video" data-node-id="10637:178">
+        <div class="circle-video__container">
+            <div class="circle-video__header">
+                <div class="circle-video__badge">From the circle</div>
+                <h2 class="circle-video__headline">A message to CEOs who feel <span class="circle-video__accent">the same wall.</span></h2>
+                <p class="circle-video__subheadline">Niko on why the Fellowship exists, and who it's for.</p>
             </div>
-            <div style="position: relative; width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; background: linear-gradient(135deg, #2a2a2a, #1a1a1a); border-radius: 16px; overflow: hidden; cursor: pointer; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
-                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 84px; height: 84px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-                <div style="position: absolute; bottom: 24px; left: 24px; color: rgba(255,255,255,0.9); font-size: 14px; letter-spacing: 0.05em;">Video coming soon</div>
+            <div class="circle-video__player">
+                <div class="circle-video__halo" aria-hidden="true"></div>
+                <button class="circle-video__card" type="button" aria-label="Play video">
+                    <img class="circle-video__thumbnail" src="images/video-section/testimonial.jpg" alt="">
+                    <div class="circle-video__overlay" aria-hidden="true"></div>
+                    <span class="circle-video__play" aria-hidden="true">
+                        <svg viewBox="0 0 31.2349 31.2349" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4117 6.5073V24.7277L24.7277 15.6175L10.4117 6.5073Z"/>
+                        </svg>
+                    </span>
+                </button>
             </div>
         </div>
     </section>
@@ -153,18 +149,17 @@
     <!-- ==========================================
          SECTION 3: LOGO CLOUD
          ========================================== -->
-    <section class="logos">
+    <section class="logos" data-node-id="10641:179">
         <div class="logos__container">
             <p class="logos__headline">Trusted by leaders building what matters</p>
             <div class="logos__grid">
-                <div class="logo-item"><span>Mojo</span></div>
-                <div class="logo-item"><span>SirPlus</span></div>
-                <div class="logo-item"><span>Amorelie</span></div>
-                <div class="logo-item"><span>LiveEO</span></div>
-                <div class="logo-item"><span>Yuri</span></div>
-                <div class="logo-item"><span>Beat81</span></div>
-                <div class="logo-item"><span>Klang Games</span></div>
-                <div class="logo-item"><span>PSL</span></div>
+                <div class="logo-item logo-item--siemens"><img src="images/logos/siemens.svg" alt="Siemens"></div>
+                <div class="logo-item logo-item--apple"><img src="images/logos/apple.svg" alt="Apple"></div>
+                <div class="logo-item logo-item--yuri"><img src="images/logos/yuri.png" alt="Yuri"></div>
+                <div class="logo-item logo-item--deepmind"><img src="images/logos/deepmind.svg" alt="DeepMind"></div>
+                <div class="logo-item logo-item--meggst"><img src="images/logos/meggst.svg" alt="Meggst"></div>
+                <div class="logo-item logo-item--eu"><img src="images/logos/european-parliament.svg" alt="European Parliament"></div>
+                <div class="logo-item logo-item--mojo"><img src="images/logos/mojo.svg" alt="mojo"></div>
             </div>
         </div>
     </section>
